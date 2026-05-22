@@ -1,0 +1,1534 @@
+/* =========================================
+   VARIABLES I CONFIGURACIÓ GENERAL
+   ========================================= */
+:root {
+  --marro-fosc: #330B00;
+  --taronja-viu: #FF4A1A;
+  --blanc: #FFFFFF;
+  --teula: #992100;
+  --carn-clar: #FFD7CC;
+  --blau-electric: #0B4EDB;
+  --blau-clar: #CFDDFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-custom {
+  width: 180px;
+  height: 52px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url("../icones/boto.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease,
+              opacity 0.3s ease,
+              filter 0.3s ease;
+}
+
+.info-icon {
+  width: 80px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease,
+              opacity 0.3s ease,
+              filter 0.3s ease;
+}
+
+.info-icon:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn-custom,
+.wrapper-centrat {
+  width: 180px;
+  height: 52px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url("../icones/boto.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease,
+              opacity 0.3s ease,
+              filter 0.3s ease;
+}
+
+.wrapper-centrat {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: var(--marro-fosc);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--taronja-viu);
+}
+
+/* =========================================
+   CONTENIDOR GLOBAL
+   ========================================= */
+
+:root {
+  --marge-lateral: 80px;
+  --espai-seccions: 80px;
+}
+
+/* =========================================
+   MARGES GLOBALS
+   ========================================= */
+
+section,
+footer {
+  padding-left: var(--marge-lateral);
+  padding-right: var(--marge-lateral);
+}
+
+section {
+  padding-top: var(--espai-seccions);
+  padding-bottom: var(--espai-seccions);
+}
+
+header {
+  padding: 30px var(--marge-lateral);
+}
+
+/* =========================================
+   ESTILS TEXTOS GENERALS
+   ========================================= */
+h1 {
+  color: var(--blanc);
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  text-transform: lowercase !important;
+}
+
+h2 {
+  color: var(--taronja-viu);
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+sub {
+  color: var(--teula);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: block;
+  text-align: center;
+  line-height: 1.3;
+}
+
+label {
+  color: var(--teula);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: var(--marro-fosc);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+p:last-child,
+h2:last-child {
+  margin-bottom: 0;
+}
+
+.date,
+figcaption {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--taronja-viu);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+  HEADER I NAVEGACIÓ
+   ========================================= */
+header {
+  background-color: var(--carn-clar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px; 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box; 
+}
+
+.logo img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+.logo a {
+  display: block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.logo img {
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--marro-fosc);
+  transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+  color: var(--blau-electric);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-list li {
+  margin-left: 25px;
+}
+
+.nav-list li a.active, 
+.nav-list-mobil li a.active {
+  color: var(--blau-electric) !important;
+  font-weight: 600;
+}
+
+.dropdown-idioma:hover .enllac-idioma {
+  color: var(--blau-electric);
+}
+
+.enllac-idioma {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mini-icona {
+  width: 10px;
+  margin-left: 6px;
+  transition: transform 0.3s;
+}
+
+.submenu-idiomes {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--carn-clar);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 80px;
+  border-radius: 4px;
+}
+
+.submenu-idiomes li a {
+  padding: 8px 15px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease; 
+}
+
+.submenu-idiomes li a:hover {
+  background-color: transparent;
+  color: var(--blau-electric); 
+}
+
+.dropdown-idioma:hover .submenu-idiomes {
+  display: block;
+}
+
+.dropdown-idioma:hover .mini-icona {
+  transform: rotate(180deg);
+}
+
+.menu-toggle, .nav-mobil {
+  display: none;
+}
+
+
+/* =========================================
+   SECCIÓ CONTACTE
+   ========================================= */
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-left: var(--marge-lateral);
+  padding-right: var(--marge-lateral);
+  padding-top: var(--espai-seccions);
+  padding-bottom: var(--espai-seccions);
+  margin-top: 150px;
+}
+
+/* TEXT ESQUERRA */
+
+.info-section {
+  flex: 1;
+  max-width: 360px;
+}
+
+.info-section h2 {
+  color: var(--taronja-viu);
+  margin-bottom: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.info-section sub {
+  display: block;
+  color: var(--teula);
+  margin-bottom: 24px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.info-section p {
+  color: var(--marro-fosc);
+}
+
+/* =========================================
+   FORMULARI
+   ========================================= */
+
+.form-section {
+  flex: 2.5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin-top: 70px;
+}
+
+/* COLUMNES */
+
+.inputs-column,
+.textarea-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* LABELS */
+
+.form-group label {
+  color: var(--teula);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* INPUTS */
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  border: 1px solid var(--marro-fosc);
+  border-radius: 10px;
+  padding: 14px 16px;
+  background: transparent;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+  border-color: var(--blau-electric);
+}
+
+/* TEXTAREA */
+
+.form-section textarea {
+  height: 142px;
+  resize: none;
+}
+
+/* BOTÓ */
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -4px;
+}
+
+.btn-custom {
+  width: 220px;
+  height: 60px;
+  background-image: url("../icones/boto.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  color: var(--blanc);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-custom:hover {
+  opacity: 0.8;
+}
+
+/* MISSATGE */
+
+#thanksforjoining {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 40px;
+}
+
+#thanksforjoining h3,
+#thanksforjoining p {
+  margin: 0;
+}
+
+/* =========================================
+   UBICACIÓ TRANSPORT
+   ========================================= */
+.ubicacio-transport {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  gap: 100px !important; 
+  background-image: url('../festivalet/fons.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: var(--espai-seccions);
+  padding-bottom: var(--espai-seccions);
+  min-height: 400px;
+  text-align: left;
+}
+
+.header-inline {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.columna-on, .columna-arribar {
+  flex: 1; 
+}
+
+address {
+  font-style: normal;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-align: right;
+  margin-top: -50px;    
+  margin-left: 350px;
+  display: block;
+}
+
+.transports-flex {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 160px;
+  margin-top: 60px; 
+  align-items: flex-end;
+}
+
+.transport-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.icona-transport {
+  width: 70px;
+  height: auto;
+}
+
+.transport-text strong {
+  display: block;
+  color: var(--teula);
+}
+
+/* =========================================
+   SPONSORS
+   ========================================= */
+.sponsors {
+  border-top: 1px solid var(--taronja-viu);
+  margin-top: 110px;
+}
+
+.sponsors-wrapper {
+  overflow: hidden;
+}
+
+.logos {
+  display: flex;
+  gap: 56px;
+  width: max-content;
+}
+
+.logos img {
+  height: 40px;
+}
+
+@keyframes sponsors-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================
+   NEWSLETTER
+   ========================================= */
+.newsletter {
+  display: flex;
+  gap: 40px;
+
+  border-top: 1px solid var(--taronja-viu);
+}
+
+.newsletter-left {
+  flex: 0 0 40%;
+}
+
+.newsletter-right {
+  flex: 1;
+  max-width: 500px;
+}
+
+.newsletter-right input {
+  width: 174%;
+  height: 60px;
+  border: 1px solid var(--marro-fosc);
+  border-radius: 8px;
+  padding: 0 15px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+  background-color: var(--carn-clar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+}
+
+.footer-left img {
+  width: 200px;
+  height: auto;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.footer-center p {
+  margin: 0;
+}
+
+.footer-center a {
+  color: var(--marro-fosc);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-center a:hover {
+  color: var(--taronja-viu);
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* =========================================
+   VERSIÓ TAULETA
+   ========================================= */
+
+@media screen and (max-width: 1180px) {
+
+  header,
+  section,
+  footer,
+  .festivalet,
+  .festivalet-entrada,
+  .festivalet-participants,
+  .festivalet-gastronomia,
+  .ubicacio-transport,
+  .allotjaments-section,
+  .faqs-section,
+  .newsletter,
+  .contact-container,
+  .sponsors,
+  .footer {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 70px;
+    width: 100%;
+
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--carn-clar);
+
+    z-index: 2001;
+
+    box-sizing: border-box;
+  }
+
+  .logo img {
+    width: clamp(150px, 18vw, 190px);
+    max-width: 190px;
+    height: auto;
+  }
+
+  .nav-list {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: clamp(10px, 2vw, 22px);
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-list li a {
+    font-size: clamp(11px, 1.3vw, 13px);
+
+    text-decoration: none;
+    color: var(--marro-fosc);
+
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .menu-toggle,
+  .nav-mobil {
+    display: none !important;
+  }
+
+  .contact-container {
+    display: block;
+
+    padding: 20px 80px 50px 80px;
+
+    margin-top: 170px;
+  }
+
+  .info-section {
+    max-width: 100%;
+  }
+
+  .info-section h2 {
+    font-size: 36px;
+
+    white-space: normal;
+
+    margin-bottom: 18px;
+  }
+
+  .info-section sub {
+    text-align: left;
+
+    font-size: 18px;
+
+    margin-bottom: 18px;
+  }
+
+  .info-section p {
+    font-size: 16px;
+
+    max-width: 850px;
+  }
+
+  .form-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+
+    margin-top: 45px;
+  }
+
+  .form-section textarea {
+    height: 138px;
+  }
+
+  .button-container {
+    justify-content: flex-start;
+
+    margin-top: 0;
+  }
+
+  #thanksforjoining {
+    display: none;
+  }
+
+  /* =========================================
+     UBICACIÓ I TRANSPORT
+     ========================================= */
+
+  .ubicacio-transport {
+    display: flex;
+    flex-direction: column;
+
+    gap: clamp(80px, 12vw, 180px);
+
+    margin-top: 40px;
+
+    padding-bottom: 40px;
+
+    padding-left: clamp(8px, 2vw, 20px);
+    padding-right: clamp(8px, 2vw, 20px);
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    background-image: url('../contacte/fons.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* ON */
+
+  .header-inline {
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: start;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin-bottom: clamp(40px, 8vw, 120px);
+  }
+
+  /* TÍTOL */
+
+  .header-inline h2 {
+    justify-self: start;
+
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  /* ADREÇA */
+
+  address {
+    justify-self: end;
+
+    margin-left: auto;
+    margin-right: -250px;
+
+    max-width: 220px;
+
+    text-align: right;
+    line-height: 1.3;
+
+    font-style: normal;
+
+    margin-top: -60px;
+  }
+
+  /* MAPA */
+
+  .mapa-isometric {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-left: 130px;
+  }
+
+  .mapa-isometric img {
+    width: min(420px, 95%);
+    height: auto;
+
+    display: block;
+  }
+
+  /* COM ARRIBAR */
+
+  .columna-arribar {
+    margin-top: clamp(60px, 10vw, 160px);
+  }
+
+  /* TRANSPORTS */
+
+  .transports-flex {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+    padding-left: clamp(30px, 6vw, 140px);
+    padding-right: clamp(30px, 6vw, 140px);
+
+    margin-top: 60px;
+  }
+
+  /* COLOR TREN METRO BUS */
+
+  .transport-text strong {
+    color: var(--teula);
+  }
+
+  /* ITEMS */
+
+  .transport-item {
+    flex: 0 1 auto;
+
+    min-width: 90px;
+    max-width: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  /* ICONES FIXES */
+
+  .icona-transport {
+    width: clamp(60px, 8vw, 90px);
+
+    height: auto;
+  }
+
+  /* =========================================
+     NEWSLETTER
+     ========================================= */
+
+  .newsletter {
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 40px;
+
+    padding-top: 50px;
+    padding-bottom: 50px !important;
+  }
+
+  .newsletter-left,
+  .newsletter-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-right {
+    margin-top: 0;
+  }
+
+  .newsletter-right input {
+    width: 100%;
+  }
+
+  /* --- BOTONS --- */
+
+  .btn-custom,
+  .wrapper-centrat {
+    width: 220px;
+    height: 65px;
+  }
+
+  .btn-custom:hover,
+  .wrapper-centrat:hover {
+    filter: brightness(1.1);
+  }
+
+  .info-icon:hover {
+    transform: scale(1.08);
+  }
+}
+
+
+@media (max-width: 430px) {
+
+  /* =========================================
+     AJUSTOS GENERALS
+     ========================================= */
+
+  header,
+  section,
+  footer,
+  .festivalet,
+  .fira,
+  .entrevistes,
+  .sponsors,
+  .newsletter {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  h1 {
+    font-size: 35px;
+    word-wrap: break-word;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  sub {
+    display: block;
+    color: var(--teula);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  label {
+    display: block;
+    color: var(--teula);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+    padding: 0;
+  }
+
+  .text-ordinador {
+    display: none !important;
+  }
+
+  .text-mobil {
+    display: block !important;
+  }
+
+  section,
+  .seccio-on,
+  .seccio-arribar,
+  .contact-container {
+    margin-bottom: 80px !important;
+  }
+
+  /* =========================================
+     LOGO NAV
+     ========================================= */
+
+  .logo img {
+    width: 150px;
+    max-width: 150px;
+  }
+
+  .nav-list {
+    display: none !important;
+  }
+
+  /* =========================================
+     HEADER
+     ========================================= */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    position: fixed;
+    background-color: var(--carn-clar);
+    z-index: 2001;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 2005;
+  }
+
+  .menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--marro-fosc);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-mobil {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: var(--carn-clar);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.5s ease-in-out,
+      opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2000;
+  }
+
+  .nav-mobil.active {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 40px 0;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
+  .nav-list-mobil {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .nav-list-mobil li a {
+    display: block;
+    text-decoration: none;
+    color: var(--marro-fosc) !important;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .nav-list-mobil li a:hover,
+  .nav-list-mobil li a:active {
+    color: var(--blau-electric) !important;
+    transform: scale(1.05);
+  }
+
+  /* =========================================
+     UBICACIÓ I TRANSPORT
+     ========================================= */
+
+  .ubicacio-transport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 80px 40px;
+    overflow: hidden;
+
+    background-image: url('../contacte/fons.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header-on {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  .header-on h2,
+  .bloc-dreta h2 {
+    color: var(--taronja-viu);
+    font-size: 2.2rem !important;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    margin-left: 120px;
+  }
+
+  .header-on address {
+    text-align: right;
+    align-self: flex-end;
+    font-style: normal;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--marro-fosc);
+    width: 100%;
+    max-width: 250px;
+    margin-right: 60px;
+  }
+
+  .mapa-isometric {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+  }
+
+  .mapa-isometric img {
+    width: 90%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .bloc-dreta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .transports-flex {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  .transports-flex::-webkit-scrollbar {
+    display: none;
+  }
+
+  .transport-item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .icona-transport {
+    width: 70px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .transport-text strong {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--teula);
+  }
+
+  .transport-text span {
+    font-size: 0.95rem;
+    color: var(--marro-fosc);
+  }
+
+  .bloc-dreta::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 15px;
+    margin: 15px auto 0 auto;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+
+    background-image:
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
+    background-position:
+      15px center,
+      45px center,
+      75px center;
+
+    transition: none !important;
+  }
+
+  .bloc-dreta.actiu-2::after {
+    background-image:
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+  }
+
+  .bloc-dreta.actiu-3::after {
+    background-image:
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+  }
+
+  /* =========================================
+     SECCIÓ CONTACTE
+     ========================================= */
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    margin-bottom: 80px !important;
+  }
+
+  .info-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .info-section sub {
+    display: block;
+    color: var(--teula);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .info-section p {
+    text-align: left;
+    margin-bottom: 10px;
+    color: var(--marro-fosc);
+    line-height: 1.5;
+  }
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group label {
+    margin-bottom: 2px;
+    color: var(--teula);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background-color: var(--blanc);
+    border: 1px solid var(--marro-fosc);
+    color: var(--marro-fosc);
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .form-group textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px 40px;
+    font-size: 16px;
+    color: var(--blanc);
+    background-color: var(--teula);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .hidden-message,
+  #thanksforjoining {
+    display: none;
+    padding: 30px;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: var(--carn-clar);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #thanksforjoining h3 {
+    color: var(--teula);
+    font-size: 22px;
+    margin: 0;
+  }
+
+  #thanksforjoining p {
+    color: var(--marro-fosc);
+    margin: 0;
+  }
+
+  /* =========================================
+     SPONSORS
+     ========================================= */
+
+  .sponsors {
+    padding-top: 20px;
+    padding-bottom: 10px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .logos img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* =========================================
+     NEWSLETTER
+     ========================================= */
+
+  .newsletter {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px;
+    padding-top: 50px;
+    padding-bottom: 0 !important;
+    margin-bottom: 30px !important;
+  }
+
+  .newsletter-left,
+  .newsletter-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-right {
+    margin-top: 0;
+  }
+
+  .newsletter-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newsletter-right input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--marro-fosc);
+  }
+
+  .veure {
+    width: 100%;
+    min-width: unset;
+    text-align: center;
+  }
+
+  .btn-custom {
+    width: 220px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  /* =========================================
+     FOOTER
+     ========================================= */
+
+  footer {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-left img {
+    margin: 0 auto;
+    width: 150px;
+  }
+
+  .footer-center,
+  .footer-right {
+    align-items: center;
+  }
+}

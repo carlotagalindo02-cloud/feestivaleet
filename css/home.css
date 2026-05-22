@@ -1,0 +1,1516 @@
+/* =========================================
+   VARIABLES I CONFIGURACIÓ GENERAL
+   ========================================= */
+:root {
+  --marro-fosc: #330B00;
+  --taronja-viu: #FF4A1A;
+  --blanc: #FFFFFF;
+  --teula: #992100;
+  --carn-clar: #FFD7CC;
+  --blau-electric: #0B4EDB;
+  --blau-clar: #CFDDFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-custom {
+  width: 180px;
+  height: 52px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url("../icones/boto.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease,
+              opacity 0.3s ease,
+              filter 0.3s ease;
+}
+
+.info-icon {
+  width: 80px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease,
+              opacity 0.3s ease,
+              filter 0.3s ease;
+}
+
+.info-icon:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn-custom,
+.wrapper-centrat {
+  width: 180px;
+  height: 52px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url("../icones/boto.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease,
+              opacity 0.3s ease,
+              filter 0.3s ease;
+}
+
+/* HOVER BOTONS */
+.btn-custom:hover,
+.wrapper-centrat:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  filter: brightness(1.1);
+}
+
+/* CENTRAT */
+.wrapper-centrat {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LINKS NORMALS */
+a:not(.btn-custom):not(.wrapper-centrat) {
+  color: var(--marro-fosc);
+  transition: color 0.3s ease;
+}
+
+a:not(.btn-custom):not(.wrapper-centrat):hover {
+  color: var(--taronja-viu);
+}
+
+/* =========================================
+   MARGES GENERALS
+   ========================================= */
+section,
+footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* =========================================
+   ESTILS TEXTOS GENERALS
+   ========================================= */
+h1 {
+  color: var(--blanc);
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  text-transform: lowercase !important;
+}
+
+h2 {
+  color: var(--taronja-viu);
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+sub {
+  color: var(--teula);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: block;
+  text-align: center;
+  line-height: 1.3;
+}
+
+label {
+  color: var(--teula);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: var(--marro-fosc);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+p:last-child,
+h2:last-child {
+  margin-bottom: 0;
+}
+
+.date,
+figcaption {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--taronja-viu);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   HEADER I NAVEGACIÓ
+   ========================================= */
+header {
+  background-color: var(--carn-clar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  box-sizing: border-box;
+}
+
+.logo a {
+  display: block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.logo img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+nav {
+  position: relative;
+  z-index: 10001;
+}
+
+nav ul,
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li,
+.nav-list li {
+  margin-left: 25px;
+  position: relative;
+}
+
+nav ul li a,
+.nav-list li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--marro-fosc);
+  transition: color 0.3s ease;
+  pointer-events: auto;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+  color: var(--blau-electric) !important;
+}
+
+.enllac-idioma {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mini-icona {
+  width: 10px;
+  margin-left: 6px;
+  transition: transform 0.3s;
+}
+
+.submenu-idiomes {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--carn-clar);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 80px;
+  border-radius: 4px;
+  z-index: 10002;
+}
+
+.submenu-idiomes li a {
+  padding: 8px 15px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.submenu-idiomes li a:hover {
+  color: var(--blau-electric);
+}
+
+.dropdown-idioma:hover .submenu-idiomes {
+  display: block;
+}
+
+.dropdown-idioma:hover .mini-icona {
+  transform: rotate(180deg);
+}
+
+.menu-toggle,
+.nav-mobil {
+  display: none;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-ordinador {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.text-ordinador h1 {
+  color: white;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  text-transform: none !important;
+}
+
+/* =========================================
+   MOBILE 430px
+   ========================================= */
+
+@media (max-width: 430px) {
+  .text-ordinador h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* =========================================
+   FESTIVALET
+   ========================================= */
+.festivalet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.festivalet .images {
+  display: contents;
+}
+
+.festivalet .images img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 70px;
+}
+
+/* =========================================
+   FIRA
+   ========================================= */
+.fira {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.fira .images {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.fira-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.fira-track figure {
+  flex: 0 0 400px;
+}
+
+.fira-track figcaption {
+  text-align: center;
+  margin-top: 12px;
+  color: var(--taronja-viu);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.fira-track img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =========================================
+   ENTREVISTES
+   ========================================= */
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.card {
+  background-image: url('../entrevistes/grafica.svg');
+  background-size: cover;
+  padding: 30px;
+  border-radius: 20px;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--marro-fosc);
+  min-height: 100%;
+}
+
+.card sub {
+  text-align: left;
+}
+
+.main-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.card-mig .main-img {
+  margin-top: 60px;
+}
+
+.date {
+  color: var(--marro-fosc);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: -23px;
+  display: block;
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 120px;
+  margin-left: 300px;
+}
+
+.date {
+  margin-left: auto;
+}
+
+
+/* =========================================
+   SPONSORS
+   ========================================= */
+.sponsors {
+  border-top: 1px solid var(--taronja-viu);
+}
+
+.sponsors-wrapper {
+  overflow: hidden;
+}
+
+.logos {
+  display: flex;
+  gap: 56px;
+  width: max-content;
+}
+
+.logos img {
+  height: 40px;
+}
+
+@keyframes sponsors-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================
+   SPONSORS
+   ========================================= */
+
+.sponsors {
+  border-top: 1px solid var(--taronja-viu);
+}
+
+.sponsors-wrapper {
+  overflow: hidden;
+}
+
+.logos {
+  display: flex;
+  gap: 56px;
+  width: max-content;
+}
+
+.logos img {
+  height: 40px;
+}
+
+@keyframes sponsors-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================
+   NEWSLETTER
+   ========================================= */
+
+.newsletter {
+  display: flex;
+  gap: 40px;
+  border-top: 1px solid var(--taronja-viu);
+}
+
+.newsletter-left {
+  flex: 0 0 40%;
+}
+
+.newsletter-right {
+  flex: 1;
+  max-width: 500px;
+  margin-top: 70px;
+}
+
+.newsletter-right input {
+  width: 155%;
+  height: 50px;
+  border: 1px solid var(--marro-fosc);
+  border-radius: 8px;
+  padding: 0 15px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  background-color: var(--carn-clar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.footer-left img {
+  width: 200px;
+  height: auto;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  margin-left: 250px;
+}
+
+.footer-center p {
+  margin: 0;
+}
+
+.footer-center a {
+  color: var(--marro-fosc);
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  color: var(--taronja-viu);
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.contacte-link {
+  margin-right: -280px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* =========================================
+   VERSIÓ TAULETA
+   ========================================= */
+
+@media screen and (max-width: 1180px) {
+
+/* --- MARGE LATERAL GLOBAL --- */
+
+  header,
+  section,
+  footer,
+  .hero,
+  .history-section,
+  .festivalet,
+  .festivalet-entrada,
+  .festivalet-participants,
+  .fira,
+  .entrevistes,
+  .ubicacio-transport,
+  .festivalet-gastronomia,
+  .allotjaments-section,
+  .faqs-section,
+  .footer {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+  /* =========================================
+   ESPAI ENTRE SECCIONS
+   ========================================= */
+
+  .hero,
+  .festivalet,
+  .fira,
+  .history-section,
+  .festivalet-entrada,
+  .festivalet-participants,
+  .ubicacio-transport,
+  .festivalet-gastronomia,
+  .allotjaments-section,
+  .faqs-section,
+  header,
+  .footer {
+    margin-bottom: 50px !important;
+  }
+
+  /* MENYS ESPAI */
+  .entrevistes {
+    margin-bottom: 0 !important;
+  }
+
+  .sponsors {
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .entrevistes {
+    margin-bottom: 5px !important;
+  }
+  
+  .sponsors {
+    margin-top: 0 !important;
+    overflow: hidden;
+    border-top: 1px solid var(--taronja-viu);   
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+  
+  .entrevistes {
+    margin-bottom: 0 !important;
+  }
+  
+  /* --- HEADER TAULETA --- */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--carn-clar);
+    z-index: 2001;
+    box-sizing: border-box;
+  }
+
+  .logo img {
+    width: clamp(150px, 18vw, 190px);
+    max-width: 190px;
+    height: auto;
+  }
+
+  .nav-list {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(10px, 2vw, 22px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  .nav-list li a {
+    font-size: clamp(11px, 1.3vw, 13px);
+    text-decoration: none;
+    color: var(--marro-fosc);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .menu-toggle,
+  .nav-mobil {
+    display: none !important;
+  }
+  
+  /* --- Festivalet --- */
+  .festivalet {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: start;
+    position: relative;
+  }
+
+  .festivalet .text {
+    width: 100%;
+  }
+
+  .festivalet .images {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 38px;
+    scrollbar-width: none;
+  }
+
+  .festivalet .images::-webkit-scrollbar {
+    display: none;
+  }
+
+  .festivalet .images img {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 28px;
+    scroll-snap-align: center;
+  }
+
+  .festivalet::after {
+    content: "";
+    position: absolute;
+    bottom: 85px !important;
+    right: 22%;
+    width: 60px;
+    height: 12px;
+    background-image:
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+    background-position: 15px center, 35px center;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+  }
+  
+  .festivalet.imatge-dos-activa::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+  }
+
+  /* --- Fira --- */
+  
+  .fira {
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+    gap: clamp(20px, 4vw, 40px);
+  }
+
+  .fira .images {
+    margin-top: 70px;
+  }
+
+  .fira-track {
+    gap: clamp(14px, 2vw, 24px);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .fira-track img {
+    width: 100%;
+    height: clamp(270px, 38vw, 440px);
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  figcaption {
+    font-size: clamp(15px, 1.5vw, 18px);
+  }
+  
+  .timeline-grid {
+    padding-left: 0;
+    padding-right: 0;
+  } 
+  
+  .fira .text h2 {
+  max-width: 280px !important;
+  width: 280px !important;
+
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+  
+  /* --- Entrevistes --- */
+  .entrevistes {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .entrevistes h2 {
+    align-self: flex-start;
+  }
+
+  .cards-container {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    scrollbar-width: none;
+  }
+
+  .cards-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 10px);
+    width: auto;
+    padding: 24px;
+    scroll-snap-align: start;
+  }
+
+  .main-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  .card p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  
+  .cards-container {
+    margin-bottom: 10px;
+  }
+  
+  .cards-container {
+    width: 100%;
+  }
+
+  /* =========================================
+     NEWSLETTER
+     ========================================= */
+
+  .newsletter {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px !important;
+  }
+
+  .newsletter-left,
+  .newsletter-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-right {
+    margin-top: 0;
+  }
+
+  .newsletter-right input {
+    width: 100%;
+  }
+
+  /* --- Botons --- */
+  .btn-custom,
+  .wrapper-centrat {
+    width: 220px;
+    height: 65px;
+  }
+
+  .btn-custom:hover,
+  .wrapper-centrat:hover {
+    filter: brightness(1.1);
+  }
+
+  .info-icon:hover {
+    transform: scale(1.08);
+  }
+}
+
+/* =========================================
+   VERSIÓ MÒBIL — FINS A 430px
+   ========================================= */
+@media screen and (max-width: 430px) {
+
+  /* --- Generals --- */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+  }
+
+  header,
+  section,
+  .festivalet,
+  .fira,
+  .entrevistes,
+  .newsletter,
+  .entitat-section,
+  .collaboracions,
+  .history-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+  }
+
+  /* Mateix espai entre seccions */
+  section,
+  .festivalet,
+  .fira,
+  .entrevistes,
+  .newsletter,
+  .sponsors,
+  .entitat-section,
+  .collaboracions,
+  .history-section {
+    margin-bottom: 80px !important;
+  }
+  
+  .entrevistes,
+  .sponsors,
+  .festivalet,
+  .history-section {
+    padding-bottom: 10px !important;
+  }
+  
+  .entrevistes,
+  .sponsors {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  
+  h1 {
+    font-size: 48px;
+    line-height: 1.1 !important;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  sub {
+    display: block;
+    color: var(--teula);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  label {
+    display: block;
+    color: var(--teula);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* --- Header --- */
+  
+  header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100% !important;
+    padding: 0 20px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--carn-clar);
+    z-index: 2001;
+  }
+
+  .logo img {
+    width: 150px;
+    max-width: 150px;
+  }
+
+  .nav-list {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 2005;
+  }
+
+  .menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--marro-fosc);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-mobil {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: var(--carn-clar);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2000;
+  }
+
+  .nav-mobil.active {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 40px 0;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
+  .nav-list-mobil {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .nav-list-mobil li a,
+  .nav-list-mobil li a:visited,
+  .nav-list-mobil li a:link {
+    display: block;
+    text-decoration: none;
+    color: var(--marro-fosc) !important;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+  }
+
+  /* --- Festivalet --- */
+  
+  .festivalet h2,
+  .festivalet p,
+  .festivalet .btn-custom,
+  .festivalet .btn-info-text {
+    margin-bottom: 10px !important;
+    margin-top: 0 !important;
+  }
+
+  .festivalet .btn-info-text {
+    margin-top: -20px !important;
+  }
+
+  .festivalet .images,
+  .festivalet .js-festivalet-slider {
+    margin-top: -60px !important;
+  }
+  
+  .festivalet {
+    display: flex !important;
+    flex-direction: column !important;
+    padding-top: 5px !important;
+    margin-top: 0 !important;
+    position: relative;
+    gap: 20px !important;
+  }
+
+  .festivalet .text {
+    width: 100%;
+  }
+
+  .festivalet .images,
+  .festivalet .js-festivalet-slider {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 5px;
+    width: 100%;
+    margin-top: 0;
+    scrollbar-width: none;
+  }
+
+  .festivalet .images::-webkit-scrollbar,
+  .festivalet .js-festivalet-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .festivalet .images img,
+  .festivalet .js-festivalet-slider img {
+    flex: 0 0 100% !important;
+    scroll-snap-align: center;
+    height: 220px !important;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .festivalet::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 12px;
+    margin: 5px auto 0 auto;
+    background-image:
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+    background-position: 15px center, 35px center;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    transition: 0.3s;
+  }
+
+  .festivalet.imatge-dos-activa::after {
+    background-image:
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+  }
+
+  /* --- Fira --- */
+  .fira {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .fira .images {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+  }
+
+  .fira-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .fira-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .fira-track figure {
+    flex: 0 0 280px;
+  }
+
+  .fira-track img {
+    height: 240px;
+  }
+
+  figcaption {
+    font-size: 15px;
+  }
+
+  /* --- Entrevistes --- */
+  .entrevistes {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px !important;
+    gap: 0;
+  }
+
+  .entrevistes h2 {
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .entrevistes .cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .entrevistes .cards-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .entrevistes .card {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    padding: 20px;
+  }
+
+  .entrevistes .main-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  .carousel-dots {
+    display: block;
+    width: 80px;
+    height: 12px;
+    margin: 10px auto 5px auto;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-image:
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+    background-position: 10px center, 35px center, 60px center;
+  }
+
+  .entrevistes.punt-2 .carousel-dots {
+    background-image:
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+  }
+
+  .entrevistes.punt-3 .carousel-dots {
+    background-image:
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+  }
+
+    /* =========================================
+     SPONSORS
+     ========================================= */
+
+  .sponsors {
+    padding-top: 20px;
+    padding-bottom: 10px !important; 
+    margin-bottom: 20px !important; 
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .logos img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+  }
+
+    /* --- NEWSLETTER --- */
+  
+  .newsletter {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px;
+    padding-top: 50px;
+    padding-bottom: 0 !important; 
+    margin-bottom: 30px !important; 
+  }
+
+  .newsletter-left,
+  .newsletter-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .newsletter-right {
+    margin-top: 0;
+  }
+  
+  .newsletter-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newsletter-right input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--marro-fosc);
+  }
+  
+  .veure {
+    width: 100%;
+    min-width: unset;
+    text-align: center;
+  }
+  
+  .btn-custom {
+    width: 220px !important; 
+    margin-left: 0 !important; 
+    margin-right: auto !important; 
+  }
+  
+  /* --- Botons i +info --- */
+  .btn-custom,
+  .wrapper-centrat {
+    width: 220px !important;
+    height: 65px !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease,
+      filter 0.25s ease !important;
+  }
+
+.btn-custom {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+  .wrapper-centrat {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 !important;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  a:has(.info-icon) {
+    display: inline-block !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+  }
+
+  .info-icon {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease,
+      filter 0.25s ease !important;
+  }
+
+  /* --- EFECTE TOUCH REAL --- */
+  .btn-custom,
+  .wrapper-centrat {
+    filter: brightness(1.1);
+  }
+
+  .nav-list-mobil li a {
+    color: var(--blau-electric) !important;
+    transform: scale(1.05);
+  }
+
+  .info-icon:hover {
+  filter: brightness(1.3);
+  opacity: 0.75;
+  transform: scale(1.12);
+}
+  
+  /* --- Footer --- */
+  footer {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-left img {
+    margin: 0 auto;
+    width: 150px;
+  }
+
+  .footer-center,
+  .footer-right {
+    align-items: center;
+  }
+}
