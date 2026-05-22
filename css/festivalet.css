@@ -341,10 +341,10 @@ nav ul li a {
 }
 
 .js-festivalet-slider img {
-  width: 440px;
-  height: 270px;
+  width: 560px;
+  height: 340px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 14px;
   display: block;
   margin-top: 75px;
   flex-shrink: 0;

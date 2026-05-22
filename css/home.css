@@ -878,7 +878,7 @@ footer {
   }
 
   .fira .images {
-    margin-top: 100px;
+    margin-top: 110px;
   }
 
   .fira-track {
@@ -924,11 +924,11 @@ footer {
 .cards-container {
   display: flex !important;
   flex-direction: row;
-  gap: 20px;
+  gap: 14px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   width: 100%;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   scrollbar-width: none;
 }
 
@@ -937,9 +937,9 @@ footer {
 }
 
 .card {
-  flex: 0 0 calc(50% - 10px);
+  flex: 0 0 calc(50% - 7px);
   width: auto;
-  padding: 14px;
+  padding: 10px;
   scroll-snap-align: start;
 }
 
@@ -947,13 +947,13 @@ footer {
   width: 100%;
   height: 260px;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: 20px;
 }
 
 .card p {
   font-size: 15px;
-  line-height: 22px;
-  margin-bottom: 6px;
+  line-height: 20px;
+  margin-bottom: 2px;
 }
 
 /* --- Xarxes esquerra / data dreta --- */
@@ -961,18 +961,19 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2px;
-  gap: 4px;
+  margin-top: 0;
+  gap: 2px;
 }
 
 .card .data-xarxes p {
   margin: 0;
+  line-height: 16px;
 }
 
 /* icones socials */
 .card .xarxes {
   display: flex;
-  gap: 6px;
+  gap: 4px;
 }
 
   /* =========================================
