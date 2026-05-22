@@ -878,7 +878,7 @@ footer {
   }
 
   .fira .images {
-    margin-top: 90px;
+    margin-top: 80px;
   }
 
   .fira-track {
@@ -919,13 +919,13 @@ footer {
 
 .entrevistes h2 {
   align-self: flex-start;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 
 .cards-container {
   display: flex !important;
   flex-direction: row;
-  gap: 6px;
+  gap: 2px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   width: 100%;
@@ -938,23 +938,23 @@ footer {
 }
 
 .card {
-  flex: 0 0 calc(50% - 3px);
+  flex: 0 0 calc(50% - 1px);
   width: auto;
-  padding: 4px;
+  padding: 1px;
   scroll-snap-align: start;
 }
 
 .main-img {
   width: 100%;
-  height: 230px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 16px;
 }
 
 .card p {
-  font-size: 15px;
-  line-height: 17px;
-  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0;
 }
 
 /* --- Xarxes esquerra / data dreta --- */
@@ -962,19 +962,19 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -4px;
+  margin-top: -10px;
   gap: 0;
 }
 
 .card .data-xarxes p {
   margin: 0;
-  line-height: 16px;
+  line-height: 14px;
 }
 
 /* icones socials */
 .card .xarxes {
   display: flex;
-  gap: 2px;
+  gap: 1px;
 }
 
   /* =========================================
