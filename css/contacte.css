@@ -156,7 +156,7 @@ h2 {
   line-height: 1.2;
 }
 
-sub {
+h3 {
   color: var(--teula);
   font-size: 22px;
   font-weight: 600;
@@ -354,7 +354,7 @@ nav ul li a:hover {
   white-space: nowrap;
 }
 
-.info-section sub {
+.info-section h3 {
   display: block;
   color: var(--teula);
   margin-bottom: 24px;
@@ -755,7 +755,7 @@ footer {
     margin-bottom: 18px;
   }
 
-  .info-section sub {
+  .info-section h3 {
     text-align: left;
 
     font-size: 18px;
@@ -1014,7 +1014,7 @@ footer {
     font-size: 16px;
   }
 
-  sub {
+  h3 {
     display: block;
     color: var(--teula);
     font-size: 20px;
@@ -1340,7 +1340,7 @@ footer {
     margin-bottom: 20px;
   }
 
-  .info-section sub {
+  .info-section h3 {
     display: block;
     color: var(--teula);
     font-size: 20px;

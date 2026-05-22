@@ -149,7 +149,7 @@ h2 {
   line-height: 1.2;
 }
 
-sub {
+h3 {
   color: var(--teula);
   font-size: 22px;
   font-weight: 600;
@@ -446,7 +446,7 @@ nav ul li a,
   min-height: 100%;
 }
 
-.card sub {
+.card h3 {
   text-align: left;
 }
 
@@ -1038,7 +1038,7 @@ footer {
     font-family: 'Montserrat', sans-serif;
   }
 
-  sub {
+  h3 {
     display: block;
     color: var(--teula);
     font-size: 20px;

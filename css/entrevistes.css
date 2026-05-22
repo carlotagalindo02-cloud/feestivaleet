@@ -156,7 +156,7 @@ h2 {
   line-height: 1.2;
 }
 
-sub {
+h3 {
   color: var(--teula);
   font-size: 22px;
   font-weight: 600;
@@ -377,7 +377,7 @@ nav ul li a:hover {
   text-transform: none;
 }
 
-.entrevista-principal sub {
+.entrevista-principal h3 {
   color: var(--teula);
   font-size: 22px !important;
   font-weight: 600;
@@ -431,7 +431,7 @@ nav ul li a:hover {
   text-align: left;
 }
 
-.contingut sub {
+.contingut h3 {
   display: block;     
   text-align: left;
   width: 100%;
@@ -888,7 +888,7 @@ footer {
     line-height: 38px;
   }
 
-  .entrevista-principal sub {
+  .entrevista-principal h3 {
     font-size: 22px !important;
     line-height: 29px;
 
@@ -1120,7 +1120,7 @@ footer {
     font-size: 16px;
   }
 
-  sub {
+  h3 {
     display: block;
     color: var(--teula);
     font-size: 20px;
@@ -1335,7 +1335,7 @@ footer {
     margin-bottom: 20px;
   }
 
-  .entrevistes-actuals sub {
+  .entrevistes-actuals h3 {
     font-size: 18px;
     line-height: 1.25;
     text-align: left;

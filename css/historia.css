@@ -160,7 +160,7 @@ h2 {
   line-height: 1.2;
 }
 
-sub {
+h3 {
   color: var(--teula);
   font-size: 22px;
   font-weight: 600;
@@ -974,7 +974,7 @@ footer {
     font-size: 16px;
   }
 
-  sub {
+  h3 {
     display: block;
     color: var(--teula);
     font-size: 20px;
@@ -1376,7 +1376,7 @@ footer {
     text-align: center !important;
   }
 
-  .contingut-banner sub {
+  .contingut-banner h3 {
     font-size: 18px !important;
     line-height: 1.5 !important;
   }
