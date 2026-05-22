@@ -306,6 +306,7 @@ nav ul li a,
 /* =========================================
    HERO
    ========================================= */
+
 .hero {
   position: relative;
   width: 100%;
@@ -332,9 +333,11 @@ nav ul li a,
   inset: 0;
   z-index: 2;
   pointer-events: none;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
   padding: 0 20px;
 }
@@ -345,9 +348,24 @@ nav ul li a,
   font-weight: 800;
   line-height: 1.1;
   margin: 0;
+
   text-transform: none !important;
-  animation: fadeLoop 22s ease-in-out infinite;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  animation-name: fadeLoop !important;
+  animation-duration: 22s !important;
+  animation-timing-function: ease-in-out !important;
+  animation-iteration-count: infinite !important;
+  animation-fill-mode: forwards !important;
+
+  will-change: opacity, transform;
 }
+
+/* =========================================
+   ANIMACIÓ
+   ========================================= */
 
 @keyframes fadeLoop {
   0% {
@@ -372,7 +390,7 @@ nav ul li a,
 }
 
 /* =========================================
-   MOBILE 430px
+   MOBILE
    ========================================= */
 
 @media (max-width: 430px) {
