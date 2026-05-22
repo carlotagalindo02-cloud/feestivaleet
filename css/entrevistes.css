@@ -663,10 +663,10 @@ details p {
 /* =========================================
    NEWSLETTER
    ========================================= */
+
 .newsletter {
   display: flex;
   gap: 40px;
-
   border-top: 1px solid var(--taronja-viu);
 }
 
@@ -677,15 +677,14 @@ details p {
 .newsletter-right {
   flex: 1;
   max-width: 500px;
+  margin-top: 70px;
 }
 
 .newsletter-right input {
-  width: 174%;
-  height: 60px;
-
+  width: 155%;
+  height: 50px;
   border: 1px solid var(--marro-fosc);
   border-radius: 8px;
-
   padding: 0 15px;
 }
 
