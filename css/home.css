@@ -467,7 +467,7 @@ nav ul li a,
    ========================================= */
 
 .entrevistes {
-  padding: 100px 200px !important;
+  padding: 100px 400px !important;
 }
 
 .entrevistes h2 {
@@ -489,10 +489,8 @@ nav ul li a,
   border-radius: 16px;
   width: 32%;
   min-height: 475px;
-
   display: flex;
   flex-direction: column;
-
   text-decoration: none;
   color: var(--marro-fosc);
 }
