@@ -318,7 +318,7 @@ nav ul li a,
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 140px !important;
+  top: 140px !important;
   width: 95% !important;
   height: 1103px !important;
   object-fit: contain !important;
@@ -391,7 +391,7 @@ nav ul li a,
 .timeline-grid .milestone:nth-child(7),
 .timeline-grid .milestone:nth-child(8),
 .timeline-grid .milestone:nth-child(9) {
-  margin-top: -22px;
+  margin-top: -23px;
 }
 
 /* =========================================
