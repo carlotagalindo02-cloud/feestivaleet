@@ -450,7 +450,7 @@ nav ul li a,
 .fira .images {
   overflow: hidden;
   width: 100%;
-  margin: 40px 0 0 10px;
+  margin: 80px 0 0 -40px; /* més avall i més a l’esquerra */
   align-self: start;
 }
 
@@ -479,6 +479,7 @@ nav ul li a,
   font-size: 18px;
   font-weight: 400;
 }
+
 /* =========================================
    ENTREVISTES
    ========================================= */
