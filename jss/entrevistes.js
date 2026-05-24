@@ -169,51 +169,69 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// --- ENTREVISTES ACTUALS I ANTERIORS ---
-document.addEventListener('DOMContentLoaded', () => {
+/* =========================================
+   SLIDER ENTREVISTES ACTUALS
+   ========================================= */
 
-    // ENTREVISTES ACTUALS
-    const containerActuals = document.querySelector('.entrevistes-actuals .cards-container');
-    const seccioActuals = document.querySelector('.entrevistes-actuals');
+const sliderActuals = document.querySelector(
+  ".entrevistes-actuals .cards-container"
+);
 
-    if (containerActuals && seccioActuals) {
+const seccioActuals = document.querySelector(
+  ".entrevistes-actuals"
+);
 
-        seccioActuals.classList.add('punts-1');
+if (sliderActuals && seccioActuals) {
 
-        containerActuals.addEventListener('scroll', () => {
+  sliderActuals.addEventListener("scroll", () => {
 
-            const scrollLeft = containerActuals.scrollLeft;
-            const width = containerActuals.offsetWidth;
+    const scrollX = sliderActuals.scrollLeft;
+    const ample = sliderActuals.offsetWidth;
 
-            const index = Math.round(scrollLeft / width) + 1;
+    const index = Math.round(scrollX / ample);
 
-            seccioActuals.classList.remove('punts-1', 'punts-2', 'punts-3');
-            seccioActuals.classList.add(`punts-${index}`);
+    seccioActuals.classList.remove(
+      "actiu-1",
+      "actiu-2",
+      "actiu-3"
+    );
 
-        });
+    seccioActuals.classList.add(`actiu-${index + 1}`);
+  });
 
-    }
+}
 
-    // ENTREVISTES ANTERIORS
-    const containerAnteriors = document.querySelector('.entrevistes .cards-container');
-    const seccioAnteriors = document.querySelector('.entrevistes');
 
-    if (containerAnteriors && seccioAnteriors) {
+/* =========================================
+   PUNTS SLIDER ENTREVISTES ANTERIORS
+   ========================================= */
 
-        seccioAnteriors.classList.add('punts-1');
+const sliderEntrevistes = document.querySelector(
+  ".entrevistes .cards-container"
+);
 
-        containerAnteriors.addEventListener('scroll', () => {
+const seccioEntrevistes = document.querySelector(
+  ".entrevistes"
+);
 
-            const scrollLeft = containerAnteriors.scrollLeft;
-            const width = containerAnteriors.offsetWidth;
+if (sliderEntrevistes && seccioEntrevistes) {
 
-            const index = Math.round(scrollLeft / width) + 1;
+  sliderEntrevistes.addEventListener("scroll", () => {
 
-            seccioAnteriors.classList.remove('punts-1', 'punts-2', 'punts-3');
-            seccioAnteriors.classList.add(`punts-${index}`);
+    const scrollX = sliderEntrevistes.scrollLeft;
 
-        });
+    const ampleCard =
+      sliderEntrevistes.querySelector(".card").offsetWidth + 20;
 
-    }
+    const index = Math.round(scrollX / ampleCard);
 
-});
+    seccioEntrevistes.classList.remove(
+      "actiu-1",
+      "actiu-2",
+      "actiu-3"
+    );
+
+    seccioEntrevistes.classList.add(`actiu-${index + 1}`);
+  });
+
+}
