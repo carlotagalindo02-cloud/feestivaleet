@@ -1509,8 +1509,8 @@ header {
   display: flex;
   flex-direction: column;
 
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: -20px;
+  padding-right: -20px;
 }
 
 .entrevista-principal .contingut {
@@ -1763,25 +1763,34 @@ header {
   /* =========================================
    SPONSORS
    ========================================= */
-  .sponsors {
-    padding-top: 20px;
-    padding-bottom: 20px !important;
-    margin-bottom: 20px !important;
-    margin-top: -10px !important;
-  }
 
-  .logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
+.sponsors {
+  padding-top: 20px;
 
-  .logos img {
-    height: 28px;
-    width: auto;
-    object-fit: contain;
-  }
+  padding-bottom: 20px !important;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin-bottom: 20px !important;
+  margin-top: -10px !important;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.logos img {
+  height: 28px;
+  width: auto;
+
+  object-fit: contain;
+}
   
   
 /* =========================================
