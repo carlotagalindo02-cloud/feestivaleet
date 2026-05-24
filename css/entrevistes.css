@@ -1535,7 +1535,7 @@ body {
 
   overflow: hidden;
 
-  margin-top: 120px;
+  margin-top: 80px;
 
   position: relative;
 }
@@ -1634,7 +1634,7 @@ body {
   position: absolute;
 
   left: 50%;
-  bottom: 40px !important;
+  bottom: 25px !important;
 
   transform: translateX(-50%);
 
@@ -1826,8 +1826,8 @@ body {
   padding-top: 20px;
   padding-bottom: 10px !important;
 
-  padding-left: 6px !important;
-  padding-right: 6px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 
   margin-top: -10px !important;
   margin-bottom: 20px !important;
