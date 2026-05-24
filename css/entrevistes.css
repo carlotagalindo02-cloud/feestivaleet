@@ -1521,7 +1521,7 @@ header {
 .entrevista-principal .contingut h3 {
   color: var(--taronja-viu);
 
-  font-size: 20px;
+  font-size: 20px !important;
   line-height: 1.15;
   font-weight: 600;
 
@@ -1530,10 +1530,8 @@ header {
 
 .entrevista-principal .contingut p {
   color: var(--marro-fosc);
-
-  font-size: 18px;
+  font-size: 18px !important;
   line-height: 1.16;
-
   margin: 0 0 28px;
 }
 
@@ -1732,25 +1730,21 @@ header {
 .participa {
   display: flex !important;
   flex-direction: column !important;
+
   gap: 15px;
 
   margin-bottom: 10px !important;
 
-  padding-left: 0 !important;
-  margin-left: 0 !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 .participa > * {
   width: 100%;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
 }
 
 .formulari {
   margin-top: -15px;
-
-  padding-left: 0 !important;
-  margin-left: 0 !important;
 }
 
 .formulari form {
