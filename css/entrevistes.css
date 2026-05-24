@@ -344,8 +344,8 @@ nav ul li a:hover {
 
 .entrevista-principal {
   display: flex;
-  align-items: flex-start; 
-  gap: 50px;
+  align-items: flex-start;
+  gap: 30px; /* menys espai entre imatge i text */
 }
 
 .entrevista-principal.reverse {
@@ -353,19 +353,19 @@ nav ul li a:hover {
 }
 
 .entrevista-principal .contenidor-foto {
-  flex: 1;
+  flex: 1.4; /* imatge més ampla */
 }
 
 .entrevista-principal .foto-entrevista {
   width: 100%;
-  height: auto;
+  height: 420px; /* més gran */
   border-radius: 20px;
   display: block;
   object-fit: cover;
 }
 
 .entrevista-principal .contingut {
-  flex: 1;
+  flex: 0.8; /* text una mica més estret */
   margin-top: -5px;
 }
 

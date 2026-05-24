@@ -341,7 +341,7 @@ nav ul li a {
 }
 
 .js-festivalet-slider img {
-  width: 560px;
+  width: 420px; /* abans 560px */
   height: 340px;
   object-fit: cover;
   border-radius: 14px;
@@ -349,7 +349,6 @@ nav ul li a {
   margin-top: 75px;
   flex-shrink: 0;
 }
-
 /* =========================================
    SECCIÓ ENTRADA
    ========================================= */
