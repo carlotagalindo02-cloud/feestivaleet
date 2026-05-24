@@ -780,11 +780,14 @@ footer {
   flex-direction: column;
   gap: clamp(80px, 12vw, 180px);
   margin-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  margin-bottom: 50px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+
   overflow: hidden;
   box-sizing: border-box;
+
   background-image: url('../contacte/fons.svg');
   background-size: cover;
   background-position: center;
@@ -795,8 +798,6 @@ footer {
 
 .columna-arribar {
   margin-top: clamp(60px, 10vw, 160px);
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 /* TRANSPORTS */
@@ -807,8 +808,6 @@ footer {
   align-items: flex-end;
   flex-wrap: nowrap;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
   margin-top: 60px;
 }
 

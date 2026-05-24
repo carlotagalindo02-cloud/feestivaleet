@@ -857,61 +857,65 @@ footer {
   }
   
   /* --- Festivalet --- */
-  .festivalet {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    align-items: start;
-    position: relative;
-  }
+.festivalet {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: start;
+  position: relative;
+}
 
-  .festivalet .text {
-    width: 100%;
-  }
+.festivalet .text {
+  width: 100%;
+}
 
-  .festivalet .images {
-    display: flex !important;
-    overflow-x: auto;
-    gap: 12px;
-    padding-bottom: 38px;
-    scrollbar-width: none;
-  }
+.festivalet .images {
+  display: flex !important;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 38px;
+  scrollbar-width: none;
 
-  .festivalet .images::-webkit-scrollbar {
-    display: none;
-  }
+  /* puja les imatges */
+  position: relative;
+  top: -20px;
+}
 
-  .festivalet .images img {
-    flex: 0 0 100%;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 28px;
-    scroll-snap-align: center;
-  }
+.festivalet .images::-webkit-scrollbar {
+  display: none;
+}
 
-  .festivalet::after {
-    content: "";
-    position: absolute;
-    bottom: 85px !important;
-    right: 22%;
-    width: 60px;
-    height: 12px;
-    background-image:
-      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-    background-position: 15px center, 35px center;
-    background-repeat: no-repeat;
-    background-size: 12px 12px;
-  }
-  
-  .festivalet.imatge-dos-activa::after {
+.festivalet .images img {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 28px;
+  scroll-snap-align: center;
+}
+
+.festivalet::after {
+  content: "";
+  position: absolute;
+  bottom: 85px !important;
+  right: 22%;
+  width: 60px;
+  height: 12px;
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+  background-position: 15px center, 35px center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+}
+
+.festivalet.imatge-dos-activa::after {
   background-image:
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
     radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
-  }
+}
   
   /* =========================================
    FIRA
