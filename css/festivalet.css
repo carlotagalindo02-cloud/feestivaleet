@@ -1551,7 +1551,7 @@ footer {
 .festivalet::after {
   content: "";
   position: absolute;
-  bottom: -80px !important;
+  bottom: 15px !important;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
@@ -1884,8 +1884,13 @@ footer {
   display: flex !important;
   flex-direction: column !important;
   gap: 40px;
-  padding-left: -40px !important;
-  padding-right: -40px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden;
+}
+
+.categoria {
+  overflow: hidden;
 }
 
 .categoria h2 {
@@ -1903,8 +1908,9 @@ footer {
   display: flex !important;
   flex-direction: row !important;
   overflow-x: auto !important;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  gap: 10px;
+  gap: 0 !important;
   width: 100%;
   scrollbar-width: none;
 }
@@ -1914,8 +1920,11 @@ footer {
 }
 
 .card {
-  flex: 0 0 96% !important;
-  scroll-snap-align: start;
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  scroll-snap-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1927,6 +1936,7 @@ footer {
   width: 100% !important;
   object-fit: cover;
   border-radius: 15px;
+  display: block;
 }
 
 .categoria::after {
@@ -1951,49 +1961,6 @@ footer {
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
     radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
 }
-
-  /* --- GASTRONOMIA --- */
-
-  .festivalet-gastronomia {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 30px !important;
-  }
-
-  .images-gastronomia {
-    display: flex;
-    margin-top: 15px !important;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    padding-bottom: 20px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .images-gastronomia::-webkit-scrollbar {
-    display: none;
-  }
-
-  .img-curvada {
-    flex: 0 0 100% !important;
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    height: 280px !important;
-    object-fit: cover;
-    border-radius: 24px;
-    margin-top: 0 !important;
-    scroll-snap-align: center;
-  }
-
-  .festivalet-gastronomia::after {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    bottom: 50px;
-  }
 
   /* =========================================
      SPONSORS
