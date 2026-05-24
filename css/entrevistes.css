@@ -1634,7 +1634,7 @@ body {
   position: absolute;
 
   left: 50%;
-  bottom: 55px !important;
+  bottom: 40px !important;
 
   transform: translateX(-50%);
 
@@ -1833,22 +1833,38 @@ body {
   margin-bottom: 20px !important;
 
   box-sizing: border-box;
+
+  overflow: hidden;
 }
 
 .logos {
   display: flex;
-  flex-wrap: wrap;
 
+  flex-wrap: nowrap; /* UNA SOLA FILA */
+
+  align-items: center;
   justify-content: flex-start;
 
   gap: 30px;
 
-  width: calc(100% - 12px);
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  width: 100%;
 
   margin: 0 auto;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.logos::-webkit-scrollbar {
+  display: none;
 }
 
 .logos img {
+  flex-shrink: 0;
+
   height: 28px;
   width: auto;
 

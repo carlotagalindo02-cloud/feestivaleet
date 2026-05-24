@@ -1143,75 +1143,103 @@ header {
 .ubicacio-transport {
   display: flex;
   flex-direction: column;
+
   align-items: center;
+
   text-align: center;
+
   width: 100%;
+
   overflow-x: hidden;
   overflow-y: visible;
+
   background-image: url('../contacte/fons.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   padding-left: 20px !important;
   padding-right: 20px !important;
 }
 
 .header-on {
   display: flex;
+
   justify-content: space-between;
   align-items: flex-start;
+
   width: 100%;
+
   margin-bottom: 30px;
+
   gap: 20px;
 }
 
 .header-on h2 {
   text-align: left;
+
   margin: 0 !important;
 }
 
 .header-on address {
   text-align: right;
+
   margin: 0 !important;
+
   max-width: 160px;
 }
 
 .mapa-isometric {
   width: 100%;
+
   display: flex;
+
   justify-content: center;
+
   margin: 40px auto;
 }
 
 .mapa-isometric img {
   width: 100%;
   max-width: 380px;
+
   height: auto;
+
   object-fit: contain;
 }
 
 .bloc-dreta {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  align-items: flex-start;
+
   width: 100%;
+
   overflow: hidden;
 }
 
 .transports-flex {
   display: flex;
   flex-direction: row;
+
   overflow-x: auto;
   overflow-y: hidden;
+
   scroll-snap-type: x mandatory;
+
   width: 100%;
+
   gap: 0 !important;
 
   padding-bottom: 0 !important;
+
   margin-top: -10px !important;
 
   scrollbar-width: none;
+
   -webkit-overflow-scrolling: touch;
+
   touch-action: pan-x;
 }
 
@@ -1221,19 +1249,23 @@ header {
 
 .transport-item {
   flex: 0 0 100% !important;
+
   width: 100% !important;
   min-width: 100% !important;
   max-width: 100% !important;
 
   box-sizing: border-box;
+
   scroll-snap-align: center;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  text-align: left;
+
   gap: 15px;
 
   padding-left: 20px;
@@ -1242,36 +1274,48 @@ header {
 
 .icona-transport {
   width: 90px;
+
   height: auto;
+
   margin-bottom: 5px;
 }
 
 .transport-text {
-  text-align: center;
+  text-align: left;
+
   max-width: 240px;
 }
 
 .transport-text strong {
   display: block;
+
   font-size: 1.3rem;
+
   margin-bottom: 5px;
+
   color: var(--teula);
 }
 
 .transport-text span {
   font-size: 0.95rem;
+
   color: var(--marro-fosc);
+
   line-height: 1.4;
 }
 
 .bloc-dreta::after {
   content: "";
+
   display: block;
+
   width: 90px;
   height: 15px;
+
   margin: 15px auto 0 auto;
 
   background-repeat: no-repeat;
+
   background-size: 15px 15px;
 
   background-image:
@@ -1308,8 +1352,9 @@ header {
   .contact-container {
   display: flex;
   flex-direction: column;
-  padding: 80px;
+
   gap: 10px;
+
   margin-top: 40px;
   margin-bottom: 40px !important;
 }
