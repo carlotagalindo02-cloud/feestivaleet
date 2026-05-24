@@ -1144,9 +1144,9 @@ header {
   display: flex;
   flex-direction: column;
 
-  align-items: center;
+  align-items: flex-start;
 
-  text-align: center;
+  text-align: left;
 
   width: 100%;
 
@@ -1312,7 +1312,7 @@ header {
   width: 90px;
   height: 15px;
 
-  margin: 15px auto 0 auto;
+  margin: 15px 0 0 0;
 
   background-repeat: no-repeat;
 
@@ -1346,125 +1346,173 @@ header {
 }
 
   /* =========================================
-     SECCIÓ CONTACTE
-     ========================================= */
+   SECCIÓ CONTACTE
+   ========================================= */
 
-  .contact-container {
+.contact-container {
   display: flex;
   flex-direction: column;
 
   gap: 10px;
 
+  padding-left: 10px;
+  padding-right: 10px;
+
   margin-top: 40px;
   margin-bottom: 40px !important;
 }
 
-  .info-section h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
+.info-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-  .info-section h3 {
-    display: block;
-    color: var(--teula);
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.3;
-    text-align: left;
-    margin-bottom: 20px;
-    padding: 0;
-  }
+.info-section h3 {
+  display: block;
 
-  .info-section p {
-    text-align: left;
-    margin-bottom: 10px;
-    color: var(--marro-fosc);
-    line-height: 1.5;
-  }
+  color: var(--teula);
 
-  .form-section {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    margin-top: 0;
-  }
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
 
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+  text-align: left;
 
-  .form-group label {
-    margin-bottom: 2px;
-    color: var(--teula);
-    font-weight: 600;
-    font-size: 14px;
-  }
+  margin-bottom: 20px;
 
-  .form-group input,
-  .form-group textarea {
-    background-color: var(--blanc);
-    border: 1px solid var(--marro-fosc);
-    color: var(--marro-fosc);
-    width: 100%;
-    padding: 14px;
-    border-radius: 12px;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
+  padding: 0;
+}
 
-  .form-group textarea {
-    height: 100px;
-    resize: none;
-  }
+.info-section p {
+  text-align: left;
 
-  .button-container {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 5px;
-  }
+  margin-bottom: 10px;
 
-  .submit-btn {
-    width: 100%;
-    max-width: 280px;
-    padding: 15px 40px;
-    font-size: 16px;
-    color: var(--blanc);
-    background-color: var(--teula);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-  }
+  color: var(--marro-fosc);
 
-  .hidden-message,
-  #thanksforjoining {
-    display: none;
-    padding: 30px;
-    border-radius: 20px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    margin-top: 20px;
-    background-color: var(--carn-clar);
-    width: 100%;
-    box-sizing: border-box;
-  }
+  line-height: 1.5;
+}
 
-  #thanksforjoining h3 {
-    color: var(--teula);
-    font-size: 22px;
-    margin: 0;
-  }
+.form-section {
+  display: flex;
+  flex-direction: column;
 
-  #thanksforjoining p {
-    color: var(--marro-fosc);
-    margin: 0;
-  }
+  gap: 15px;
+
+  width: 100%;
+
+  margin-top: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.form-group label {
+  margin-bottom: 2px;
+
+  color: var(--teula);
+
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--blanc);
+
+  border: 1px solid var(--marro-fosc);
+
+  color: var(--marro-fosc);
+
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  height: 100px;
+
+  resize: none;
+}
+
+.button-container {
+  display: flex;
+
+  justify-content: flex-start;
+
+  margin-top: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  max-width: 280px;
+
+  padding: 15px 40px;
+
+  font-size: 16px;
+
+  color: var(--blanc);
+
+  background-color: var(--teula);
+
+  border: none;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+.hidden-message,
+#thanksforjoining {
+  display: none;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+  background-color: var(--carn-clar);
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+#thanksforjoining h3 {
+  color: var(--teula);
+
+  font-size: 22px;
+
+  margin: 0;
+}
+
+#thanksforjoining p {
+  color: var(--marro-fosc);
+
+  margin: 0;
+}
 
   /* =========================================
      SPONSORS

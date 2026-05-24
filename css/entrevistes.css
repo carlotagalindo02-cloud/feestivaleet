@@ -1824,7 +1824,7 @@ body {
 
 .sponsors {
   padding-top: 20px;
-  padding-bottom: 20px !important;
+  padding-bottom: 10px !important;
 
   padding-left: 6px !important;
   padding-right: 6px !important;
@@ -1840,7 +1840,7 @@ body {
 .logos {
   display: flex;
 
-  flex-wrap: nowrap; /* UNA SOLA FILA */
+  flex-wrap: nowrap;
 
   align-items: center;
   justify-content: flex-start;
