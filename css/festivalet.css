@@ -1545,12 +1545,13 @@ footer {
   scroll-snap-align: center;
   transform: translateY(0);
   flex-shrink: 0;
+  margin-top: -20px;
 }
 
 .festivalet::after {
   content: "";
   position: absolute;
-  bottom: 0px !important;
+  bottom: -20px !important;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
@@ -1883,8 +1884,8 @@ footer {
   display: flex !important;
   flex-direction: column !important;
   gap: 40px;
-  padding-left: -20px;
-  padding-right: -20px;
+  padding-left: -40px;
+  padding-right: -40px;
 }
 
 .categoria h2 {
