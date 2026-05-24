@@ -795,144 +795,144 @@ footer {
   }
 
   /* =========================================
-     UBICACIÓ I TRANSPORT
-     ========================================= */
+   UBICACIÓ I TRANSPORT
+   ========================================= */
 
-  .ubicacio-transport {
-    display: flex;
-    flex-direction: column;
+.ubicacio-transport {
+  display: flex;
+  flex-direction: column;
 
-    gap: clamp(80px, 12vw, 180px);
+  gap: clamp(80px, 12vw, 180px);
 
-    margin-top: 40px;
+  margin-top: 40px;
 
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 
-    padding-left: clamp(8px, 2vw, 20px);
-    padding-right: clamp(8px, 2vw, 20px);
+  padding-left: clamp(8px, 2vw, 20px);
+  padding-right: 8px; /* menys marge dret */
 
-    overflow: hidden;
+  overflow: hidden;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    background-image: url('../contacte/fons.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+  background-image: url('../contacte/fons.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  /* ON */
+/* ON */
 
-  .header-inline {
-    display: grid;
+.header-inline {
+  display: grid;
 
-    grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr;
 
-    align-items: start;
+  align-items: start;
 
-    width: 100%;
-    max-width: 900px;
+  width: 100%;
+  max-width: 900px;
 
-    margin-bottom: clamp(40px, 8vw, 120px);
-  }
+  margin-bottom: clamp(40px, 8vw, 120px);
+}
 
-  /* TÍTOL */
+/* TÍTOL */
 
-  .header-inline h2 {
-    justify-self: start;
+.header-inline h2 {
+  justify-self: start;
 
-    margin: 0;
-    margin-left: 40px;
-  }
+  margin: 0;
+  margin-left: 40px;
+}
 
-  /* ADREÇA */
+/* ADREÇA */
 
-  address {
-    justify-self: end;
+address {
+  justify-self: end;
 
-    margin-left: auto;
-    margin-right: -250px;
+  margin-left: auto;
+  margin-right: -180px; /* menys separat de la dreta */
 
-    max-width: 220px;
+  max-width: 220px;
 
-    text-align: right;
-    line-height: 1.3;
+  text-align: right;
+  line-height: 1.3;
 
-    font-style: normal;
+  font-style: normal;
 
-    margin-top: -60px;
-  }
+  margin-top: -60px;
+}
 
-  /* MAPA */
+/* MAPA */
 
-  .mapa-isometric {
-    display: flex;
-    justify-content: center;
+.mapa-isometric {
+  display: flex;
+  justify-content: center;
 
-    width: 100%;
+  width: 100%;
 
-    margin-left: 130px;
-  }
+  margin-left: 130px;
+}
 
-  .mapa-isometric img {
-    width: min(420px, 95%);
-    height: auto;
+.mapa-isometric img {
+  width: min(420px, 95%);
+  height: auto;
 
-    display: block;
-  }
+  display: block;
+}
 
-  /* COM ARRIBAR */
+/* COM ARRIBAR */
 
-  .columna-arribar {
-    margin-top: clamp(60px, 10vw, 160px);
-  }
+.columna-arribar {
+  margin-top: clamp(60px, 10vw, 160px);
+}
 
-  /* TRANSPORTS */
+/* TRANSPORTS */
 
-  .transports-flex {
-    display: flex;
+.transports-flex {
+  display: flex;
 
-    justify-content: space-between;
-    align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
 
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 
-    width: 100%;
+  width: 100%;
 
-    padding-left: clamp(30px, 6vw, 140px);
-    padding-right: clamp(30px, 6vw, 140px);
+  padding-left: clamp(30px, 6vw, 140px);
+  padding-right: clamp(10px, 3vw, 60px); /* menys marge dret */
 
-    margin-top: 60px;
-  }
+  margin-top: 60px;
+}
 
-  /* COLOR TREN METRO BUS */
+/* COLOR TREN METRO BUS */
 
-  .transport-text strong {
-    color: var(--teula);
-  }
+.transport-text strong {
+  color: var(--teula);
+}
 
-  /* ITEMS */
+/* ITEMS */
 
-  .transport-item {
-    flex: 0 1 auto;
+.transport-item {
+  flex: 0 1 auto;
 
-    min-width: 90px;
-    max-width: 180px;
+  min-width: 90px;
+  max-width: 180px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  /* ICONES FIXES */
+/* ICONES FIXES */
 
-  .icona-transport {
-    width: clamp(60px, 8vw, 90px);
+.icona-transport {
+  width: clamp(60px, 8vw, 90px);
 
-    height: auto;
-  }
+  height: auto;
+}
 
   /* =========================================
      NEWSLETTER
@@ -1169,160 +1169,156 @@ footer {
   }
 
   /* =========================================
-     UBICACIÓ I TRANSPORT
-     ========================================= */
+   UBICACIÓ I TRANSPORT
+   ========================================= */
 
-  .ubicacio-transport {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 80px 40px;
-    overflow: hidden;
+.ubicacio-transport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 80px 20px; 
+  overflow: hidden;
+  background-image: url('../contacte/fons.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    background-image: url('../contacte/fons.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.header-on {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0 5px; 
+}
 
-  .header-on {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 0 10px;
-  }
+.header-on h2,
+.bloc-dreta h2 {
+  color: var(--taronja-viu);
+  font-size: 2.2rem !important;
+  line-height: 1.1;
+  margin: 0 0 10px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  margin-left: 60px;
+}
 
-  .header-on h2,
-  .bloc-dreta h2 {
-    color: var(--taronja-viu);
-    font-size: 2.2rem !important;
-    line-height: 1.1;
-    margin: 0 0 10px 0;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    width: 100%;
-    margin-left: 120px;
-  }
+.header-on address {
+  text-align: right;
+  align-self: flex-end;
+  font-style: normal;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--marro-fosc);
+  width: 100%;
+  max-width: 250px;
+  margin-right: 20px; 
+}
 
-  .header-on address {
-    text-align: right;
-    align-self: flex-end;
-    font-style: normal;
-    text-decoration: underline;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    color: var(--marro-fosc);
-    width: 100%;
-    max-width: 250px;
-    margin-right: 60px;
-  }
+.mapa-isometric {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+}
 
-  .mapa-isometric {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    margin: 40px auto;
-  }
+.mapa-isometric img {
+  width: 90%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
 
-  .mapa-isometric img {
-    width: 90%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-  }
+.bloc-dreta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-  .bloc-dreta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+.transports-flex {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+}
 
-  .transports-flex {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    width: 100%;
-    margin: 0;
-    padding-bottom: 20px;
-  }
+.transports-flex::-webkit-scrollbar {
+  display: none;
+}
 
-  .transports-flex::-webkit-scrollbar {
-    display: none;
-  }
+.transport-item {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
 
-  .transport-item {
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
+.icona-transport {
+  width: 70px;
+  height: auto;
+  margin-bottom: 15px;
+}
 
-  .icona-transport {
-    width: 70px;
-    height: auto;
-    margin-bottom: 15px;
-  }
+.transport-text strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--teula);
+}
 
-  .transport-text strong {
-    display: block;
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    color: var(--teula);
-  }
+.transport-text span {
+  font-size: 0.95rem;
+  color: var(--marro-fosc);
+}
 
-  .transport-text span {
-    font-size: 0.95rem;
-    color: var(--marro-fosc);
-  }
+.bloc-dreta::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 15px;
+  margin: 15px auto 0 auto;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+  background-position:
+    15px center,
+    45px center,
+    75px center;
+  transition: none !important;
+}
 
-  .bloc-dreta::after {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 15px;
-    margin: 15px auto 0 auto;
-    background-repeat: no-repeat;
-    background-size: 15px 15px;
+.bloc-dreta.actiu-2::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+}
 
-    background-image:
-      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-
-    background-position:
-      15px center,
-      45px center,
-      75px center;
-
-    transition: none !important;
-  }
-
-  .bloc-dreta.actiu-2::after {
-    background-image:
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-  }
-
-  .bloc-dreta.actiu-3::after {
-    background-image:
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
-  }
+.bloc-dreta.actiu-3::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+}
 
   /* =========================================
      SECCIÓ CONTACTE

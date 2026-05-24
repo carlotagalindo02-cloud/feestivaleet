@@ -314,6 +314,10 @@ nav ul li a,
   width: max-content;
 }
 
+.mobile-break br {
+  display: none;
+}
+
 .background-line {
   position: absolute;
   left: 50%;
@@ -717,7 +721,7 @@ footer {
   .history-section::before {
     content: "";
     position: absolute;
-    top: 260px !important;
+    top: 220px !important;
     left: 0;
     width: 100%;
     height: 2px;
@@ -1277,6 +1281,10 @@ footer {
     margin-top: 80px !important;
     overflow: visible !important;
   }
+  
+  .mobile-break br {
+    display: block;
+  }
 
   /* =========================================
      LÍNIA
@@ -1289,7 +1297,7 @@ footer {
   .history-section::before {
     content: "";
     position: absolute;
-    top: 230px !important;
+    top: 190px !important;
     left: 0;
     width: 100%;
     height: 2px;
