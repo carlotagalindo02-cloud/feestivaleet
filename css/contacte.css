@@ -1146,7 +1146,8 @@ header {
   align-items: center;
   text-align: center;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   background-image: url('../contacte/fons.svg');
   background-size: cover;
   background-position: center;
@@ -1200,7 +1201,7 @@ header {
 .transports-flex {
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   gap: 0 !important;
@@ -1209,6 +1210,11 @@ header {
   margin-top: -10px !important;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+}
+
+.transports-flex::-webkit-scrollbar {
+  display: none;
 }
 
 .transport-item {

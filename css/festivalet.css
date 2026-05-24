@@ -1550,7 +1550,7 @@ footer {
 .festivalet::after {
   content: "";
   position: absolute;
-  bottom: 20px !important;
+  bottom: 5px !important; /* menys espai */
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
@@ -1570,7 +1570,7 @@ footer {
   align-items: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  margin-top: 20px !important;
+  margin-top: 10px !important; 
   text-align: center;
 }
 
@@ -1630,7 +1630,8 @@ footer {
   align-items: center;
   text-align: center;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   background-image: url('../contacte/fons.svg');
   background-size: cover;
   background-position: center;
@@ -1684,7 +1685,7 @@ footer {
 .transports-flex {
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   gap: 0 !important;
@@ -1693,6 +1694,11 @@ footer {
   margin-top: -10px !important;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+}
+
+.transports-flex::-webkit-scrollbar {
+  display: none;
 }
 
 .transport-item {

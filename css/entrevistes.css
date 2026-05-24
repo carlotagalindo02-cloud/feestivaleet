@@ -829,7 +829,7 @@ footer {
     display: none !important;
   }
 
-  /* =========================================
+/* =========================================
    ENTREVISTES ACTUALS
    ========================================= */
 
@@ -840,31 +840,53 @@ footer {
   margin-bottom: 40px;
 }
 
+/* SCROLL HORITZONTAL */
+
 .entrevistes-actuals .cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
+  display: flex !important;
+  flex-direction: row;
+  gap: 20px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  padding-bottom: 30px;
 }
 
+.entrevistes-actuals .cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+
 .entrevista-principal {
+  flex: 0 0 100%;
+  min-width: 100%;
+
   display: flex !important;
-  flex-direction: column; /* text a dalt, imatge a sota */
+  flex-direction: column-reverse !important;
   gap: 30px;
+
+  scroll-snap-align: center;
 }
 
 .entrevista-principal.reverse {
   direction: ltr;
 }
 
-.entrevista-principal .contenidor-foto,
 .entrevista-principal .contingut {
   width: 100%;
+  margin-top: 0;
+  order: 1;
 }
 
-/* CONTINGUT */
-
-.entrevista-principal .contingut {
-  margin-top: 0;
+.entrevista-principal .contenidor-foto {
+  width: 100%;
+  order: 2;
 }
 
 /* IMATGE */
@@ -900,7 +922,34 @@ footer {
   width: 80px !important;
   max-width: 80px;
   height: auto;
-  margin-bottom: 25px; /* espai abans de la imatge */
+  display: block;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   PUNTS / DOTS
+   ========================================= */
+
+.entrevistes-actuals .swiper-pagination,
+.entrevistes .swiper-pagination {
+  position: relative;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.entrevistes-actuals .swiper-pagination-bullet,
+.entrevistes .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  margin: 0 6px !important;
+  border-radius: 50%;
+}
+
+.entrevistes-actuals .swiper-pagination-bullet-active,
+.entrevistes .swiper-pagination-bullet-active {
+  transform: scale(1.2);
 }
 
   /* =========================================
@@ -909,8 +958,9 @@ footer {
 
 .entrevistes {
   padding-top: 50px;
-  padding-bottom: 40px;
-  overflow: hidden; 
+  padding-bottom: 60px; 
+  overflow: hidden;
+  position: relative;
 }
 
 .entrevistes h2 {
@@ -923,11 +973,14 @@ footer {
   display: flex !important;
   flex-direction: row;
   gap: 20px;
+
   overflow-x: auto;
   overflow-y: hidden;
+
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+
   padding-bottom: 25px;
 }
 
@@ -936,9 +989,11 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 100%; 
+  flex: 0 0 100%;
   min-width: 100%;
+
   scroll-snap-align: center;
+
   padding: 24px;
   border-radius: 24px;
   box-sizing: border-box;
@@ -954,6 +1009,29 @@ footer {
 .entrevistes .card p {
   font-size: 14px;
   line-height: 22px;
+}
+
+/* =========================================
+   PUNTS A SOTA
+   ========================================= */
+
+.entrevistes .swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.entrevistes .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.entrevistes .swiper-pagination-bullet-active {
+  transform: scale(1.2);
 }
 
   /* =========================================
