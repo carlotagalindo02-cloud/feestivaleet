@@ -1,237 +1,149 @@
 // --- MENÚ MÒBIL I IDIOMA ---
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMobil = document.querySelector(".nav-mobil");
 
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMobil = document.querySelector('.nav-mobil');
+  if (menuToggle && navMobil) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      navMobil.classList.toggle("active");
+    });
 
-    if (menuToggle && navMobil) {
+    const links = navMobil.querySelectorAll("a");
 
-        menuToggle.addEventListener('click', () => {
-
-            // Activar creu i menú
-            menuToggle.classList.toggle('active');
-            navMobil.classList.toggle('active');
-
-        });
-
-        // Tancar menú quan cliques un link
-        const links = navMobil.querySelectorAll('a');
-
-        links.forEach(link => {
-
-            link.addEventListener('click', () => {
-
-                menuToggle.classList.remove('active');
-                navMobil.classList.remove('active');
-
-            });
-
-        });
-
-    }
-
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menuToggle.classList.remove("active");
+        navMobil.classList.remove("active");
+      });
+    });
+  }
 });
 
 
 // --- ANIMACIÓ SPONSORS ---
-const logos = document.querySelector(".logos");
+document.addEventListener("DOMContentLoaded", () => {
+  const logos = document.querySelector(".logos");
 
-if (logos) {
-
+  if (logos) {
     logos.innerHTML += logos.innerHTML;
 
     let position = 0;
-
-    // LENT PERÒ ES VEU
     const speed = 0.2;
 
     const animateSponsors = () => {
+      position -= speed;
 
-        position -= speed;
+      const halfWidth = logos.scrollWidth / 2;
 
-        const halfWidth = logos.scrollWidth / 2;
+      if (Math.abs(position) >= halfWidth) {
+        position = 0;
+      }
 
-        if (Math.abs(position) >= halfWidth) {
-            position = 0;
-        }
+      logos.style.transform = `translateX(${position}px)`;
 
-        logos.style.transform = `translateX(${position}px)`;
-
-        requestAnimationFrame(animateSponsors);
-
+      requestAnimationFrame(animateSponsors);
     };
 
     animateSponsors();
-
-}
-
-// --- ENLLAÇ ACTIU MENÚ ---
-document.addEventListener("DOMContentLoaded", function () {
-
-    // URL actual
-    const currentUrl = window.location.pathname.split("/").pop();
-
-    // Enllaços menú
-    const navLinks = document.querySelectorAll('nav a');
-
-    navLinks.forEach(link => {
-
-        if (link.getAttribute('href') === currentUrl) {
-
-            link.classList.add('active');
-
-        }
-
-    });
-
+  }
 });
 
 
-// --- CARRUSELS ---
+// --- ENLLAÇ ACTIU MENÚ ---
 document.addEventListener("DOMContentLoaded", () => {
+  const currentUrl = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll("nav a");
 
-    const carrusels = [
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentUrl) {
+      link.classList.add("active");
+    }
+  });
+});
 
-        { contenidor: '.entrevistes', scroll: '.cards-container' },
-        { contenidor: '.collaboracions', scroll: '.grid-cards' }
 
-    ];
+// --- CARRUSELS I PUNTS ---
+document.addEventListener("DOMContentLoaded", () => {
+  const carrusels = [
+    {
+      contenidor: ".entrevistes-actuals",
+      scroll: ".cards-container",
+      item: ".entrevista-principal"
+    },
+    {
+      contenidor: ".entrevistes",
+      scroll: ".cards-container",
+      item: ".card"
+    },
+    {
+      contenidor: ".collaboracions",
+      scroll: ".grid-cards",
+      item: ".card"
+    }
+  ];
 
-    carrusels.forEach(car => {
+  carrusels.forEach(car => {
+    const wrapper = document.querySelector(car.contenidor);
+    const scrollElement = wrapper?.querySelector(car.scroll);
 
-        const wrapper = document.querySelector(car.contenidor);
-        const scrollElement = wrapper?.querySelector(car.scroll);
+    if (!wrapper || !scrollElement) return;
 
-        if (scrollElement) {
+    const actualitzarPunts = () => {
+      const primerItem = scrollElement.querySelector(car.item);
 
-            scrollElement.addEventListener('scroll', () => {
+      if (!primerItem) return;
 
-                const ampleCard = scrollElement.offsetWidth;
-                const scrollEsquerra = scrollElement.scrollLeft;
+      const gap = parseInt(getComputedStyle(scrollElement).gap) || 0;
+      const ampleItem = primerItem.offsetWidth + gap;
+      const index = Math.round(scrollElement.scrollLeft / ampleItem) + 1;
 
-                // Índex visible
-                const index = Math.round(scrollEsquerra / ampleCard) + 1;
+      wrapper.classList.remove(
+        "actiu-1",
+        "actiu-2",
+        "actiu-3",
+        "punt-1",
+        "punt-2",
+        "punt-3"
+      );
 
-                // Classes punts
-                wrapper.classList.remove('punt-1', 'punt-2', 'punt-3');
-                wrapper.classList.add(`punt-${index}`);
+      wrapper.classList.add(`actiu-${index}`);
+    };
 
-            });
+    actualitzarPunts();
 
-        }
-
-    });
-
+    scrollElement.addEventListener("scroll", actualitzarPunts);
+  });
 });
 
 
 // --- NEWSLETTER + PARTICIPA ---
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", () => {
+  const newsForm = document.getElementById("newsletterForm");
+  const newsThanks = document.getElementById("thankYouMessage");
 
-    // NEWSLETTER
-    const newsForm = document.getElementById('newsletterForm');
-    const newsThanks = document.getElementById('thankYouMessage');
+  if (newsForm && newsThanks) {
+    newsForm.addEventListener("submit", event => {
+      event.preventDefault();
 
-    if (newsForm && newsThanks) {
+      const emailValue = document.getElementById("emailInput").value;
 
-        newsForm.addEventListener('submit', function (event) {
+      console.log("Subscripció nova per a:", emailValue);
 
-            event.preventDefault();
+      newsForm.style.display = "none";
+      newsThanks.style.display = "block";
+    });
+  }
 
-            const emailValue = document.getElementById('emailInput').value;
+  const participaForm = document.querySelector(".formulari form");
+  const participaThanks = document.getElementById("thanksforjoining");
 
-            console.log("Subscripció nova per a:", emailValue);
+  if (participaForm && participaThanks) {
+    participaForm.addEventListener("submit", event => {
+      event.preventDefault();
 
-            newsForm.style.display = 'none';
-            newsThanks.style.display = 'block';
-
-        });
-
-    }
-
-    // PARTICIPA / CONTACTE
-    const participaForm = document.querySelector('.formulari form');
-    const participaThanks = document.getElementById('thanksforjoining');
-
-    if (participaForm && participaThanks) {
-
-        participaForm.addEventListener('submit', function (event) {
-
-            event.preventDefault();
-
-            participaForm.style.display = 'none';
-            participaThanks.style.display = 'flex';
-
-        });
-
-    }
-
+      participaForm.style.display = "none";
+      participaThanks.style.display = "flex";
+    });
+  }
 });
-
-
-/* =========================================
-   SLIDER ENTREVISTES ACTUALS
-   ========================================= */
-
-const sliderActuals = document.querySelector(
-  ".entrevistes-actuals .cards-container"
-);
-
-const seccioActuals = document.querySelector(
-  ".entrevistes-actuals"
-);
-
-if (sliderActuals && seccioActuals) {
-
-  sliderActuals.addEventListener("scroll", () => {
-
-    const scrollX = sliderActuals.scrollLeft;
-    const ample = sliderActuals.offsetWidth;
-
-    const index = Math.round(scrollX / ample);
-
-    seccioActuals.classList.remove(
-      "actiu-1",
-      "actiu-2",
-      "actiu-3"
-    );
-
-    seccioActuals.classList.add(`actiu-${index + 1}`);
-  });
-
-}
-
-
-/* =========================================
-   PUNTS SLIDER ENTREVISTES ANTERIORS
-   ========================================= */
-
-const sliderEntrevistes = document.querySelector(
-  ".entrevistes .cards-container"
-);
-
-const seccioEntrevistes = document.querySelector(
-  ".entrevistes"
-);
-
-if (sliderEntrevistes && seccioEntrevistes) {
-
-  sliderEntrevistes.addEventListener("scroll", () => {
-
-    const scrollX = sliderEntrevistes.scrollLeft;
-
-    const ampleCard =
-      sliderEntrevistes.querySelector(".card").offsetWidth + 20;
-
-    const index = Math.round(scrollX / ampleCard);
-
-    seccioEntrevistes.classList.remove(
-      "actiu-1",
-      "actiu-2",
-      "actiu-3"
-    );
-
-    seccioEntrevistes.classList.add(`actiu-${index + 1}`);
-  });
-
-}
