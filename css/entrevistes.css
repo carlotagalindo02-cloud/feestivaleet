@@ -1514,8 +1514,8 @@ header {
 }
 
 .entrevista-principal .contingut {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .entrevista-principal .contingut h3 {
@@ -1530,8 +1530,10 @@ header {
 
 .entrevista-principal .contingut p {
   color: var(--marro-fosc);
+
   font-size: 18px !important;
   line-height: 1.16;
+
   margin: 0 0 28px;
 }
 
