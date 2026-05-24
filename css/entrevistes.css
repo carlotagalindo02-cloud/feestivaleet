@@ -1437,6 +1437,7 @@ header {
 .entrevistes-actuals {
   padding: 30px;
   overflow: hidden;
+  margin-top: 80px;
 }
 
 .entrevistes-actuals .titol-seccio {
@@ -1501,6 +1502,41 @@ header {
 .card-footer {
   display: none;
 }
+  
+  .entrevistes-actuals::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 15px;
+  margin: 18px auto 0 auto;
+
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
+  background-position:
+    15px center,
+    45px center,
+    75px center;
+}
+
+.entrevistes-actuals.actiu-2::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+}
+
+.entrevistes-actuals.actiu-3::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+}
 
 /* =========================================
    ENTREVISTES ANTERIORS
@@ -1508,14 +1544,17 @@ header {
 
 .entrevistes {
   overflow: hidden;
+
   padding-top: 20px;
   padding-bottom: 20px;
+
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
 .entrevistes h2 {
   margin-bottom: 20px;
+
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -1523,15 +1562,21 @@ header {
 .entrevistes .cards-container {
   display: flex;
   flex-direction: row;
+
   gap: 20px;
+
   overflow-x: auto;
   overflow-y: hidden;
+
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+
   padding-left: 20px;
   padding-right: 20px;
+
   margin: 0;
   box-sizing: border-box;
+
   scrollbar-width: none;
 }
 
@@ -1542,47 +1587,105 @@ header {
 .entrevistes .card {
   flex: 0 0 88vw;
   max-width: none;
+
   scroll-snap-align: center;
+
   background-image: url("../entrevistes/grafica.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   border-radius: 20px;
+
   padding: 24px 18px 18px;
+
   box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
 }
 
-  /* =========================================
-     PARTICIPA
-     ========================================= */
+/* =========================================
+   PUNTS SLIDER
+   ========================================= */
 
-  .participa {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 15px;
-    margin-bottom: 10px !important;
-  }
+.entrevistes::after {
+  content: "";
 
-  .participa > * {
-    width: 100%;
-  }
+  display: block;
 
-  .formulari {
-    margin-top: -15px;
-  }
+  width: 90px;
+  height: 15px;
 
-  .formulari form {
-    margin-top: 0;
-  }
+  margin: 15px auto 0 auto;
 
-  .formulari select,
-  .formulari input,
-  .formulari textarea {
-    margin-top: 10px;
-  }
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
 
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
+  background-position:
+    15px center,
+    45px center,
+    75px center;
+}
+
+.entrevistes.actiu-2::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+}
+
+.entrevistes.actiu-3::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+}
+
+/* =========================================
+   PARTICIPA
+   ========================================= */
+
+.participa {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px;
+
+  margin-bottom: 10px !important;
+
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.participa > * {
+  width: 100%;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.formulari {
+  margin-top: -15px;
+
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.formulari form {
+  margin-top: 0;
+}
+
+.formulari select,
+.formulari input,
+.formulari textarea {
+  margin-top: 10px;
+}
+  
+  
   /* =========================================
      SPONSORS
      ========================================= */
