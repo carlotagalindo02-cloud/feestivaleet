@@ -1469,8 +1469,11 @@ header {
    ========================================= */
 
 .entrevistes-actuals {
-  padding: 30px;
+  padding-top: 30px;
   padding-bottom: 60px;
+
+  padding-left: 0;
+  padding-right: 0;
 
   overflow: hidden;
 
@@ -1505,15 +1508,32 @@ header {
 
   display: flex;
   flex-direction: column;
+
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.entrevista-principal .contingut {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .entrevista-principal .contingut h3 {
+  color: var(--taronja-viu);
+
+  font-size: 20px;
   line-height: 1.15;
+  font-weight: 600;
+
   margin: 0 0 55px;
 }
 
 .entrevista-principal .contingut p {
   color: var(--marro-fosc);
+
+  font-size: 18px;
+  line-height: 1.16;
+
   margin: 0 0 28px;
 }
 
@@ -1537,7 +1557,7 @@ header {
 
   object-fit: cover;
 
-  border-radius: 22px;
+  border-radius: 0;
 
   display: block;
 }
@@ -1745,75 +1765,113 @@ header {
   
   
   /* =========================================
-     SPONSORS
-     ========================================= */
+   SPONSORS
+   ========================================= */
 
-  .sponsors {
-    padding-top: 25px !important;
-    padding-bottom: 20px !important;
-    margin-top: 10px !important;
-    margin-bottom: 20px !important;
-  }
+.sponsors {
+  padding-top: 25px !important;
+  padding-bottom: 20px !important;
 
-  .logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 
-  .logos img {
-    height: 28px;
-    width: auto;
-    object-fit: contain;
-  }
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
 
-  /* =========================================
-     NEWSLETTER
-     ========================================= */
+.logos {
+  display: flex;
+  flex-wrap: wrap;
 
-  .newsletter {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 30px;
-    padding-top: 50px;
-    padding-bottom: 0 !important;
-    margin-bottom: 30px !important;
-  }
+  justify-content: center;
 
-  .newsletter-left,
-  .newsletter-right {
-    width: 100%;
-    max-width: 100%;
-  }
+  gap: 30px;
 
-  .newsletter-right {
-    margin-top: 0;
-  }
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 
-  .newsletter-form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
-  .newsletter-right input {
-    width: 100%;
-    height: 60px;
-    border: 1px solid var(--marro-fosc);
-  }
+.logos img {
+  height: 28px;
+  width: auto;
 
-  .veure {
-    width: 100%;
-    min-width: unset;
-    text-align: center;
-  }
+  object-fit: contain;
+}
 
-  .btn-custom {
-    width: 220px !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-  }
+
+/* =========================================
+   NEWSLETTER
+   ========================================= */
+
+.newsletter {
+  display: flex !important;
+  flex-direction: column !important;
+
+  gap: 30px;
+
+  padding-top: 50px;
+  padding-bottom: 0 !important;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  margin-bottom: 30px !important;
+}
+
+.newsletter-left,
+.newsletter-right {
+  width: 100%;
+  max-width: 100%;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.newsletter-left {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.newsletter-right {
+  margin-top: 0;
+
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.newsletter-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.newsletter-right input {
+  width: 100%;
+  height: 60px;
+
+  border: 1px solid var(--marro-fosc);
+}
+
+.veure {
+  width: 100%;
+  min-width: unset;
+
+  text-align: center;
+}
+
+.btn-custom {
+  width: 220px !important;
+
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
 
   /* =========================================
      FOOTER
