@@ -1193,7 +1193,7 @@ header {
 .bloc-dreta {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   overflow: hidden;
 }
@@ -1204,10 +1204,12 @@ header {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  gap: 0 !important;
   width: 100%;
+  gap: 0 !important;
+
   padding-bottom: 0 !important;
   margin-top: -10px !important;
+
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x;
@@ -1222,16 +1224,16 @@ header {
   width: 100% !important;
   min-width: 100% !important;
   max-width: 100% !important;
-  box-sizing: border-box;
 
+  box-sizing: border-box;
   scroll-snap-align: center;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  text-align: left;
+  text-align: center;
   gap: 15px;
 
   padding-left: 20px;
@@ -1239,14 +1241,14 @@ header {
 }
 
 .icona-transport {
-  width: 70px;
+  width: 90px;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .transport-text {
-  text-align: left;
-  max-width: 220px;
+  text-align: center;
+  max-width: 240px;
 }
 
 .transport-text strong {
@@ -1259,6 +1261,7 @@ header {
 .transport-text span {
   font-size: 0.95rem;
   color: var(--marro-fosc);
+  line-height: 1.4;
 }
 
 .bloc-dreta::after {
@@ -1267,16 +1270,20 @@ header {
   width: 90px;
   height: 15px;
   margin: 15px auto 0 auto;
+
   background-repeat: no-repeat;
   background-size: 15px 15px;
+
   background-image:
     radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
   background-position:
     15px center,
     45px center,
     75px center;
+
   transition: none !important;
 }
 
