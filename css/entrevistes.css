@@ -1464,12 +1464,19 @@ header {
   color: var(--blau-electric) !important;
 }
 
-  /* ENTREVISTA ACTUAL */
+/* =========================================
+   ENTREVISTES ACTUALS
+   ========================================= */
 
 .entrevistes-actuals {
   padding: 30px;
+  padding-bottom: 60px;
+
   overflow: hidden;
-  margin-top: 80px;
+
+  margin-top: 120px;
+
+  position: relative;
 }
 
 .entrevistes-actuals .titol-seccio {
@@ -1478,9 +1485,13 @@ header {
 
 .entrevistes-actuals .cards-container {
   display: flex;
+
   overflow-x: auto;
+
   scroll-snap-type: x mandatory;
+
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .entrevistes-actuals .cards-container::-webkit-scrollbar {
@@ -1489,23 +1500,29 @@ header {
 
 .entrevista-principal {
   flex: 0 0 100%;
+
   scroll-snap-align: center;
+
   display: flex;
   flex-direction: column;
 }
 
 .entrevista-principal .contingut h3 {
   color: var(--taronja-viu);
+
   font-size: 40px;
   line-height: 1.15;
   font-weight: 400;
+
   margin: 0 0 55px;
 }
 
 .entrevista-principal .contingut p {
   color: var(--marro-fosc);
+
   font-size: 21px;
   line-height: 1.16;
+
   margin: 0 0 28px;
 }
 
@@ -1526,21 +1543,34 @@ header {
 .foto-entrevista {
   width: 100%;
   height: 285px;
+
   object-fit: cover;
+
   border-radius: 22px;
+
   display: block;
 }
 
 .card-footer {
   display: none;
 }
-  
-  .entrevistes-actuals::after {
+
+/* =========================================
+   PUNTS SLIDER
+   ========================================= */
+
+.entrevistes-actuals::after {
   content: "";
-  display: block;
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 15px;
+
+  transform: translateX(-50%);
+
   width: 90px;
   height: 15px;
-  margin: 18px auto 0 auto;
 
   background-repeat: no-repeat;
   background-size: 15px 15px;
@@ -1578,10 +1608,12 @@ header {
   overflow: hidden;
 
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
 
   padding-left: 0 !important;
   padding-right: 0 !important;
+
+  position: relative; /* IMPORTANT */
 }
 
 .entrevistes h2 {
@@ -1644,12 +1676,15 @@ header {
 .entrevistes::after {
   content: "";
 
-  display: block;
+  position: absolute;
+
+  left: 50%;
+  bottom: 18px;
+
+  transform: translateX(-50%);
 
   width: 90px;
   height: 15px;
-
-  margin: 15px auto 0 auto;
 
   background-repeat: no-repeat;
   background-size: 15px 15px;
