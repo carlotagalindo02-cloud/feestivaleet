@@ -926,30 +926,43 @@ footer {
   margin-bottom: 25px;
 }
 
-
 /* =========================================
    PUNTS / DOTS
    ========================================= */
 
-.entrevistes-actuals .swiper-pagination,
-.entrevistes .swiper-pagination {
-  position: relative;
-  margin-top: 25px;
-  text-align: center;
+.entrevistes-actuals::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 15px;
+  margin: 18px auto 0 auto;
+
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
+  background-position:
+    15px center,
+    45px center,
+    75px center;
 }
 
-.entrevistes-actuals .swiper-pagination-bullet,
-.entrevistes .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  opacity: 1;
-  margin: 0 6px !important;
-  border-radius: 50%;
+.entrevistes-actuals.actiu-2::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
 }
 
-.entrevistes-actuals .swiper-pagination-bullet-active,
-.entrevistes .swiper-pagination-bullet-active {
-  transform: scale(1.2);
+.entrevistes-actuals.actiu-3::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
 }
 
   /* =========================================
@@ -1010,28 +1023,47 @@ footer {
   font-size: 14px;
   line-height: 22px;
 }
-
+  
 /* =========================================
-   PUNTS A SOTA
+   PUNTS SLIDER
    ========================================= */
 
-.entrevistes .swiper-pagination {
-  position: relative !important;
-  bottom: 0 !important;
-  margin-top: 25px;
-  text-align: center;
+.entrevistes::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+  height: 15px;
+
+  margin: 15px auto 0 auto;
+
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
+  background-position:
+    15px center,
+    45px center,
+    75px center;
 }
 
-.entrevistes .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  margin: 0 6px !important;
-  border-radius: 50%;
-  opacity: 1;
+.entrevistes.actiu-2::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
 }
 
-.entrevistes .swiper-pagination-bullet-active {
-  transform: scale(1.2);
+.entrevistes.actiu-3::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
 }
 
   /* =========================================
