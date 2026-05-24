@@ -919,8 +919,8 @@ footer {
   scrollbar-width: none;
   width: 100%;
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 160px; 
+  padding-top: 80px;
+  padding-bottom: 160px;
 }
 
 /* IMATGES IGUALS */
@@ -937,8 +937,7 @@ footer {
   display: block;
   scroll-snap-align: center;
 
-  /* IMATGE MÉS AMUNT */
-  transform: translateY(60px);
+  transform: translateY(120px);
 
   flex-shrink: 0;
 }
