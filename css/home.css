@@ -1763,10 +1763,8 @@ footer {
   display: grid !important;
   grid-template-columns: 1fr;
   gap: 30px;
-
   padding-top: 40px !important;
   padding-bottom: 40px !important;
-
   padding-left: 20px !important;
   padding-right: 20px !important;
 }
@@ -1780,13 +1778,14 @@ footer {
 .fira-track {
   display: flex;
   gap: 16px;
-
   overflow-x: auto;
   scrollbar-width: none;
-
-  padding-left: 20px;
-  padding-right: 20px; /* mateix marge als laterals */
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
   box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .fira-track::-webkit-scrollbar {
@@ -1795,23 +1794,33 @@ footer {
 
 .fira-track figure {
   flex: 0 0 280px;
+  margin: 0 auto;
+  scroll-snap-align: center;
 }
 
 .fira-track img {
+  width: 100%;
   height: 240px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
 }
 
 figcaption {
   font-size: 15px;
+  margin-top: 10px;
+  text-align: left;
 }
 
-  /* --- Entrevistes --- */
+/* --- Entrevistes --- */
 
 .entrevistes {
   display: flex !important;
   flex-direction: column;
   align-items: center;
+
   padding-top: 40px !important;
+
   gap: 0;
 }
 
@@ -1822,6 +1831,7 @@ figcaption {
 
 .carousel-container {
   width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1830,13 +1840,16 @@ figcaption {
 .entrevistes .cards-container {
   display: flex;
   flex-direction: row;
+
   gap: 15px;
 
   overflow-x: auto;
+
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 
   width: 100%;
+
   margin-bottom: 30px;
 }
 
@@ -1856,7 +1869,9 @@ figcaption {
 .entrevistes .main-img {
   width: 100%;
   height: 250px;
+
   object-fit: cover;
+
   border-radius: 30px;
 }
 
@@ -1865,17 +1880,21 @@ figcaption {
 .entrevistes .social-row {
   display: flex !important;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   width: 100%;
-  margin-top: 15px;
+
+  margin-top: 22px;
+  margin-left: 10px;
+
+  gap: 18px;
 }
 
 .entrevistes .social-icons {
   display: flex !important;
   align-items: center;
 
-  gap: 8px;
+  gap: 12px;
 
   margin-left: 0 !important;
   margin-top: 0;
@@ -1893,6 +1912,13 @@ figcaption {
 
   width: 24px;
   height: 24px;
+}
+
+.entrevistes .date {
+  margin-left: 0;
+  margin-top: 2px;
+
+  font-size: 14px;
 }
 
 /* PUNTS CARRUSEL */
@@ -1913,7 +1939,10 @@ figcaption {
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
 
-  background-position: 10px center, 35px center, 60px center;
+  background-position:
+    10px center,
+    35px center,
+    60px center;
 }
 
 .entrevistes.punt-2 .carousel-dots {
@@ -1930,9 +1959,9 @@ figcaption {
     radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
 }
 
-    /* =========================================
-     SPONSORS
-     ========================================= */
+  /* =========================================
+   SPONSORS
+  ========================================= */
 
   .sponsors {
     padding-top: 20px;

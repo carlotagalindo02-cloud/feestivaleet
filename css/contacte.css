@@ -1066,169 +1066,171 @@ address {
   }
 
   /* =========================================
-     HEADER
-     ========================================= */
+   HEADER
+   ========================================= */
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 65px;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--carn-clar);
-    z-index: 3000;
-    box-sizing: border-box;
-  }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--carn-clar);
+  z-index: 3000;
+  box-sizing: border-box;
+}
 
-  /* =========================================
-     LOGO
-     ========================================= */
+/* =========================================
+   LOGO
+   ========================================= */
 
-  .logo img {
-    width: 150px;
-    max-width: 150px;
-    height: auto;
-    display: block;
-  }
+.logo img {
+  width: 150px;
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
 
-  /* =========================================
-     MENÚ ORDINADOR
-     ========================================= */
+/* =========================================
+   MENÚ ORDINADOR
+   ========================================= */
 
-  .nav-list {
-    display: none !important;
-  }
+.nav-list {
+  display: none !important;
+}
 
-  /* =========================================
-     BOTÓ HAMBURGUESA
-     ========================================= */
+/* =========================================
+   BOTÓ HAMBURGUESA
+   ========================================= */
 
-  .menu-toggle {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    position: relative;
-    z-index: 3002;
-  }
+.menu-toggle {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 3002;
+}
 
-  .menu-toggle .bar {
-    display: block;
-    width: 100%;
-    height: 2.5px;
-    background-color: var(--marro-fosc);
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-  }
+.menu-toggle .bar {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--marro-fosc);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
 
-  /* =========================================
-     ANIMACIÓ X
-     ========================================= */
+/* =========================================
+   ANIMACIÓ X
+   ========================================= */
 
-  .menu-toggle.active .bar:nth-child(1) {
-    transform: translateY(8.5px) rotate(45deg);
-  }
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
 
-  .menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
 
-  .menu-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8.5px) rotate(-45deg);
-  }
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
 
-  /* =========================================
-     MENÚ DESPLEGABLE
-     ========================================= */
+/* =========================================
+   MENÚ DESPLEGABLE
+   ========================================= */
 
-  .nav-mobil {
-    position: fixed;
-    top: 65px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: var(--carn-clar);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition:
-      max-height 0.45s ease,
-      opacity 0.3s ease,
-      transform 0.3s ease;
-    pointer-events: none;
-    z-index: 3001;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-  }
+.nav-mobil {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--carn-clar);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    max-height 0.45s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
+  z-index: 3001;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
 
-  /* =========================================
-     MENÚ OBERT
-     ========================================= */
+/* =========================================
+   MENÚ OBERT
+   ========================================= */
 
-  .nav-mobil.active {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-    padding-top: 35px;
-    padding-bottom: 40px;
-  }
+.nav-mobil.active {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
 
-  /* =========================================
-     LLISTA
-     ========================================= */
+/* =========================================
+   LLISTA
+   ========================================= */
 
-  .nav-list-mobil {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    width: 100%;
-    text-align: center;
-  }
+.nav-list-mobil {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  text-align: center;
+}
 
-  .nav-list-mobil li {
-    width: 100%;
-  }
+.nav-list-mobil li {
+  width: 100%;
+}
 
-  /* =========================================
-     LINKS
-     ========================================= */
+/* =========================================
+   LINKS
+   ========================================= */
 
-  .nav-list-mobil li a {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: var(--marro-fosc);
-    font-size: 18px;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
+.nav-list-mobil li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: var(--marro-fosc);
+  font-size: 18px;
+  font-weight: 600;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
 
-  .nav-list-mobil li a:hover,
-  .nav-list-mobil li a:active {
-    color: var(--blau-electric);
-    transform: scale(1.03);
-  }
+.nav-list-mobil li a:hover,
+.nav-list-mobil li a:active {
+  color: var(--blau-electric);
+  transform: scale(1.03);
+}
 
-  /* =========================================
-   UBICACIÓ I TRANSPORT
+/* =========================================
+   UBICACIÓ TRANSPORT
    ========================================= */
 
 .ubicacio-transport {
@@ -1237,7 +1239,6 @@ address {
   align-items: center;
   text-align: center;
   width: 100%;
-  padding: 80px 20px; 
   overflow: hidden;
   background-image: url('../contacte/fons.svg');
   background-size: cover;
@@ -1247,57 +1248,42 @@ address {
 
 .header-on {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 30px;
-  padding: 0 5px; 
+  gap: 20px;
 }
 
-.header-on h2,
-.bloc-dreta h2 {
-  color: var(--taronja-viu);
-  font-size: 2.2rem !important;
-  line-height: 1.1;
-  margin: 0 0 10px 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  width: 100%;
-  margin-left: 60px;
+.header-on h2 {
+  text-align: left;
+  margin: 0 !important;
 }
 
 .header-on address {
   text-align: right;
-  align-self: flex-end;
-  font-style: normal;
-  text-decoration: underline;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: var(--marro-fosc);
-  width: 100%;
-  max-width: 250px;
-  margin-right: 20px; 
+  margin: 0 !important;
+  max-width: 160px;
 }
 
 .mapa-isometric {
   width: 100%;
-  max-width: 400px;
   display: flex;
   justify-content: center;
   margin: 40px auto;
 }
 
 .mapa-isometric img {
-  width: 90%;
+  width: 100%;
+  max-width: 380px;
   height: auto;
-  display: block;
   object-fit: contain;
 }
 
 .bloc-dreta {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -1305,33 +1291,38 @@ address {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  gap: 0 !important;
   width: 100%;
-  margin: 0;
-  padding-bottom: 20px;
-}
-
-.transports-flex::-webkit-scrollbar {
-  display: none;
+  padding-bottom: 0 !important;
+  margin-top: -10px !important;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .transport-item {
-  flex: 0 0 100%;
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
   scroll-snap-align: center;
+
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
-  padding: 0 10px;
-  box-sizing: border-box;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 15px;
 }
 
 .icona-transport {
   width: 70px;
   height: auto;
   margin-bottom: 15px;
+}
+
+.transport-text {
+  text-align: left;
 }
 
 .transport-text strong {
@@ -1354,14 +1345,17 @@ address {
   margin: 15px auto 0 auto;
   background-repeat: no-repeat;
   background-size: 15px 15px;
+
   background-image:
     radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
   background-position:
     15px center,
     45px center,
     75px center;
+
   transition: none !important;
 }
 
@@ -1384,12 +1378,13 @@ address {
      ========================================= */
 
   .contact-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 10px;
-    margin-bottom: 80px !important;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  margin-top: -40px;
+  margin-bottom: 40px !important;
+}
 
   .info-section h2 {
     margin-top: 0;

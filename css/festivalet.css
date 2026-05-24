@@ -1521,9 +1521,9 @@ address {
   .nav-list-mobil li a.active {
     color: var(--blau-electric) !important;
   }
-
+  
   /* --- CONSISTEIX --- */
-
+  
   .festivalet {
     display: flex !important;
     flex-direction: column !important;
@@ -1532,13 +1532,18 @@ address {
     position: relative;
     z-index: 10;
   }
-
+  
+  .festivalet-participants h3 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  
   .festivalet p {
     text-align: left;
     margin-bottom: 0 !important;
     padding-bottom: 0;
   }
-
+  
   .js-festivalet-slider {
     display: flex !important;
     gap: 20px !important;
@@ -1550,11 +1555,11 @@ address {
     margin-top: -60px !important;
     scrollbar-width: none;
   }
-
+  
   .js-festivalet-slider::-webkit-scrollbar {
     display: none;
   }
-
+  
   .js-festivalet-slider img {
     flex: 0 0 90vw;
     width: 90vw;
@@ -1578,11 +1583,9 @@ address {
     transform: translateX(-50%);
     width: 60px;
     height: 12px;
-
     background-image:
       radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
       radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-
     background-position: 15px center, 35px center;
     background-repeat: no-repeat;
     background-size: 12px 12px;
@@ -1646,143 +1649,148 @@ address {
   }
 
   /* =========================================
-     UBICACIÓ TRANSPORT
-     ========================================= */
+   UBICACIÓ TRANSPORT
+   ========================================= */
 
-  .ubicacio-transport {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
+.ubicacio-transport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('../contacte/fons.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    background-image: url('../contacte/fons.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.header-on {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+  gap: 20px;
+}
 
-  .header-on {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 30px;
-    gap: 20px;
-  }
+.header-on h2 {
+  text-align: left;
+  margin: 0 !important;
+}
 
-  .header-on h2 {
-    text-align: left;
-    margin: 0 !important;
-  }
+.header-on address {
+  text-align: right;
+  margin: 0 !important;
+  max-width: 160px;
+}
 
-  .header-on address {
-    text-align: right;
-    margin: 0 !important;
-    max-width: 160px;
-  }
+.mapa-isometric {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+}
 
-  .mapa-isometric {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 40px auto;
-  }
+.mapa-isometric img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+}
 
-  .mapa-isometric img {
-    width: 100%;
-    max-width: 380px;
-    height: auto;
-    object-fit: contain;
-  }
+.bloc-dreta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
 
-  .bloc-dreta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+.transports-flex {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  gap: 0 !important;
+  width: 100%;
+  padding-bottom: 0 !important;
+  margin-top: -10px !important;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
 
-  .transports-flex {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    gap: 0 !important;
-    width: 100%;
-    padding-bottom: 0 !important;
-    margin-top: -10px !important;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
+.transport-item {
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  scroll-snap-align: center;
 
-  .transport-item {
-    flex: 0 0 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    scroll-snap-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 15px;
+}
 
-  .icona-transport {
-    width: 70px;
-    height: auto;
-    margin-bottom: 15px;
-  }
+.icona-transport {
+  width: 70px;
+  height: auto;
+  margin-bottom: 15px;
+}
 
-  .transport-text strong {
-    display: block;
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    color: var(--teula);
-  }
+.transport-text {
+  text-align: left;
+}
 
-  .transport-text span {
-    font-size: 0.95rem;
-    color: var(--marro-fosc);
-  }
+.transport-text strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--teula);
+}
 
-  .bloc-dreta::after {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 15px;
-    margin: 15px auto 0 auto;
-    background-repeat: no-repeat;
-    background-size: 15px 15px;
+.transport-text span {
+  font-size: 0.95rem;
+  color: var(--marro-fosc);
+}
 
-    background-image:
-      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+.bloc-dreta::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 15px;
+  margin: 15px auto 0 auto;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
 
-    background-position:
-      15px center,
-      45px center,
-      75px center;
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
 
-    transition: none !important;
-  }
+  background-position:
+    15px center,
+    45px center,
+    75px center;
 
-  .bloc-dreta.actiu-2::after {
-    background-image:
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-  }
+  transition: none !important;
+}
 
-  .bloc-dreta.actiu-3::after {
-    background-image:
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-      radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-      radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
-  }
+.bloc-dreta.actiu-2::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+}
+
+.bloc-dreta.actiu-3::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+}
 
   /* --- FAQS --- */
 
