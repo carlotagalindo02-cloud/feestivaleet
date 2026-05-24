@@ -1551,7 +1551,7 @@ footer {
 .festivalet::after {
   content: "";
   position: absolute;
-  bottom: -20px !important;
+  bottom: -80px !important;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
@@ -1884,8 +1884,8 @@ footer {
   display: flex !important;
   flex-direction: column !important;
   gap: 40px;
-  padding-left: -40px;
-  padding-right: -40px;
+  padding-left: -40px !important;
+  padding-right: -40px !important;
 }
 
 .categoria h2 {
