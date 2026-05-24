@@ -1174,41 +1174,69 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     height: 65px;
+    padding: 0 20px;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: var(--carn-clar);
-    z-index: 2001;
+    z-index: 3000;
+    box-sizing: border-box;
   }
+
+  /* =========================================
+     LOGO
+     ========================================= */
+
+  .logo img {
+    width: 150px;
+    max-width: 150px;
+    height: auto;
+    display: block;
+  }
+
+  /* =========================================
+     MENÚ ORDINADOR
+     ========================================= */
 
   .nav-list {
-    display: none;
+    display: none !important;
   }
 
+  /* =========================================
+     BOTÓ HAMBURGUESA
+     ========================================= */
+
   .menu-toggle {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 18px;
+    width: 28px;
+    height: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
     position: relative;
-    z-index: 2005;
+    z-index: 3002;
   }
 
   .menu-toggle .bar {
     display: block;
     width: 100%;
-    height: 2px;
+    height: 2.5px;
     background-color: var(--marro-fosc);
-    border-radius: 5px;
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
   }
 
+  /* =========================================
+     ANIMACIÓ X
+     ========================================= */
+
   .menu-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8.5px) rotate(45deg);
   }
 
   .menu-toggle.active .bar:nth-child(2) {
@@ -1216,13 +1244,18 @@ footer {
   }
 
   .menu-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8.5px) rotate(-45deg);
   }
 
+  /* =========================================
+     MENÚ DESPLEGABLE
+     ========================================= */
+
   .nav-mobil {
-    position: absolute;
+    position: fixed;
     top: 65px;
     left: 0;
+    right: 0;
     width: 100%;
     background-color: var(--carn-clar);
     display: flex;
@@ -1231,21 +1264,29 @@ footer {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    transform: translateY(-10px);
     transition:
-      max-height 0.5s ease-in-out,
-      opacity 0.3s ease;
+      max-height 0.45s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease;
     pointer-events: none;
-    z-index: 2000;
+    z-index: 3001;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
   }
 
   .nav-mobil.active {
     max-height: 500px;
     opacity: 1;
+    transform: translateY(0);
     pointer-events: auto;
-    padding: 20px 0;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    padding-top: 35px;
+    padding-bottom: 40px;
   }
+
+  /* =========================================
+     LLISTA MENÚ
+     ========================================= */
 
   .nav-list-mobil {
     list-style: none;
@@ -1253,22 +1294,30 @@ footer {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
     text-align: center;
+  }
+
+  .nav-list-mobil li {
+    width: 100%;
   }
 
   .nav-list-mobil li a {
     display: block;
+    width: 100%;
     text-decoration: none;
-    color: var(--marro-fosc) !important;
+    color: var(--marro-fosc);
     font-size: 18px;
     font-weight: 600;
-    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
 
   .nav-list-mobil li a:hover,
   .nav-list-mobil li a:active {
-    color: var(--blau-electric) !important;
+    color: var(--blau-electric);
+    transform: scale(1.03);
   }
 
   /* =========================================
@@ -1421,23 +1470,16 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 calc(92vw - 40px); /* menys ample */
-
+  flex: 0 0 calc(92vw - 40px);
   max-width: 330px;
-
   scroll-snap-align: center;
-
   background-image: url("../entrevistes/grafica.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
   border-radius: 20px;
-
   padding: 20px 14px 14px;
-
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
 }
@@ -1445,18 +1487,14 @@ footer {
 .entrevistes .card p {
   font-size: 13px;
   line-height: 1.22;
-
   margin: 0 0 14px;
 }
 
 .entrevistes .main-img {
   width: 100%;
-  height: 260px; /* imatge menys gran */
-
+  height: 260px; 
   object-fit: cover;
-
   border-radius: 12px;
-
   margin-bottom: 16px;
 }
 
@@ -1485,14 +1523,10 @@ footer {
 .entrevistes-actuals .info-icon {
   width: 90px !important;
   max-width: 90px;
-
   height: auto;
-
   display: block;
-
   border: none !important;
   background: transparent !important;
-
   transition:
     filter 0.3s ease,
     opacity 0.3s ease,
@@ -1505,17 +1539,12 @@ footer {
 
 .entrevistes::after {
   content: "";
-
   display: block;
-
   width: 80px;
   height: 12px;
-
   margin: 10px auto;
-
   background-repeat: no-repeat;
   background-size: 12px 12px;
-
   background-position:
     10px center,
     35px center,

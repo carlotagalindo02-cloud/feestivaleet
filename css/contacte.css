@@ -1073,37 +1073,69 @@ address {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     height: 65px;
+    padding: 0 20px;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: var(--carn-clar);
-    z-index: 2001;
+    z-index: 3000;
+    box-sizing: border-box;
   }
 
+  /* =========================================
+     LOGO
+     ========================================= */
+
+  .logo img {
+    width: 150px;
+    max-width: 150px;
+    height: auto;
+    display: block;
+  }
+
+  /* =========================================
+     MENÚ ORDINADOR
+     ========================================= */
+
+  .nav-list {
+    display: none !important;
+  }
+
+  /* =========================================
+     BOTÓ HAMBURGUESA
+     ========================================= */
+
   .menu-toggle {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 18px;
+    width: 28px;
+    height: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
     position: relative;
-    z-index: 2005;
+    z-index: 3002;
   }
 
   .menu-toggle .bar {
     display: block;
     width: 100%;
-    height: 2px;
+    height: 2.5px;
     background-color: var(--marro-fosc);
-    border-radius: 5px;
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
   }
 
+  /* =========================================
+     ANIMACIÓ X
+     ========================================= */
+
   .menu-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8.5px) rotate(45deg);
   }
 
   .menu-toggle.active .bar:nth-child(2) {
@@ -1111,13 +1143,18 @@ address {
   }
 
   .menu-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8.5px) rotate(-45deg);
   }
 
+  /* =========================================
+     MENÚ DESPLEGABLE
+     ========================================= */
+
   .nav-mobil {
-    position: absolute;
+    position: fixed;
     top: 65px;
     left: 0;
+    right: 0;
     width: 100%;
     background-color: var(--carn-clar);
     display: flex;
@@ -1126,21 +1163,33 @@ address {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    transform: translateY(-10px);
     transition:
-      max-height 0.5s ease-in-out,
-      opacity 0.3s ease;
+      max-height 0.45s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease;
     pointer-events: none;
-    z-index: 2000;
+    z-index: 3001;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
   }
+
+  /* =========================================
+     MENÚ OBERT
+     ========================================= */
 
   .nav-mobil.active {
     max-height: 500px;
     opacity: 1;
+    transform: translateY(0);
     pointer-events: auto;
-    padding: 40px 0;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    padding-top: 35px;
+    padding-bottom: 40px;
   }
+
+  /* =========================================
+     LLISTA
+     ========================================= */
 
   .nav-list-mobil {
     list-style: none;
@@ -1148,24 +1197,34 @@ address {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
     text-align: center;
   }
 
+  .nav-list-mobil li {
+    width: 100%;
+  }
+
+  /* =========================================
+     LINKS
+     ========================================= */
+
   .nav-list-mobil li a {
     display: block;
+    width: 100%;
     text-decoration: none;
-    color: var(--marro-fosc) !important;
+    color: var(--marro-fosc);
     font-size: 18px;
     font-weight: 600;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
 
   .nav-list-mobil li a:hover,
   .nav-list-mobil li a:active {
-    color: var(--blau-electric) !important;
-    transform: scale(1.05);
+    color: var(--blau-electric);
+    transform: scale(1.03);
   }
 
   /* =========================================
