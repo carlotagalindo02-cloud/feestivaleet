@@ -1390,7 +1390,7 @@ footer {
       radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
   }
 
-  /* --- Fira --- */
+/* --- Fira --- */
 
 .fira {
   display: grid !important;
@@ -1424,14 +1424,14 @@ footer {
 }
 
 .fira-track figure {
-  flex: 0 0 280px;
+  flex: 0 0 240px; 
   margin: 0 auto;
   scroll-snap-align: center;
 }
 
 .fira-track img {
   width: 100%;
-  height: 240px;
+  height: 190px; 
   object-fit: cover;
   border-radius: 20px;
   display: block;
@@ -1440,7 +1440,8 @@ footer {
 figcaption {
   font-size: 15px;
   margin-top: 10px;
-  text-align: left;
+  text-align: right; 
+  color: var(--taronja-viu);
 }
 
 /* --- Entrevistes --- */

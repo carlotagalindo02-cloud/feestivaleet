@@ -1496,7 +1496,6 @@ footer {
   }
   
   /* --- CONSISTEIX --- */
-  
 .festivalet {
   display: flex !important;
   flex-direction: column !important;
@@ -1525,7 +1524,7 @@ footer {
   scroll-snap-type: x mandatory;
   width: 100% !important;
   height: auto !important;
-  margin-top: 20px !important;
+  margin-top: 5px !important;
   scrollbar-width: none;
 }
 
@@ -1544,7 +1543,7 @@ footer {
   border-radius: 34px;
   display: block;
   scroll-snap-align: center;
-  transform: translateY(60px);
+  transform: translateY(0);
   flex-shrink: 0;
 }
 
@@ -1620,13 +1619,13 @@ footer {
     margin-right: auto !important;
     text-align: center !important;
   }
-
-/* =========================================
+  
+  /* =========================================
    UBICACIÓ TRANSPORT
    ========================================= */
 
 .ubicacio-transport {
-  display: none !important;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -1636,6 +1635,8 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 .header-on {
@@ -1677,12 +1678,13 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  overflow: hidden;
 }
 
 .transports-flex {
   display: flex;
   flex-direction: row;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   gap: 0 !important;
@@ -1695,10 +1697,11 @@ footer {
 
 .transport-item {
   flex: 0 0 100% !important;
+  width: 100% !important;
   min-width: 100% !important;
   max-width: 100% !important;
+  box-sizing: border-box;
   scroll-snap-align: center;
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1737,17 +1740,14 @@ footer {
   margin: 15px auto 0 auto;
   background-repeat: no-repeat;
   background-size: 15px 15px;
-
   background-image:
     radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-
   background-position:
     15px center,
     45px center,
     75px center;
-
   transition: none !important;
 }
 
