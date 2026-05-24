@@ -1530,8 +1530,8 @@ body {
   padding-top: 30px;
   padding-bottom: 60px;
 
-  padding-left: -20px !important;
-  padding-right: -20 !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
 
   overflow: hidden;
 
@@ -1567,8 +1567,8 @@ body {
   display: flex;
   flex-direction: column;
 
-  padding-left: -20px;
-  padding-right: -20px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .entrevista-principal .contingut {
@@ -1818,15 +1818,19 @@ body {
 }
   
   
-  /* =========================================
+/* =========================================
    SPONSORS
    ========================================= */
 
 .sponsors {
-  padding: 20px 10px !important;
+  padding-top: 20px;
+  padding-bottom: 20px !important;
 
-  margin-bottom: 20px !important;
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+
   margin-top: -10px !important;
+  margin-bottom: 20px !important;
 
   box-sizing: border-box;
 }
@@ -1835,11 +1839,11 @@ body {
   display: flex;
   flex-wrap: wrap;
 
-  justify-content: flex-start; 
+  justify-content: flex-start;
 
   gap: 30px;
 
-  width: calc(100% - 20px);
+  width: calc(100% - 12px);
 
   margin: 0 auto;
 }
