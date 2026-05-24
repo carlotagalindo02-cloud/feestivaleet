@@ -1,37 +1,57 @@
-// --- MENÚ MÒBIL I IDIOMA ---
+// =========================================
+// MENÚ MÒBIL
+// =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
+
   const menuToggle = document.querySelector(".menu-toggle");
   const navMobil = document.querySelector(".nav-mobil");
 
   if (menuToggle && navMobil) {
+
     menuToggle.addEventListener("click", () => {
+
       menuToggle.classList.toggle("active");
       navMobil.classList.toggle("active");
+
     });
 
     const links = navMobil.querySelectorAll("a");
 
     links.forEach(link => {
+
       link.addEventListener("click", () => {
+
         menuToggle.classList.remove("active");
         navMobil.classList.remove("active");
+
       });
+
     });
+
   }
+
 });
 
 
-// --- ANIMACIÓ SPONSORS ---
+// =========================================
+// ANIMACIÓ SPONSORS
+// =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
+
   const logos = document.querySelector(".logos");
 
   if (logos) {
+
     logos.innerHTML += logos.innerHTML;
 
     let position = 0;
+
     const speed = 0.2;
 
     const animateSponsors = () => {
+
       position -= speed;
 
       const halfWidth = logos.scrollWidth / 2;
@@ -43,107 +63,157 @@ document.addEventListener("DOMContentLoaded", () => {
       logos.style.transform = `translateX(${position}px)`;
 
       requestAnimationFrame(animateSponsors);
+
     };
 
     animateSponsors();
+
   }
+
 });
 
 
-// --- ENLLAÇ ACTIU MENÚ ---
+// =========================================
+// ENLLAÇ ACTIU MENÚ
+// =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
+
   const currentUrl = window.location.pathname.split("/").pop();
+
   const navLinks = document.querySelectorAll("nav a");
 
   navLinks.forEach(link => {
+
     if (link.getAttribute("href") === currentUrl) {
+
       link.classList.add("active");
+
     }
+
   });
+
 });
 
 
-// --- CARRUSELS I PUNTS ---
+// =========================================
+// SLIDERS + PUNTS
+// =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
-  const carrusels = [
+
+  const sliders = [
+
     {
-      contenidor: ".entrevistes-actuals",
-      scroll: ".cards-container",
+      section: ".entrevistes-actuals",
+      container: ".cards-container",
       item: ".entrevista-principal"
     },
+
     {
-      contenidor: ".entrevistes",
-      scroll: ".cards-container",
+      section: ".entrevistes",
+      container: ".cards-container",
       item: ".card"
     },
+
     {
-      contenidor: ".collaboracions",
-      scroll: ".grid-cards",
+      section: ".collaboracions",
+      container: ".grid-cards",
       item: ".card"
     }
+
   ];
 
-  carrusels.forEach(car => {
-    const wrapper = document.querySelector(car.contenidor);
-    const scrollElement = wrapper?.querySelector(car.scroll);
+  sliders.forEach(slider => {
 
-    if (!wrapper || !scrollElement) return;
+    const section = document.querySelector(slider.section);
 
-    const actualitzarPunts = () => {
-      const primerItem = scrollElement.querySelector(car.item);
+    if (!section) return;
 
-      if (!primerItem) return;
+    const container = section.querySelector(slider.container);
 
-      const gap = parseInt(getComputedStyle(scrollElement).gap) || 0;
-      const ampleItem = primerItem.offsetWidth + gap;
-      const index = Math.round(scrollElement.scrollLeft / ampleItem) + 1;
+    if (!container) return;
 
-      wrapper.classList.remove(
+    const items = container.querySelectorAll(slider.item);
+
+    if (!items.length) return;
+
+    const updateDots = () => {
+
+      const firstItem = items[0];
+
+      const gap =
+        parseInt(getComputedStyle(container).gap) || 0;
+
+      const itemWidth =
+        firstItem.offsetWidth + gap;
+
+      const index =
+        Math.round(container.scrollLeft / itemWidth) + 1;
+
+      section.classList.remove(
         "actiu-1",
         "actiu-2",
-        "actiu-3",
-        "punt-1",
-        "punt-2",
-        "punt-3"
+        "actiu-3"
       );
 
-      wrapper.classList.add(`actiu-${index}`);
+      section.classList.add(`actiu-${index}`);
+
     };
 
-    actualitzarPunts();
+    updateDots();
 
-    scrollElement.addEventListener("scroll", actualitzarPunts);
+    container.addEventListener("scroll", updateDots);
+
   });
+
 });
 
 
-// --- NEWSLETTER + PARTICIPA ---
+// =========================================
+// NEWSLETTER + PARTICIPA
+// =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
-  const newsForm = document.getElementById("newsletterForm");
-  const newsThanks = document.getElementById("thankYouMessage");
+
+  // NEWSLETTER
+  const newsForm =
+    document.getElementById("newsletterForm");
+
+  const newsThanks =
+    document.getElementById("thankYouMessage");
 
   if (newsForm && newsThanks) {
+
     newsForm.addEventListener("submit", event => {
+
       event.preventDefault();
-
-      const emailValue = document.getElementById("emailInput").value;
-
-      console.log("Subscripció nova per a:", emailValue);
 
       newsForm.style.display = "none";
       newsThanks.style.display = "block";
+
     });
+
   }
 
-  const participaForm = document.querySelector(".formulari form");
-  const participaThanks = document.getElementById("thanksforjoining");
+  // PARTICIPA
+  const participaForm =
+    document.querySelector(".formulari form");
+
+  const participaThanks =
+    document.getElementById("thanksforjoining");
 
   if (participaForm && participaThanks) {
+
     participaForm.addEventListener("submit", event => {
+
       event.preventDefault();
 
       participaForm.style.display = "none";
       participaThanks.style.display = "flex";
+
     });
+
   }
+
 });

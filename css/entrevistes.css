@@ -1565,7 +1565,7 @@ header {
   position: absolute;
 
   left: 50%;
-  bottom: 55px;
+  bottom: 55px !important;
 
   transform: translateX(-50%);
 
