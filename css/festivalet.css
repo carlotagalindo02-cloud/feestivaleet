@@ -1707,13 +1707,19 @@ footer {
   min-width: 100% !important;
   max-width: 100% !important;
   box-sizing: border-box;
+
   scroll-snap-align: center;
+
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+
   text-align: left;
   gap: 15px;
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .icona-transport {
@@ -1724,6 +1730,7 @@ footer {
 
 .transport-text {
   text-align: left;
+  max-width: 220px;
 }
 
 .transport-text strong {
