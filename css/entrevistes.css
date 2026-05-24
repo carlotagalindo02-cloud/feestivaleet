@@ -1508,21 +1508,12 @@ header {
 }
 
 .entrevista-principal .contingut h3 {
-  color: var(--taronja-viu);
-
-  font-size: 40px;
   line-height: 1.15;
-  font-weight: 400;
-
   margin: 0 0 55px;
 }
 
 .entrevista-principal .contingut p {
   color: var(--marro-fosc);
-
-  font-size: 21px;
-  line-height: 1.16;
-
   margin: 0 0 28px;
 }
 
