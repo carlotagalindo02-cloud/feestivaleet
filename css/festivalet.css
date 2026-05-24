@@ -920,7 +920,8 @@ footer {
   scrollbar-width: none;
   width: 100%;
   position: relative;
-  padding-bottom: 80px;
+  padding-top: 20px;
+  padding-bottom: 160px; 
 }
 
 /* IMATGES IGUALS */
@@ -936,7 +937,7 @@ footer {
   border-radius: 34px;
   display: block;
   scroll-snap-align: center;
-  transform: translateY(110px); /* més avall */
+  transform: translateY(140px); 
   flex-shrink: 0;
 }
 
@@ -947,11 +948,9 @@ footer {
   right: 21%;
   width: 60px;
   height: 12px;
-
   background-image:
     radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-
   background-position: 15px center, 35px center;
   background-repeat: no-repeat;
   background-size: 12px 12px;
@@ -966,7 +965,59 @@ footer {
 .entrada-header {
   column-gap: 40px !important;
 }
-  
+  .festivalet-participants {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.btn-info-text {
+  display: block;
+  width: 70px;
+  margin: 24px 0;
+}
+
+.festivalet-participants h3 {
+  text-align: left;
+}
+
+.btn-info-text:hover {
+  opacity: 0.8;
+}
+
+.participants-header {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  gap: 40px;
+
+  align-items: flex-start;
+}
+
+.participants-header > * {
+  align-self: flex-start;
+}
+
+.img-gran-curvada {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center 70%;
+  margin-top: 0;
+}
+
+.participants-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
+
+.contenidor-boto {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
   
   /* --- GASTRONOMIA --- */
 
@@ -1037,7 +1088,6 @@ footer {
   }
 
   /* IMATGES */
-
   .img-curvada {
     flex: 0 0 clamp(280px, 42vw, 500px);
     width: clamp(280px, 42vw, 500px);
@@ -1052,9 +1102,8 @@ footer {
     margin-top: 85px;
     flex-shrink: 0;
   }
-
+  
   /* PUNTS */
-
   .festivalet-gastronomia::after {
     content: "";
     position: absolute;
@@ -1078,9 +1127,9 @@ footer {
       radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
   }
   
-  /* =========================================
+/* =========================================
    UBICACIÓ I TRANSPORT
-   ========================================= */
+========================================= */
 
 .ubicacio-transport {
   display: flex;
@@ -1088,8 +1137,8 @@ footer {
   gap: clamp(80px, 12vw, 180px);
   margin-top: 40px;
   padding-bottom: 40px;
-  padding-left: clamp(8px, 2vw, 20px);
-  padding-right: 8px; /* menys marge dret */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   overflow: hidden;
   box-sizing: border-box;
   background-image: url('../contacte/fons.svg');
@@ -1098,106 +1147,47 @@ footer {
   background-repeat: no-repeat;
 }
 
-/* ON */
-
-.header-inline {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: start;
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: clamp(40px, 8vw, 120px);
-}
-
-/* TÍTOL */
-
-.header-inline h2 {
-  justify-self: start;
-  margin: 0;
-  margin-left: 40px;
-}
-
-/* ADREÇA */
-
-address {
-  justify-self: end;
-  margin-left: auto;
-  margin-right: 40px; 
-  max-width: 220px;
-  text-align: right;
-  line-height: 1.3;
-  font-style: normal;
-  margin-top: -60px;
-}
-
-/* MAPA */
-
-.mapa-isometric {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-left: 130px;
-}
-
-.mapa-isometric img {
-  width: min(420px, 95%);
-  height: auto;
-  display: block;
-}
-
 /* COM ARRIBAR */
 
 .columna-arribar {
   margin-top: clamp(60px, 10vw, 160px);
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /* TRANSPORTS */
 
 .transports-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   flex-wrap: nowrap;
   width: 100%;
-  padding-left: clamp(30px, 6vw, 140px);
-  padding-right: clamp(10px, 3vw, 60px); 
+  padding-left: 0;
+  padding-right: 0;
   margin-top: 60px;
 }
-
-
-.transport-text strong {
-  color: var(--teula);
-}
-
-/* ITEMS */
-
-.transport-item {
-  flex: 0 1 auto;
-  min-width: 90px;
-  max-width: 180px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* ICONES FIXES */
-
-.icona-transport {
-  width: clamp(60px, 8vw, 90px);
-  height: auto;
-}
   
-  /* =========================================
-     NEWSLETTER
-     ========================================= */
+   /* --- ESPÒNSORS --- */
+
+  .esponsors-section {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* --- NEWSLETTER --- */
 
   .newsletter {
     display: flex !important;
     flex-direction: column !important;
-    gap: 40px;
-    padding-top: 50px;
-    padding-bottom: 50px !important;
+    gap: 24px !important;
+
+    margin-top: 0 !important;
+
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
 
   .newsletter-left,
@@ -1214,6 +1204,23 @@ address {
     width: 100%;
   }
 
+  /* --- BOTONS --- */
+
+  .btn-custom,
+  .wrapper-centrat {
+    width: 220px;
+    height: 65px;
+  }
+
+  .btn-custom:hover,
+  .wrapper-centrat:hover {
+    filter: brightness(1.1);
+  }
+
+  .info-icon:hover {
+    transform: scale(1.08);
+  }
+  
   /* --- Botons --- */
 
   .btn-custom,

@@ -836,7 +836,7 @@ footer {
   .entrevistes-actuals .titol-seccio {
     font-size: 40px;
     line-height: 48px;
-    margin-top: 140px;
+    margin-top: 120px;
     margin-bottom: 40px;
   }
 
@@ -917,7 +917,6 @@ footer {
   .entrevistes h2 {
     font-size: 36px;
     line-height: 43px;
-
     margin-bottom: 35px;
   }
 
@@ -938,7 +937,7 @@ footer {
   }
 
   .entrevistes .card {
-    flex: 0 0 calc(50% - 10px);
+    flex: 0 0 70%;
     scroll-snap-align: start;
     padding: 24px;
     border-radius: 24px;
