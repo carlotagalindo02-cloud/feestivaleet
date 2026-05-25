@@ -1713,345 +1713,324 @@ footer {
 }
 
 /* =========================================
-   ENTREVISTES ANTERIORS
-========================================= */
+     ENTREVISTES
+  ========================================= */
 
-.entrevistes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .entrevistes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  width: 100%;
+    width: 100%;
 
-  padding: 0 12px 60px 12px !important;
+    padding: 0 12px 55px 12px !important;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  margin-top: 0 !important;
-}
+    margin-top: 0 !important;
+  }
 
-.entrevistes h2 {
-  width: 100%;
+  .entrevistes h2 {
+    width: 100%;
 
-  color: var(--taronja-viu);
+    color: var(--taronja-viu);
 
-  font-size: 20px;
-  font-weight: 500;
+    font-size: 20px;
+    font-weight: 500;
 
-  margin-bottom: 34px;
+    margin-bottom: 34px;
 
-  text-align: left;
-}
+    text-align: left;
+  }
 
-/* =========================================
-   CARRUSEL
-========================================= */
+  .entrevistes .carousel-container {
+    width: 100%;
 
-.entrevistes .carousel-container {
-  width: 100%;
-  overflow: hidden;
-}
+    overflow: hidden;
+  }
 
-.entrevistes .cards-container {
-  display: flex;
+  .entrevistes .cards-container {
+    display: flex;
 
-  width: 100%;
+    width: 100%;
 
-  overflow-x: auto;
-  overflow-y: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 
-  scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
 
-  -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 
-  scrollbar-width: none;
+    scrollbar-width: none;
 
-  gap: 0;
+    gap: 0;
 
-  padding: 0;
+    padding: 0;
 
-  margin-bottom: 20px;
-}
+    margin-bottom: 18px;
+  }
 
-.entrevistes .cards-container::-webkit-scrollbar {
-  display: none;
-}
+  .entrevistes .cards-container::-webkit-scrollbar {
+    display: none;
+  }
 
-/* =========================================
-   TARGETA
-========================================= */
+  .entrevistes .card {
+    flex: 0 0 100%;
 
-.entrevistes .card {
-  flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
 
-  min-width: 100%;
-  max-width: 100%;
+    scroll-snap-align: start;
 
-  scroll-snap-align: start;
+    background-image: url("../entrevistes/grafica.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-  background-image: url("../entrevistes/grafica.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    border-radius: 14px;
 
-  border-radius: 14px;
+    padding: 20px 16px 16px;
 
-  padding: 20px 16px 16px;
+    box-sizing: border-box;
 
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
 
-  display: flex;
-  flex-direction: column;
-}
+  .entrevistes .card h3 {
+    color: var(--taronja-viu);
 
-.entrevistes .card h3 {
-  color: var(--taronja-viu);
+    font-size: 18px;
+    font-weight: 500;
 
-  font-size: 18px;
-  font-weight: 500;
+    text-align: center;
 
-  text-align: center;
+    margin-bottom: 6px;
+  }
 
-  margin-bottom: 6px;
-}
+  .entrevistes .card p {
+    font-size: 11px;
+    line-height: 1.35;
 
-.entrevistes .card p {
-  font-size: 11px;
-  line-height: 1.35;
+    color: var(--marro-fosc);
 
-  color: var(--marro-fosc);
+    margin-bottom: 16px;
+  }
 
-  margin-bottom: 16px;
-}
+  .entrevistes .main-img {
+    width: 100%;
+    height: 250px;
 
-.entrevistes .card .mes-info {
-  color: var(--marro-fosc);
+    object-fit: cover;
 
-  font-size: 14px;
-  font-weight: 700;
+    border-radius: 12px;
+  }
 
-  margin-bottom: 18px;
-}
+  .entrevistes .social-row {
+    display: flex;
 
-/* =========================================
-   IMATGE
-========================================= */
+    align-items: center;
+    justify-content: space-between;
 
-.entrevistes .main-img {
-  width: 100%;
-  height: 250px;
+    width: 100%;
 
-  object-fit: cover;
+    margin-top: 10px;
+  }
 
-  border-radius: 12px;
-}
+  .entrevistes .social-icons {
+    display: flex;
 
-/* =========================================
-   XARXES SOCIALS
-========================================= */
+    align-items: center;
 
-.entrevistes .social-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    gap: 10px;
+  }
 
-  width: 100%;
+  .entrevistes .social-icons img,
+  .entrevistes .social-icons svg,
+  .entrevistes .social-icons i {
+    width: 16px;
+    height: 16px;
+  }
 
-  margin-top: 10px;
-}
+  .entrevistes .date {
+    font-size: 10px;
 
-.entrevistes .social-icons {
-  display: flex;
-  align-items: center;
+    color: var(--marro-fosc);
+  }
 
-  gap: 10px;
-}
+  .entrevistes .carousel-dots {
+    display: block;
 
-.entrevistes .social-icons img,
-.entrevistes .social-icons svg,
-.entrevistes .social-icons i {
-  width: 16px;
-  height: 16px;
-}
+    width: 52px;
+    height: 10px;
 
-.entrevistes .date {
-  font-size: 10px;
+    margin: 0 auto;
 
-  color: var(--marro-fosc);
-}
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
 
-/* =========================================
-   PUNTS CARRUSEL
-========================================= */
+    background-image:
+      radial-gradient(circle, var(--taronja-viu) 4px, transparent 5px),
+      radial-gradient(circle, var(--carn-clar) 4px, transparent 5px),
+      radial-gradient(circle, var(--carn-clar) 4px, transparent 5px);
 
-.entrevistes .carousel-dots {
-  display: block;
+    background-position:
+      0 center,
+      20px center,
+      40px center;
+  }
 
-  width: 52px;
-  height: 10px;
-
-  margin: 0 auto;
-
-  background-repeat: no-repeat;
-  background-size: 10px 10px;
-
-  background-image:
-    radial-gradient(circle, var(--taronja-viu) 4px, transparent 5px),
-    radial-gradient(circle, var(--carn-clar) 4px, transparent 5px),
-    radial-gradient(circle, var(--carn-clar) 4px, transparent 5px);
-
-  background-position:
-    0 center,
-    20px center,
-    40px center;
-}
-
-.entrevistes.punt-2 .carousel-dots {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 4px, transparent 5px),
-    radial-gradient(circle, var(--taronja-viu) 4px, transparent 5px),
-    radial-gradient(circle, var(--carn-clar) 4px, transparent 5px);
-}
-
-.entrevistes.punt-3 .carousel-dots {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 4px, transparent 5px),
-    radial-gradient(circle, var(--carn-clar) 4px, transparent 5px),
-    radial-gradient(circle, var(--taronja-viu) 4px, transparent 5px);
-}
-  
   /* =========================================
-   PARTICIPA
-========================================= */
+     PARTICIPA
+  ========================================= */
 
-.participa {
-  display: flex;
-  flex-direction: column;
+  .participa {
+    display: flex;
+    flex-direction: column;
 
-  width: 100%;
+    width: 100%;
 
-  padding: 0 12px 60px 12px;
+    padding: 0 12px 60px 12px;
 
-  gap: 18px;
-}
+    gap: 18px;
+  }
 
-/* =========================================
-   TITOL
-========================================= */
+  .participa h2 {
+    color: var(--taronja-viu);
 
-.participa h2 {
-  color: var(--taronja-viu);
+    font-size: 24px;
+    font-weight: 500;
 
-  font-size: 24px;
-  font-weight: 500;
+    line-height: 1.15;
 
-  line-height: 1.15;
+    text-align: left;
 
-  text-align: left;
+    margin-bottom: 12px;
+  }
 
-  margin-bottom: 12px;
-}
+  .text-participa {
+    width: 100%;
+  }
 
-/* =========================================
-   TEXT
-========================================= */
+  .text-participa p {
+    font-size: 11px;
+    line-height: 1.3;
 
-.text-participa {
-  width: 100%;
-}
+    color: var(--marro-fosc);
 
-.text-participa p {
-  font-size: 11px;
-  line-height: 1.3;
+    margin-bottom: 18px;
+  }
 
-  color: var(--marro-fosc);
+  /* =========================================
+     DESPLEGABLES
+  ========================================= */
 
-  margin-bottom: 18px;
-}
+  .preguntes,
+  .accordion,
+  .faq {
+    width: 100%;
 
-/* =========================================
-   PREGUNTES / DESPLEGABLES
-========================================= */
+    margin-bottom: 14px;
+  }
 
-.preguntes,
-.accordion,
-.faq {
-  width: 100%;
+  .preguntes details,
+  .accordion details,
+  .faq details {
+    margin-bottom: 10px;
+  }
 
-  margin-bottom: 14px;
-}
+  .preguntes summary,
+  .accordion summary,
+  .faq summary {
+    font-size: 12px;
+    font-weight: 500;
 
-.preguntes details,
-.accordion details,
-.faq details {
-  margin-bottom: 10px;
-}
+    color: var(--taronja-viu);
 
-.preguntes summary,
-.accordion summary,
-.faq summary {
-  font-size: 12px;
-  font-weight: 500;
+    cursor: pointer;
+  }
 
-  color: var(--taronja-viu);
+  /* =========================================
+     FORMULARI
+  ========================================= */
 
-  cursor: pointer;
-}
+  .formulari {
+    width: 100%;
 
-/* =========================================
-   FORMULARI
-========================================= */
+    margin-top: 10px;
+  }
 
-.formulari {
-  width: 100%;
+  .formulari form {
+    display: flex;
+    flex-direction: column;
 
-  margin-top: 10px;
-}
+    width: 100%;
 
-.formulari form {
-  display: flex;
-  flex-direction: column;
+    gap: 10px;
+  }
 
-  width: 100%;
+  .formulari label {
+    font-size: 10px;
 
-  gap: 10px;
-}
+    color: var(--marro-fosc);
+  }
 
-.formulari label {
-  font-size: 10px;
+  .formulari input,
+  .formulari textarea,
+  .formulari select {
+    width: 100%;
 
-  color: var(--marro-fosc);
+    border: 1px solid #b77b6b;
+    border-radius: 4px;
 
-  margin-bottom: -2px;
-}
+    background: transparent;
 
-.formulari input,
-.formulari textarea,
-.formulari select {
-  width: 100%;
+    padding: 8px 10px;
 
-  border: 1px solid var(--teula);
-  border-radius: 4px;
+    font-size: 11px;
 
-  background: transparent;
+    box-sizing: border-box;
+  }
 
-  padding: 8px 10px;
+  .formulari input,
+  .formulari select {
+    height: 32px;
+  }
 
-  font-size: 11px;
+  .formulari textarea {
+    height: 48px;
 
-  box-sizing: border-box;
-}
+    resize: none;
+  }
 
-.formulari input,
-.formulari select {
-  height: 32px;
-}
+  /* =========================================
+     BOTO
+  ========================================= */
 
-.formulari textarea {
-  height: 48px;
+  .formulari button {
+    width: 78px;
+    height: 34px;
 
-  resize: none;
-}
+    border: none;
+
+    background: #1d52d6;
+
+    color: white;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      85% 50%,
+      100% 100%,
+      0 100%,
+      15% 50%
+    );
+  }
 
 /* =========================================
    BOTO
