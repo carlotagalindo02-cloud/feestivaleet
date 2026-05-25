@@ -1620,7 +1620,8 @@ body {
   padding-left: 8px !important;
   padding-right: 8px !important;
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 
   margin-top: 80px;
 
@@ -1635,11 +1636,16 @@ body {
   display: flex;
 
   overflow-x: auto;
+  overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
 
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+
+  scroll-behavior: smooth;
+
+  touch-action: pan-x;
 }
 
 .entrevistes-actuals .cards-container::-webkit-scrollbar {
