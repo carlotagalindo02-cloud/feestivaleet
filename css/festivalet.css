@@ -1795,7 +1795,7 @@ footer {
 
   position: absolute;
 
-  top: 480px !important;
+  top: 100px !important;
 
   left: 50%;
 
@@ -2371,8 +2371,8 @@ footer {
   padding-left: 0 !important;
   padding-right: 0 !important;
 
-  margin-left: -20px !important;
-  margin-right: -20px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 
   width: 100% !important;
 
@@ -2410,7 +2410,7 @@ footer {
 
   gap: 0 !important;
 
-  width: 100%;
+  width: calc(100vw - 40px);
 
   scrollbar-width: none;
 
@@ -2422,10 +2422,10 @@ footer {
 }
 
 .card {
-  flex: 0 0 100% !important;
+  flex: 0 0 calc(100vw - 40px) !important;
 
-  min-width: 100% !important;
-  max-width: 100% !important;
+  min-width: calc(100vw - 40px) !important;
+  max-width: calc(100vw - 40px) !important;
 
   scroll-snap-align: center;
 

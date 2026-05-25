@@ -779,10 +779,10 @@ footer {
   display: flex;
   flex-direction: column;
 
-  gap: clamp(80px, 12vw, 180px);
+  gap: clamp(100px, 14vw, 220px);
 
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 
   padding-left: 40px;
   padding-right: 40px;
@@ -825,9 +825,9 @@ footer {
 
   text-align: right;
 
-  max-width: 220px;
+  max-width: 260px;
 
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* =========================================
@@ -842,13 +842,13 @@ footer {
   justify-content: center;
   align-items: center;
 
-  margin: 60px auto;
+  margin: 80px auto;
 }
 
 .mapa-isometric img {
   width: 100%;
 
-  max-width: 500px;
+  max-width: 620px;
 
   height: auto;
 
@@ -874,9 +874,9 @@ footer {
 
   width: 100%;
 
-  margin-top: 90px;
+  margin-top: 130px;
 
-  gap: 120px;
+  gap: 180px;
 }
 
 .transport-item {
@@ -889,9 +889,9 @@ footer {
 
   text-align: center;
 
-  gap: 8px;
+  gap: 14px;
 
-  min-height: 250px;
+  min-height: 280px;
 }
 
 .icona-transport {
@@ -901,9 +901,9 @@ footer {
 }
 
 .transport-text {
-  max-width: 260px;
+  max-width: 280px;
 
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
   /* =========================================

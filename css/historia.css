@@ -747,7 +747,7 @@ footer {
   gap: 24px !important;
   scroll-snap-type: x mandatory;
 
-  padding-top: 40px !important;
+  padding-top: 60px !important;
   padding-bottom: 140px !important;
 
   padding-left: 20px;
@@ -822,7 +822,7 @@ footer {
   padding-top: 80px;
   padding-bottom: 20px;
 
-  padding-left: 40px !important; /* ← més marge lateral */
+  padding-left: 40px !important; 
   padding-right: 40px !important;
 }
 
@@ -854,7 +854,7 @@ footer {
 
   margin-left: 0 !important;
 
-  padding-left: 10px !important; /* ← més separació interior */
+  padding-left: 10px !important; 
 
   display: flex;
   flex-direction: column;
@@ -897,15 +897,10 @@ footer {
 
 .entitat-imatge {
   width: 38%;
-
   order: 2;
-
-  margin-top: -180px; 
-
-  margin-left: auto;
-
+  margin-top: -400px; 
+  margin-right: -20px;
   display: flex;
-
   justify-content: flex-end;
 }
 
@@ -1347,7 +1342,7 @@ footer {
   .history-section::before {
   content: "";
   position: absolute;
-  top: 180px !important;
+  top: 160px !important;
   left: 0;
   width: 100%;
   height: 2px;
