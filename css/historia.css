@@ -1316,7 +1316,9 @@ footer {
 
 .history-section {
   position: relative;
+
   margin-top: 60px !important;
+
   overflow: visible !important;
 }
 
@@ -1351,7 +1353,7 @@ footer {
 }
 
 /* =========================================
-   LÍNIA HORITZONTAL
+   LINIA HORITZONTAL
 ========================================= */
 
 .timeline-grid::before {
@@ -1360,10 +1362,10 @@ footer {
   position: absolute;
 
   left: 0;
-  top: 63%;
+  top: 50%;
 
-  width: 220%;
-  height: 3px;
+  width: 300%;
+  height: 2px;
 
   background-color: var(--taronja-viu);
 
@@ -1390,11 +1392,9 @@ footer {
   background: transparent !important;
   background-image: none !important;
 
-  border: 2px solid var(--taronja-viu);
+  border: none !important;
 
-  border-radius: 20px;
-
-  padding: 20px;
+  padding: 0 !important;
 }
 
 /* =========================================

@@ -1521,24 +1521,33 @@ footer,
     font-weight: 400;
   }
 
-/* --- Entrevistes --- */
+/* =========================================
+   ENTREVISTES ANTERIORS
+========================================= */
 
 .entrevistes {
   display: flex !important;
   flex-direction: column;
   align-items: center;
 
-  padding-top: 40px !important;
+  padding: 80px 0 70px 0 !important;
+
+  margin-bottom: 20px !important;
+
+  overflow: hidden;
+
+  position: relative;
 
   gap: 0;
 }
 
 .entrevistes h2 {
   align-self: flex-start;
+
   margin-bottom: 10px;
 }
 
-.carousel-container {
+.entrevistes .carousel-container {
   width: 100%;
 
   display: flex;
@@ -1547,32 +1556,64 @@ footer,
 }
 
 .entrevistes .cards-container {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
 
-  gap: 15px;
+  gap: 20px;
 
   overflow-x: auto;
+  overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
+
   scrollbar-width: none;
 
   width: 100%;
 
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 16px;
+
   margin-bottom: 30px;
+
+  box-sizing: border-box;
 }
 
 .entrevistes .cards-container::-webkit-scrollbar {
   display: none;
 }
 
+/* CARD MÉS AMPLE */
+
 .entrevistes .card {
-  flex: 0 0 100%;
-  width: 100%;
+  flex: 0 0 98vw;
 
-  scroll-snap-align: start;
+  min-width: 98vw;
+  max-width: 98vw;
 
-  padding: 20px;
+  scroll-snap-align: center;
+
+  background-image: url("../entrevistes/grafica.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 24px;
+
+  border-radius: 18px;
+
+  min-height: 520px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+
+  color: var(--marro-fosc);
+
+  box-sizing: border-box;
 }
 
 .entrevistes .main-img {
@@ -1584,7 +1625,9 @@ footer,
   border-radius: 30px;
 }
 
-/* XARXES SOCIALS */
+/* =========================================
+   XARXES SOCIALS
+========================================= */
 
 .entrevistes .social-row {
   display: flex !important;
@@ -1630,9 +1673,11 @@ footer,
   font-size: 14px;
 }
 
-/* PUNTS CARRUSEL */
+/* =========================================
+   PUNTS CARRUSEL
+========================================= */
 
-.carousel-dots {
+.entrevistes .carousel-dots {
   display: block;
 
   width: 80px;
@@ -1799,7 +1844,7 @@ footer,
   transform: scale(1.12);
 }
   
-  /* =========================================
+/* =========================================
    FOOTER
 ========================================= */
 
@@ -1816,7 +1861,7 @@ footer {
 
   gap: 28px;
 
-  padding: 40px 20px;
+  padding: 32px 20px;
 }
 
 /* =========================================
@@ -1824,7 +1869,7 @@ footer {
 ========================================= */
 
 .footer-left img {
-  width: 150px;
+  width: 140px;
   height: auto;
 }
 
@@ -1839,25 +1884,23 @@ footer {
   align-items: center;
   justify-content: center;
 
-  gap: 10px;
-
   text-align: center;
+
+  gap: 6px;
+
+  margin-left: 0;
 }
 
 .footer-center p {
   margin: 0;
 
   color: var(--marro-fosc);
-
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .footer-center a {
   color: var(--marro-fosc);
-  text-decoration: none;
 
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .footer-center a:hover {
@@ -1875,37 +1918,36 @@ footer {
   align-items: center;
   justify-content: center;
 
-  gap: 18px;
+  gap: 12px;
 
   text-align: center;
 }
 
-/* CONTACTE */
+/* =========================================
+   CONTACTE
+========================================= */
 
 .contacte-link {
   margin-right: 0;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 24px;
 
   color: var(--marro-fosc);
 
-  text-decoration: none;
+  text-decoration: underline;
 
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  text-underline-offset: 4px;
+
+  transition: color 0.3s ease;
 }
 
 .contacte-link:hover {
   color: var(--taronja-viu);
-
-  transform: scale(1.05);
 }
 
 /* =========================================
-   XARXES SOCIALS
+   XARXES
 ========================================= */
 
 .social-icons {
@@ -1914,25 +1956,13 @@ footer {
   align-items: center;
   justify-content: center;
 
-  gap: 14px;
+  gap: 10px;
 }
 
 .social-icons img,
 .social-icons svg,
 .social-icons i {
-  width: 24px;
-  height: 24px;
-
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
-
-.social-icons img:hover,
-.social-icons svg:hover,
-.social-icons i:hover {
-  transform: scale(1.12);
-
-  opacity: 0.8;
+  width: 18px;
+  height: 18px;
 }
 }

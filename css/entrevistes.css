@@ -1795,8 +1795,10 @@ footer {
 
   gap: 20px;
 
-  padding-top: 50px !important;
+  padding-top: 20px !important; /* més amunt */
   padding-bottom: 40px !important;
+
+  margin-top: -40px !important; /* puja tota la secció */
 }
 
 .text-participa h2 {
@@ -1815,7 +1817,13 @@ summary {
   line-height: 26px;
 }
 
-/* FORMULARI MÉS AMUNT */
+/* =========================================
+   FORMULARI
+========================================= */
+
+.formulari {
+  margin-top: -20px !important; 
+}
 
 .formulari form {
   margin-top: 0;
