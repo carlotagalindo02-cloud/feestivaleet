@@ -132,27 +132,28 @@ figcaption {
 }
 
 /* =========================================
-   HEADER
+   HEADER I NAVEGACIÓ
    ========================================= */
 
 header {
   background-color: var(--carn-clar);
 
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
 
   position: fixed;
 
   top: 0;
-
   left: 0;
 
   width: 100%;
 
   z-index: 1000;
+
+  box-sizing: border-box;
+
+  padding: 18px 20px;
 }
 
 .logo img {
@@ -161,25 +162,43 @@ header {
   height: auto;
 
   display: block;
+
+  cursor: pointer;
 }
 
-nav ul {
+.logo a {
+  display: block;
+
+  text-decoration: none;
+
+  border: none;
+  outline: none;
+}
+
+nav ul,
+.nav-list {
   display: flex;
 
   align-items: center;
 
   list-style: none;
+
+  gap: 22px;
+
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  margin-left: 25px;
+nav ul li,
+.nav-list li {
+  position: relative;
 }
 
-nav ul li a {
+nav ul li a,
+.nav-list li a {
   text-decoration: none;
 
-  font-size: 17px;
-
+  font-size: 16px;
   font-weight: 600;
 
   color: var(--marro-fosc);
@@ -187,8 +206,68 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-list li a:hover,
+.nav-list li a.active,
+.nav-list li a[href*="entrevistes"] {
+  color: var(--blau-electric) !important;
+}
+
+.enllac-idioma {
+  display: flex;
+
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.mini-icona {
+  width: 10px;
+
+  margin-left: 6px;
+
+  transition: transform 0.3s;
+}
+
+.submenu-idiomes {
+  display: none;
+
+  position: absolute;
+
+  top: 100%;
+  right: 0;
+
+  background-color: var(--carn-clar);
+
+  list-style: none;
+
+  padding: 10px 0;
+
+  min-width: 80px;
+
+  border-radius: 4px;
+}
+
+.submenu-idiomes li a {
+  padding: 8px 15px;
+
+  display: block;
+}
+
+.submenu-idiomes li a:hover {
   color: var(--blau-electric);
+}
+
+.dropdown-idioma:hover .submenu-idiomes {
+  display: block;
+}
+
+.dropdown-idioma:hover .mini-icona {
+  transform: rotate(180deg);
+}
+
+.menu-toggle,
+.nav-mobil {
+  display: none;
 }
 
 /* =========================================
@@ -197,18 +276,19 @@ nav ul li a:hover {
 
 .cards-container {
   width: 100%;
-
   max-width: 1400px;
 
-  margin: 0 auto;
+  margin: 140px auto 0 auto;
 
-  padding: 0;
+  padding: 0 20px;
 
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-  flex-direction: column;
+  gap: 28px;
 
-  gap: 36px;
+  box-sizing: border-box;
 }
 
 .entrevista-principal {
@@ -218,7 +298,7 @@ nav ul li a:hover {
 
   gap: 18px;
 
-  width: 100%;
+  width: calc(50% - 14px);
 }
 
 .contenidor-foto,
@@ -273,6 +353,28 @@ nav ul li a:hover {
 }
 
 /* =========================================
+   LINKS
+   ========================================= */
+
+a,
+p a,
+.link-text,
+.enllac-info {
+  color: var(--marro-fosc);
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+a:hover,
+p a:hover,
+.link-text:hover,
+.enllac-info:hover {
+  color: var(--taronja-viu);
+}
+
+/* =========================================
    + INFO
    ========================================= */
 
@@ -280,10 +382,6 @@ nav ul li a:hover {
   margin-top: 18px;
 
   display: inline-block;
-
-  color: var(--marro-fosc);
-
-  text-decoration: none;
 
   font-weight: 600;
 }
@@ -329,9 +427,11 @@ nav ul li a:hover {
    ========================================= */
 
 .entrevistes {
-  padding: 60px 0 !important;
+  padding: 60px 0 120px 0 !important;
 
-  overflow-x: hidden;
+  overflow: visible;
+
+  position: relative;
 }
 
 .entrevistes h2 {
@@ -347,7 +447,7 @@ nav ul li a:hover {
 }
 
 /* =========================================
-   SLIDER HORITZONTAL
+   TARGETES SENSE SCROLL
    ========================================= */
 
 .entrevistes .cards-container {
@@ -355,25 +455,17 @@ nav ul li a:hover {
 
   flex-direction: row !important;
 
+  justify-content: center;
+
   gap: 18px;
-
-  overflow-x: auto !important;
-
-  overflow-y: hidden;
-
-  scroll-snap-type: x mandatory;
 
   padding-left: 30px;
 
   padding-right: 30px;
 
-  scrollbar-width: none;
+  flex-wrap: wrap;
 
-  -webkit-overflow-scrolling: touch;
-}
-
-.entrevistes .cards-container::-webkit-scrollbar {
-  display: none;
+  overflow: visible !important;
 }
 
 /* =========================================
@@ -381,13 +473,13 @@ nav ul li a:hover {
    ========================================= */
 
 .card {
-  flex: 0 0 32vw !important;
+  flex: 0 0 28% !important;
 
-  width: 32vw !important;
+  width: 28% !important;
 
-  min-width: 32vw !important;
+  min-width: 28% !important;
 
-  max-width: 32vw !important;
+  max-width: 28% !important;
 
   background: url('../entrevistes/grafica.svg') no-repeat center center;
 
@@ -404,8 +496,6 @@ nav ul li a:hover {
   position: relative;
 
   text-align: left;
-
-  scroll-snap-align: center;
 
   box-sizing: border-box;
 }
@@ -439,13 +529,45 @@ nav ul li a:hover {
 .card a {
   color: var(--marro-fosc);
 
-  text-decoration: underline;
+  text-decoration: none;
 
   transition: color 0.3s ease;
 }
 
 .card a:hover {
   color: var(--taronja-viu);
+}
+
+/* =========================================
+   PUNTS
+   ========================================= */
+
+.entrevistes::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%);
+
+  width: 90px;
+  height: 15px;
+
+  background-repeat: no-repeat;
+
+  background-size: 15px 15px;
+
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
+  background-position:
+    15px center,
+    45px center,
+    75px center;
 }
 
 /* =========================================
@@ -832,8 +954,8 @@ footer {
 
   margin: 0 auto;
 
-  padding-left: 20px;  
-  padding-right: 20px; 
+  padding-left: 20px;
+  padding-right: 20px;
 
   display: flex;
   flex-direction: column;
@@ -845,7 +967,7 @@ footer {
   margin-top: 100px;
 }
 
-/* CARD MÉS AMPLA */
+/* CARD MÉS PETITA */
 
 .entrevista-principal {
   display: flex;
@@ -856,7 +978,7 @@ footer {
   gap: 20px;
 
   width: 100%;
-  max-width: 1400px; 
+  max-width: 720px;
 
   margin: 0 auto;
 }
@@ -1403,7 +1525,9 @@ footer {
 .entrevistes-actuals {
   position: relative;
 
-  padding-bottom: 70px;
+  padding-bottom: 120px;
+
+  overflow: visible;
 }
 
 .cards-container {
@@ -1411,11 +1535,14 @@ footer {
   gap: 20px;
 
   overflow-x: auto;
+  overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
 
   padding-left: 20px;
   padding-right: 20px;
+
+  -webkit-overflow-scrolling: touch;
 
   scrollbar-width: none;
 }
@@ -1425,9 +1552,9 @@ footer {
 }
 
 .entrevista-principal {
-  flex: 0 0 88vw;
-  min-width: 88vw;
-  max-width: 88vw;
+  flex: 0 0 92vw;
+  min-width: 92vw;
+  max-width: 92vw;
 
   scroll-snap-align: center;
 
@@ -1479,7 +1606,7 @@ footer {
   position: absolute;
 
   left: 50%;
-  bottom: -10px; /* MÉS AVALL */
+  bottom: 20px;
 
   transform: translateX(-50%);
 
@@ -1522,7 +1649,7 @@ footer {
   overflow: visible;
 
   padding-top: 20px;
-  padding-bottom: 90px; /* MÉS ESPAI A BAIX */
+  padding-bottom: 120px;
 
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -1536,7 +1663,7 @@ footer {
   padding-left: 20px;
   padding-right: 20px;
 
-  text-align: center;
+  text-align: left;
 }
 
 .entrevistes .cards-container {
@@ -1567,9 +1694,9 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 92vw;
-  min-width: 92vw;
-  max-width: 92vw;
+  flex: 0 0 96vw;
+  min-width: 96vw;
+  max-width: 96vw;
 
   scroll-snap-align: center;
 
@@ -1589,7 +1716,7 @@ footer {
 }
 
 /* =========================================
-   PUNTS ENTREVISTES ANTERIORS
+   PUNTS
    ========================================= */
 
 .entrevistes::after {
@@ -1598,7 +1725,7 @@ footer {
   position: absolute;
 
   left: 50%;
-  bottom: 10px; /* MÉS A SOTA */
+  bottom: 25px;
 
   transform: translateX(-50%);
 
@@ -1617,20 +1744,6 @@ footer {
     15px center,
     45px center,
     75px center;
-}
-
-.entrevistes.actiu-2::after {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-}
-
-.entrevistes.actiu-3::after {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
 }
 
 /* =========================================

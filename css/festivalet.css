@@ -1709,9 +1709,9 @@ footer {
   display: flex !important;
   flex-direction: column !important;
 
-  padding: 0 0 70px 0;
+  padding: 0 0 10px 0;
 
-  margin-top: 30px !important;
+  margin-top: 120px !important;
 
   position: relative;
 
@@ -1801,7 +1801,7 @@ footer {
 
   position: absolute;
 
-  bottom: 20px !important;
+  bottom: -14px;
 
   left: 50%;
 
@@ -2450,11 +2450,12 @@ footer {
   margin-bottom: 15px;
 
   width: 100%;
+  margin-left: 20px;
 }
 
 .categoria p,
 .categoria h3 {
-  text-align: center;
+  text-align: left;
 }
 
 .cards-wrapper {
