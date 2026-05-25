@@ -326,13 +326,13 @@ nav ul li a:hover {
 .destacats {
   padding: 0 0 80px;
   font-family: Arial, sans-serif;
-  color: #2b1a14;
+  color: var(--marro-fosc);
 }
 
 .cards-container {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 24px;
 }
 
 .entrevista-principal {
