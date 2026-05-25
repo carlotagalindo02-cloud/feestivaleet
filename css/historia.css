@@ -707,9 +707,7 @@ footer {
 
 .history-section {
   position: relative;
-
   margin-top: 60px !important;
-
   overflow: visible !important;
 }
 
@@ -727,19 +725,14 @@ footer {
 
 .history-section::before {
   content: "";
-
   position: absolute;
 
-  top: 340px !important;
+  top: 390px !important; /* ← línia més avall */
 
   left: 0;
-
   width: 100%;
-
   height: 2px;
-
   background-color: var(--taronja-viu);
-
   z-index: 0;
 }
 
@@ -749,13 +742,9 @@ footer {
 
 .timeline-grid {
   display: flex !important;
-
   flex-direction: row !important;
-
   overflow-x: auto !important;
-
   gap: 24px !important;
-
   scroll-snap-type: x mandatory;
 
   padding-top: 40px !important;
@@ -765,7 +754,6 @@ footer {
   padding-right: 20px;
 
   scrollbar-width: none;
-
   -webkit-overflow-scrolling: touch;
 }
 
@@ -807,11 +795,8 @@ footer {
 
 .milestone img {
   width: 100% !important;
-
   height: 190px !important;
-
   object-fit: cover;
-
   border-radius: 20px;
 }
 
@@ -821,13 +806,11 @@ footer {
 
 .year {
   font-size: 22px !important;
-
   font-weight: 600 !important;
 }
 
 .description {
   font-size: 15px !important;
-
   line-height: 1.4 !important;
 }
 
@@ -837,7 +820,6 @@ footer {
 
 .entitat-section {
   padding-top: 80px;
-
   padding-bottom: 20px;
 
   padding-left: 20px !important;
@@ -850,14 +832,13 @@ footer {
 
 .entitat-container {
   display: flex;
-
   flex-direction: row;
 
-  align-items: center;
+  align-items: flex-start; /* ← imatge més amunt */
 
   justify-content: space-between;
 
-  gap: 30px;
+  gap: 20px;
 }
 
 /* =========================================
@@ -865,11 +846,13 @@ footer {
    ========================================= */
 
 .entitat-text {
-  width: 58%;
+  width: 62%; /* ← més ample */
 
   order: 1;
 
   margin-top: 0;
+
+  margin-left: 0 !important; /* ← més a l’esquerra */
 
   display: flex;
   flex-direction: column;
@@ -881,7 +864,6 @@ footer {
 
 .entitat-text h2 {
   margin-bottom: 20px;
-
   text-align: left;
 }
 
@@ -912,11 +894,11 @@ footer {
    ========================================= */
 
 .entitat-imatge {
-  width: 34%;
+  width: 40%; /* ← més ampla */
 
   order: 2;
 
-  margin-top: 0;
+  margin-top: -20px; /* ← puja la imatge */
 
   margin-left: auto;
 
@@ -928,7 +910,7 @@ footer {
 .entitat-imatge img {
   width: 100%;
 
-  max-width: 320px;
+  max-width: 380px; /* ← imatge més gran */
 
   height: auto;
 
@@ -953,8 +935,8 @@ footer {
 
   align-items: center;
 
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
 
   margin-top: -20px !important;
 }

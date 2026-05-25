@@ -115,41 +115,38 @@ if (logos) {
 
     });
 
-    // --- 4. SLIDER COL·LABORACIONS (Puntets) ---
-    const sliderCollab = document.querySelector('.grid-cards');
-    const seccioCollab = document.querySelector('.collaboracions');
+    // --- SLIDER COL·LABORACIONS / PUNTETS ---
 
-    if (sliderCollab && seccioCollab) {
+document.addEventListener('DOMContentLoaded', () => {
+  const sliderCollab = document.querySelector('.grid-cards');
+  const seccioCollab = document.querySelector('.collaboracions');
 
-        sliderCollab.addEventListener('scroll', () => {
+  if (sliderCollab && seccioCollab) {
+    const actualitzarPunt = () => {
+      const firstCard = sliderCollab.querySelector('.card');
 
-            const scrollX = sliderCollab.scrollLeft;
+      if (!firstCard) return;
 
-            const firstCard = sliderCollab.querySelector('.card');
+      const gap = 15;
+      const cardWidth = firstCard.offsetWidth + gap;
+      const index = Math.round(sliderCollab.scrollLeft / cardWidth);
 
-            if (firstCard) {
+      seccioCollab.classList.remove('punt-1', 'punt-2', 'punt-3');
 
-                const cardWidth = firstCard.offsetWidth + 15;
+      if (index === 0) {
+        seccioCollab.classList.add('punt-1');
+      } else if (index === 1) {
+        seccioCollab.classList.add('punt-2');
+      } else {
+        seccioCollab.classList.add('punt-3');
+      }
+    };
 
-                const index = Math.round(scrollX / cardWidth);
+    sliderCollab.addEventListener('scroll', actualitzarPunt);
 
-                seccioCollab.classList.remove('punt-2', 'punt-3');
-
-                if (index === 1) {
-
-                    seccioCollab.classList.add('punt-2');
-
-                } else if (index >= 2) {
-
-                    seccioCollab.classList.add('punt-3');
-
-                }
-
-            }
-
-        });
-
-    }
+    actualitzarPunt();
+  }
+});
 
     // --- 5. TIMELINE SCROLL ---
     const timeline = document.querySelector('.timeline-grid');

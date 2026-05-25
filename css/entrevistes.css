@@ -329,11 +329,8 @@ nav ul li a:hover {
 
 .cards-container {
   width: 100%;
-
   max-width: 100%;
-
   margin: 0;
-
   padding-left: 0;
   padding-right: 0;
 
@@ -349,16 +346,19 @@ nav ul li a:hover {
 
 .entrevista-principal {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 
-  flex-direction: column !important;
-
-  align-items: flex-start;
-
-  gap: 20px;
+  gap: 30px;
 
   width: 100%;
-
   margin-bottom: 0;
+}
+
+/* la del mig invertida */
+
+.entrevista-principal:nth-child(2) {
+  flex-direction: row-reverse;
 }
 
 /* =========================================
@@ -366,12 +366,11 @@ nav ul li a:hover {
 ========================================= */
 
 .contenidor-foto {
-  width: 100%;
+  width: 50%;
 }
 
 .foto-entrevista {
   width: 100%;
-
   height: 250px;
 
   object-fit: cover;
@@ -386,7 +385,7 @@ nav ul li a:hover {
 ========================================= */
 
 .contingut {
-  width: 100%;
+  width: 50%;
 
   display: flex;
   flex-direction: column;
@@ -477,49 +476,34 @@ nav ul li a:hover {
 
 /* =========================================
    SECCIÓ ENTREVISTES ANTERIORS
-========================================= */
+   ========================================= */
 
 .entrevistes {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-
+  padding: 100px 0 !important;
   overflow-x: hidden;
 }
 
 .entrevistes h2 {
   color: var(--taronja-viu);
-
   margin-bottom: 40px;
-
-  padding-left: 20px;
-  padding-right: 20px;
-
+  padding: 0 20px;
   font-size: 32px;
-
   text-align: left;
 }
 
 /* =========================================
    SLIDER HORITZONTAL
-========================================= */
+   ========================================= */
 
 .cards-container {
   display: flex !important;
-
   flex-direction: row !important;
-
+  gap: 12px;
   overflow-x: auto !important;
   overflow-y: hidden;
-
   scroll-snap-type: x mandatory;
-
-  gap: 12px;
-
-  padding-left: 0;
-  padding-right: 0;
-
+  padding: 0;
   scrollbar-width: none;
-
   -webkit-overflow-scrolling: touch;
 }
 
@@ -529,178 +513,118 @@ nav ul li a:hover {
 
 /* =========================================
    TARGETES
-========================================= */
+   ========================================= */
 
 .card {
   flex: 0 0 72vw !important;
-
   width: 72vw !important;
   min-width: 72vw !important;
   max-width: 72vw !important;
-
   background: url('../entrevistes/grafica.svg') no-repeat center center;
-
   background-size: cover;
-
+  padding: 24px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-
   position: relative;
-
-  padding: 24px;
-
-  border-radius: 20px;
-
   text-align: left;
-
   scroll-snap-align: center;
-
   box-sizing: border-box;
+  color: var(--marro-fosc);
 }
 
 /* =========================================
    TEXT
-========================================= */
+   ========================================= */
 
 .contingut h3 {
   display: block;
-
-  text-align: left;
-
   width: 100%;
-
   font-size: 0.8em;
+  text-align: left;
 }
 
 .card p {
   font-size: 14px;
-
   line-height: 1.5;
-
   margin-bottom: 20px;
-
   flex-grow: 1;
 }
 
-.contingut p a {
+.contingut p a,
+.card a {
   color: var(--marro-fosc);
-
   text-decoration: underline;
-
   transition: color 0.3s ease;
 }
 
-.contingut p a:hover {
-  color: var(--taronja-viu);
-
-  text-decoration: underline;
-}
-
-.card a {
-  color: inherit;
-
-  text-decoration: underline;
-
-  transition: color 0.3s;
-}
-
+.contingut p a:hover,
 .card a:hover {
   color: var(--taronja-viu);
-
   text-decoration: underline;
 }
 
 /* =========================================
    IMATGE
-========================================= */
+   ========================================= */
 
 .main-img {
   width: 100%;
-
   height: 240px;
-
   object-fit: cover;
-
   border-radius: 15px;
-
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 /* =========================================
    FOOTER
-========================================= */
+   ========================================= */
 
 .card-footer {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   width: 100%;
-
   margin-top: auto;
 }
 
 .social-icons {
   display: flex !important;
-
   flex-direction: row !important;
-
-  gap: 12px !important;
-
   align-items: center !important;
-
+  gap: 12px !important;
   height: 30px !important;
-
   overflow: visible !important;
 }
 
 .social-icons a {
   display: inline-flex !important;
-
   align-items: center !important;
   justify-content: center !important;
-
   text-decoration: none !important;
-
   border: none !important;
-
   outline: none !important;
-
   line-height: 0 !important;
 }
 
 .social-icons img {
   width: 24px !important;
   height: 24px !important;
-
   max-width: 24px !important;
   max-height: 24px !important;
-
   object-fit: contain !important;
-
-  border: none !important;
-
-  background: transparent !important;
-
-  box-shadow: none !important;
-
   display: block !important;
-
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
   transform: none !important;
 }
 
 .date {
-  font-size: 0.85rem;
-
-  font-weight: 500;
-
   color: var(--marro-fosc);
-
+  font-size: 0.85rem;
+  font-weight: 500;
   white-space: nowrap;
-
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -1451,7 +1375,7 @@ footer {
 
 @media (max-width: 430px) {
 
-  /* =========================================
+    /* =========================================
      FIX GENERAL
      ========================================= */
 
@@ -1465,7 +1389,13 @@ footer {
   }
 
   main {
-    padding-top: 65px !important;
+    padding-top: 0 !important;
+  }
+
+  .container,
+  .hero,
+  .festivalet {
+    margin-top: 65px !important;
   }
 
   section {
@@ -1492,28 +1422,28 @@ footer {
 
   header,
   section,
-  footer {
-    width: 100%;
+  footer,
+  .festivalet,
+  .fira,
+  .entrevistes,
+  .entrevistes-actuals,
+  .participa,
+  .seccio-on,
+  .seccio-arribar,
+  .sponsors,
+  .newsletter {
+    width: 100% !important;
 
     height: auto !important;
-    min-height: 100% !important;
+    min-height: auto !important;
 
     margin: 0;
-    padding: 0;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+
+    box-sizing: border-box !important;
 
     overflow-x: hidden !important;
-    overflow-y: scroll !important;
-
-    position: static !important;
-
-    touch-action: auto !important;
-
-    -webkit-overflow-scrolling: touch;
-  }
-  
-   main,
-  body,
-  section {
     overflow-y: visible !important;
   }
 
@@ -1552,23 +1482,30 @@ footer {
   h3 {
     display: block;
     color: var(--teula);
+
     font-size: 20px;
     font-weight: 600;
+
     line-height: 1.2;
+
     text-align: center;
+
     margin-bottom: 20px;
-    padding: 0;
   }
 
   label {
     display: block;
+
     color: var(--teula);
+
     font-size: 15px;
     font-weight: 600;
+
     line-height: 1.4;
+
     letter-spacing: 0.3px;
+
     margin-bottom: 6px;
-    padding: 0;
   }
 
   .text-ordinador {
@@ -1584,11 +1521,12 @@ footer {
   }
 
   /* =========================================
-     HEADER + MENÚ
+     HEADER
      ========================================= */
 
   header {
     display: flex !important;
+
     justify-content: space-between !important;
     align-items: center !important;
 
@@ -1605,8 +1543,6 @@ footer {
     background-color: var(--carn-clar) !important;
 
     z-index: 3000 !important;
-
-    box-sizing: border-box !important;
   }
 
   /* =========================================
@@ -1615,7 +1551,9 @@ footer {
 
   .logo a {
     display: block;
+
     text-decoration: none;
+
     border: none;
     outline: none;
   }
@@ -1623,9 +1561,10 @@ footer {
   .logo img {
     width: 150px;
     max-width: 150px;
+
     height: auto;
+
     display: block;
-    cursor: pointer;
   }
 
   /* =========================================
@@ -1642,6 +1581,7 @@ footer {
 
   .menu-toggle {
     display: flex !important;
+
     flex-direction: column !important;
     justify-content: space-between !important;
 
@@ -1656,12 +1596,11 @@ footer {
     padding: 0 !important;
 
     position: relative !important;
+
     z-index: 3002 !important;
   }
 
   .menu-toggle .bar {
-    display: block !important;
-
     width: 100% !important;
     height: 2.5px !important;
 
@@ -1671,10 +1610,6 @@ footer {
 
     transition: all 0.3s ease-in-out !important;
   }
-
-  /* =========================================
-     ANIMACIÓ X
-     ========================================= */
 
   .menu-toggle.active .bar:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg) !important;
@@ -1724,8 +1659,6 @@ footer {
 
     border-bottom-left-radius: 35px !important;
     border-bottom-right-radius: 35px !important;
-
-    box-sizing: border-box !important;
   }
 
   .nav-mobil.active {
@@ -1741,10 +1674,6 @@ footer {
     padding-bottom: 40px !important;
   }
 
-  /* =========================================
-     LLISTA
-     ========================================= */
-
   .nav-list-mobil {
     list-style: none !important;
 
@@ -1753,6 +1682,7 @@ footer {
 
     display: flex !important;
     flex-direction: column !important;
+
     align-items: center !important;
 
     gap: 25px !important;
@@ -1761,14 +1691,6 @@ footer {
 
     text-align: center !important;
   }
-
-  .nav-list-mobil li {
-    width: 100% !important;
-  }
-
-  /* =========================================
-     LINKS
-     ========================================= */
 
   .nav-list-mobil li a {
     display: block !important;
@@ -1783,10 +1705,6 @@ footer {
     font-weight: 600 !important;
 
     line-height: 1.4 !important;
-
-    transition:
-      color 0.3s ease,
-      transform 0.3s ease !important;
   }
 
   .nav-list-mobil li a:hover,
