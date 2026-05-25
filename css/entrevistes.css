@@ -328,14 +328,19 @@ nav ul li a:hover {
 ========================================= */
 
 .cards-container {
-  max-width: 1060px;
+  width: 100%;
 
-  margin: 0 auto;
+  max-width: 100%;
+
+  margin: 0;
+
+  padding-left: 0;
+  padding-right: 0;
 
   display: flex;
   flex-direction: column;
 
-  gap: 35px;
+  gap: 60px;
 }
 
 /* =========================================
@@ -345,11 +350,11 @@ nav ul li a:hover {
 .entrevista-principal {
   display: flex;
 
-  flex-direction: row;
+  flex-direction: column !important;
 
-  align-items: stretch;
+  align-items: flex-start;
 
-  gap: 24px;
+  gap: 20px;
 
   width: 100%;
 
@@ -361,9 +366,7 @@ nav ul li a:hover {
 ========================================= */
 
 .contenidor-foto {
-  width: 48%;
-
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .foto-entrevista {
@@ -383,14 +386,14 @@ nav ul li a:hover {
 ========================================= */
 
 .contingut {
-  width: 52%;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
 
-  justify-content: space-between;
+  justify-content: flex-start;
 
-  min-height: 250px;
+  min-height: auto;
 }
 
 .contingut h3 {
@@ -416,7 +419,7 @@ nav ul li a:hover {
 
   margin: 0;
 
-  max-width: 95%;
+  max-width: 100%;
 }
 
 /* =========================================
@@ -442,13 +445,15 @@ nav ul li a:hover {
 ========================================= */
 
 .card-footer {
-  margin-top: auto;
+  margin-top: 20px;
 
   display: flex;
 
   justify-content: space-between;
 
   align-items: center;
+
+  width: 100%;
 }
 
 .social-icons {
@@ -475,8 +480,8 @@ nav ul li a:hover {
 ========================================= */
 
 .entrevistes {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 
   overflow-x: hidden;
 }
@@ -485,6 +490,9 @@ nav ul li a:hover {
   color: var(--taronja-viu);
 
   margin-bottom: 40px;
+
+  padding-left: 20px;
+  padding-right: 20px;
 
   font-size: 32px;
 
@@ -505,10 +513,10 @@ nav ul li a:hover {
 
   scroll-snap-type: x mandatory;
 
-  gap: 16px;
+  gap: 12px;
 
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 0;
+  padding-right: 0;
 
   scrollbar-width: none;
 
@@ -524,11 +532,11 @@ nav ul li a:hover {
 ========================================= */
 
 .card {
-  flex: 0 0 84vw !important;
+  flex: 0 0 72vw !important;
 
-  width: 84vw !important;
-  min-width: 84vw !important;
-  max-width: 84vw !important;
+  width: 72vw !important;
+  min-width: 72vw !important;
+  max-width: 72vw !important;
 
   background: url('../entrevistes/grafica.svg') no-repeat center center;
 
@@ -539,7 +547,7 @@ nav ul li a:hover {
 
   position: relative;
 
-  padding: 30px;
+  padding: 24px;
 
   border-radius: 20px;
 
@@ -609,14 +617,14 @@ nav ul li a:hover {
 .main-img {
   width: 100%;
 
-  height: 280px;
+  height: 240px;
 
   object-fit: cover;
 
   border-radius: 15px;
 
-  margin-bottom: 24px;
-  margin-top: 24px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* =========================================
@@ -1005,104 +1013,169 @@ footer {
    ENTREVISTES ACTUALS
 ========================================= */
 
- .destacats {
-    padding: 120px 0 80px;
-    color: var(--marro-fosc);
-  }
+.destacats {
+  padding: 120px 0 80px;
 
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-  }
+  color: var(--marro-fosc);
+}
 
-  .entrevista-principal {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 40px;
-  }
+.cards-container {
+  display: flex;
 
-  .entrevista-principal.reverse .contenidor-foto,
-  .entrevista-principal.reverse .contingut {
-    order: unset;
-  }
+  flex-direction: column;
 
-  .contenidor-foto {
-    width: 100%;
-  }
+  gap: 80px;
+}
 
-  .foto-entrevista {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 14px;
-  }
+/* =========================================
+   CARD HORITZONTAL
+========================================= */
 
-  .contingut {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-top: 0;
-    height: auto;
-  }
+.entrevista-principal {
+  display: flex;
 
-  .contingut h3 {
-    margin: 0;
-    font-size: 32px;
-    line-height: 1.05;
-    font-weight: 500;
-    color: var(--taronja-viu);
-  }
+  flex-direction: row;
 
-  .contingut p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.5;
-    max-width: 700px;
-  }
+  align-items: center;
 
-  .contingut a {
-    color: inherit;
-    text-decoration: underline;
-  }
+  justify-content: space-between;
 
-  .enllac-info {
-    margin-top: 10px;
-    display: inline-block;
-    width: fit-content;
-  }
+  gap: 40px;
 
-  .info-icon {
-    height: 28px;
-    width: auto;
-  }
+  margin-top: 40px;
+}
 
-  .card-footer {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
+/* SEMPRE IMATGE ESQUERRA / TEXT DRETA */
 
-  .social-icons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
+.entrevista-principal.reverse .contenidor-foto {
+  order: 1;
+}
 
-  .social-icons img {
-    width: 15px;
-    height: 15px;
-    object-fit: contain;
-  }
+.entrevista-principal.reverse .contingut {
+  order: 2;
+}
 
-  .date {
-    font-size: 13px;
-    color: var(--marro-fosc);
-  }
+/* =========================================
+   IMATGE
+========================================= */
+
+.contenidor-foto {
+  width: 48%;
+}
+
+.foto-entrevista {
+  width: 100%;
+
+  height: 340px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.contingut {
+  width: 48%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding-top: 0;
+
+  height: auto;
+}
+
+.contingut h3 {
+  margin: 0;
+
+  font-size: 32px;
+
+  line-height: 1.05;
+
+  font-weight: 500;
+
+  color: var(--taronja-viu);
+}
+
+.contingut p {
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  max-width: 700px;
+}
+
+.contingut a {
+  color: inherit;
+
+  text-decoration: underline;
+}
+
+/* =========================================
+   INFO
+========================================= */
+
+.enllac-info {
+  margin-top: 10px;
+
+  display: inline-block;
+
+  width: fit-content;
+}
+
+.info-icon {
+  height: 28px;
+
+  width: auto;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.card-footer {
+  margin-top: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.social-icons {
+  display: flex;
+
+  gap: 10px;
+
+  align-items: center;
+}
+
+.social-icons img {
+  width: 15px;
+
+  height: 15px;
+
+  object-fit: contain;
+}
+
+.date {
+  font-size: 13px;
+
+  color: var(--marro-fosc);
+}
 
 
 /* =========================================

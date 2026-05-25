@@ -1294,100 +1294,6 @@ footer {
   }
   
 /* =========================================
-   UBICACIÓ I TRANSPORT
-========================================= */
-
-.ubicacio-transport {
-  display: flex;
-  flex-direction: column;
-
-  gap: clamp(80px, 12vw, 180px);
-
-  margin-top: 40px;
-  margin-bottom: 50px;
-
-  padding-left: 40px;
-  padding-right: 40px;
-
-  overflow: hidden;
-
-  box-sizing: border-box;
-
-  background-image: url('../contacte/fons.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* =========================================
-   HEADER UBICACIÓ
-========================================= */
-
-.header-on {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: flex-start;
-
-  width: 100%;
-
-  gap: 40px;
-}
-
-.header-on h2 {
-  margin: 0;
-
-  text-align: left;
-}
-
-.header-on address {
-  margin: 0;
-
-  text-align: right;
-
-  margin-left: auto;
-
-  max-width: 220px;
-
-  line-height: 1.4;
-}
-
-/* =========================================
-   MAPA CENTRAT
-========================================= */
-
-.mapa-isometric {
-  width: 100%;
-
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  margin: 70px auto;
-}
-
-.mapa-isometric img {
-  width: 100%;
-
-  max-width: 500px;
-
-  height: auto;
-
-  object-fit: contain;
-
-  display: block;
-}
-
-/* =========================================
-   COM ARRIBAR
-========================================= */
-
-.columna-arribar {
-  margin-top: clamp(60px, 10vw, 160px);
-}
-
-/* =========================================
    TRANSPORTS
 ========================================= */
 
@@ -1411,11 +1317,15 @@ footer {
   display: flex;
   flex-direction: column;
 
+  justify-content: flex-end;
+
   align-items: center;
 
   text-align: center;
 
-  gap: 25px;
+  gap: 8px;
+
+  min-height: 250px;
 }
 
 .icona-transport {
