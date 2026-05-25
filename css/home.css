@@ -419,7 +419,7 @@ nav ul li a,
   height: 275px;
   object-fit: cover;
   border-radius: 20px;
-  margin-top: 100px !important;
+  margin-top: -40px !important;
 }
 
 /* =========================================
