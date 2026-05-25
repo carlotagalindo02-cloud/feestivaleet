@@ -727,7 +727,7 @@ footer {
   content: "";
   position: absolute;
 
-  top: 390px !important; /* ← línia més avall */
+  top: 390px !important; 
 
   left: 0;
   width: 100%;
@@ -748,7 +748,7 @@ footer {
   scroll-snap-type: x mandatory;
 
   padding-top: 40px !important;
-  padding-bottom: 120px !important;
+  padding-bottom: 140px !important;
 
   padding-left: 20px;
   padding-right: 20px;
@@ -822,8 +822,8 @@ footer {
   padding-top: 80px;
   padding-bottom: 20px;
 
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 40px !important; /* ← més marge lateral */
+  padding-right: 40px !important;
 }
 
 /* =========================================
@@ -834,11 +834,11 @@ footer {
   display: flex;
   flex-direction: row;
 
-  align-items: flex-start; /* ← imatge més amunt */
+  align-items: flex-start;
 
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 30px;
 }
 
 /* =========================================
@@ -846,13 +846,15 @@ footer {
    ========================================= */
 
 .entitat-text {
-  width: 62%; /* ← més ample */
+  width: 60%;
 
   order: 1;
 
   margin-top: 0;
 
-  margin-left: 0 !important; /* ← més a l’esquerra */
+  margin-left: 0 !important;
+
+  padding-left: 10px !important; /* ← més separació interior */
 
   display: flex;
   flex-direction: column;
@@ -894,11 +896,11 @@ footer {
    ========================================= */
 
 .entitat-imatge {
-  width: 40%; /* ← més ampla */
+  width: 38%;
 
   order: 2;
 
-  margin-top: -20px; /* ← puja la imatge */
+  margin-top: -180px; 
 
   margin-left: auto;
 
@@ -910,7 +912,7 @@ footer {
 .entitat-imatge img {
   width: 100%;
 
-  max-width: 380px; /* ← imatge més gran */
+  max-width: 380px;
 
   height: auto;
 
@@ -935,8 +937,8 @@ footer {
 
   align-items: center;
 
-  padding-left: 30px !important;
-  padding-right: 30px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
 
   margin-top: -20px !important;
 }
@@ -1343,15 +1345,15 @@ footer {
   }
 
   .history-section::before {
-    content: "";
-    position: absolute;
-    top: 225px !important;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--taronja-viu);
-    z-index: 0;
-  }
+  content: "";
+  position: absolute;
+  top: 180px !important;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--taronja-viu);
+  z-index: 0;
+}
 
   /* =========================================
      TIMELINE
@@ -1669,4 +1671,3 @@ footer {
   .footer-right {
     align-items: center;
   }
-}

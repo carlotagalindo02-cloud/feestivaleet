@@ -346,19 +346,14 @@ nav ul li a:hover {
 
 .entrevista-principal {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
 
-  gap: 30px;
+  align-items: flex-start;
+
+  gap: 20px;
 
   width: 100%;
   margin-bottom: 0;
-}
-
-/* la del mig invertida */
-
-.entrevista-principal:nth-child(2) {
-  flex-direction: row-reverse;
 }
 
 /* =========================================
@@ -366,7 +361,7 @@ nav ul li a:hover {
 ========================================= */
 
 .contenidor-foto {
-  width: 50%;
+  width: 100%;
 }
 
 .foto-entrevista {
@@ -385,7 +380,7 @@ nav ul li a:hover {
 ========================================= */
 
 .contingut {
-  width: 50%;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -937,170 +932,55 @@ footer {
    ENTREVISTES ACTUALS
 ========================================= */
 
-.destacats {
-  padding: 120px 0 80px;
-
-  color: var(--marro-fosc);
-}
-
 .cards-container {
-  display: flex;
+    width: 100%;
+    max-width: 100%;
 
-  flex-direction: column;
+    margin: 0;
 
-  gap: 80px;
-}
+    padding-left: 0;
+    padding-right: 0;
 
-/* =========================================
-   CARD HORITZONTAL
-========================================= */
+    display: flex;
+    flex-direction: column;
 
-.entrevista-principal {
-  display: flex;
+    gap: 60px;
+  }
 
-  flex-direction: row;
+  .entrevista-principal {
+    display: flex;
+    flex-direction: column;
 
-  align-items: center;
+    align-items: flex-start;
 
-  justify-content: space-between;
+    gap: 20px;
 
-  gap: 40px;
+    width: 100%;
+  }
 
-  margin-top: 40px;
-}
+  .contenidor-foto,
+  .contingut {
+    width: 100%;
+  }
 
-/* SEMPRE IMATGE ESQUERRA / TEXT DRETA */
+  .foto-entrevista {
+    width: 100%;
+    height: 320px;
 
-.entrevista-principal.reverse .contenidor-foto {
-  order: 1;
-}
+    object-fit: cover;
 
-.entrevista-principal.reverse .contingut {
-  order: 2;
-}
+    border-radius: 20px;
+  }
 
-/* =========================================
-   IMATGE
-========================================= */
+  .contingut h3 {
+    font-size: 2rem;
+  }
 
-.contenidor-foto {
-  width: 48%;
-}
+  .contingut p {
+    font-size: 1rem;
 
-.foto-entrevista {
-  width: 100%;
-
-  height: 340px;
-
-  display: block;
-
-  object-fit: cover;
-
-  border-radius: 14px;
-}
-
-/* =========================================
-   TEXT
-========================================= */
-
-.contingut {
-  width: 48%;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 20px;
-
-  padding-top: 0;
-
-  height: auto;
-}
-
-.contingut h3 {
-  margin: 0;
-
-  font-size: 32px;
-
-  line-height: 1.05;
-
-  font-weight: 500;
-
-  color: var(--taronja-viu);
-}
-
-.contingut p {
-  margin: 0;
-
-  font-size: 15px;
-
-  line-height: 1.5;
-
-  max-width: 700px;
-}
-
-.contingut a {
-  color: inherit;
-
-  text-decoration: underline;
-}
-
-/* =========================================
-   INFO
-========================================= */
-
-.enllac-info {
-  margin-top: 10px;
-
-  display: inline-block;
-
-  width: fit-content;
-}
-
-.info-icon {
-  height: 28px;
-
-  width: auto;
-}
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.card-footer {
-  margin-top: 20px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 20px;
-}
-
-.social-icons {
-  display: flex;
-
-  gap: 10px;
-
-  align-items: center;
-}
-
-.social-icons img {
-  width: 15px;
-
-  height: 15px;
-
-  object-fit: contain;
-}
-
-.date {
-  font-size: 13px;
-
-  color: var(--marro-fosc);
-}
-
+    line-height: 1.45;
+  }
 
 /* =========================================
    ENTREVISTES ANTERIORS
@@ -1719,120 +1599,44 @@ footer {
    ENTREVISTES ACTUALS
    ========================================= */
 
-.entrevistes-actuals {
-  padding-top: 30px;
-  padding-bottom: 60px;
+.cards-container {
+    gap: 45px;
+  }
 
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  .entrevista-principal {
+    gap: 18px;
+  }
 
-  overflow-x: hidden;
-  overflow-y: visible;
+  .foto-entrevista {
+    height: 240px;
 
-  margin-top: 100px;
+    border-radius: 16px;
+  }
 
-  position: relative;
-}
+  .contingut h3 {
+    font-size: 1.5rem;
 
-.entrevistes-actuals .titol-seccio {
-  display: none;
-}
+    line-height: 1.1;
+  }
 
-.entrevistes-actuals .cards-container {
-  display: flex;
+  .contingut p {
+    font-size: 0.9rem;
 
-  gap: 18px;
+    line-height: 1.4;
+  }
 
-  overflow-x: auto !important;
-  overflow-y: hidden;
+  .info-icon {
+    width: 60px;
+  }
 
-  scroll-snap-type: x mandatory;
+  .social-icons img {
+    width: 12px;
+    height: 12px;
+  }
 
-  padding-left: 20px;
-  padding-right: 20px;
-
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-
-  scroll-behavior: smooth;
-
-  touch-action: pan-x;
-}
-
-.entrevistes-actuals .cards-container::-webkit-scrollbar {
-  display: none;
-}
-
-.entrevista-principal {
-  flex: 0 0 82vw !important;
-
-  width: 82vw !important;
-  min-width: 82vw !important;
-  max-width: 82vw !important;
-
-  scroll-snap-align: center;
-
-  display: flex;
-  flex-direction: column;
-
-  padding-left: 0;
-  padding-right: 0;
-
-  box-sizing: border-box;
-}
-
-.entrevista-principal .contingut {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.entrevista-principal .contingut h3 {
-  color: var(--taronja-viu);
-
-  font-size: 20px !important;
-  line-height: 1.15;
-  font-weight: 600;
-
-  margin: 0 0 35px;
-}
-
-.entrevista-principal .contingut p {
-  color: var(--marro-fosc);
-
-  font-size: 16px !important;
-  line-height: 1.25;
-
-  margin: 0 0 24px;
-}
-
-.entrevista-principal .contingut p a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.entrevista-principal .info-icon {
-  width: 100px !important;
-  margin-bottom: 24px;
-}
-
-.contenidor-foto {
-  width: 100%;
-}
-
-.foto-entrevista {
-  width: 100%;
-  height: 260px;
-
-  object-fit: cover;
-
-  border-radius: 0;
-
-  display: block;
-}
-
-.card-footer {
-  display: none;
-}
+  .date {
+    font-size: 0.7rem;
+  }
 
 /* =========================================
    ENTREVISTES ANTERIORS
@@ -1847,7 +1651,7 @@ footer {
   padding-left: 0 !important;
   padding-right: 0 !important;
 
-  position: relative; 
+  position: relative;
 }
 
 .entrevistes h2 {
@@ -1883,8 +1687,7 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 88vw;
-  max-width: none;
+  flex: 0 0 72vw;
 
   scroll-snap-align: center;
 

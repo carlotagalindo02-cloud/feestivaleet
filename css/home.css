@@ -737,26 +737,28 @@ footer {
 
 /* --- MARGE LATERAL GLOBAL --- */
 
-  header,
-  section,
-  footer,
-  .hero,
-  .history-section,
-  .festivalet,
-  .festivalet-entrada,
-  .festivalet-participants,
-  .fira,
-  .entrevistes,
-  .ubicacio-transport,
-  .festivalet-gastronomia,
-  .allotjaments-section,
-  .faqs-section,
-  .footer {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
+header,
+section,
+footer,
+.hero,
+.history-section,
+.festivalet,
+.festivalet-entrada,
+.festivalet-participants,
+.fira,
+.entrevistes,
+.ubicacio-transport,
+.festivalet-gastronomia,
+.allotjaments-section,
+.faqs-section,
+.sponsors,
+.newsletter,
+.footer {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
 }
 
   /* =========================================
@@ -903,18 +905,26 @@ footer {
 .festivalet::after {
   content: "";
   position: absolute;
-  bottom: 85px !important;
+
+  bottom: 40px !important;
+
   right: 22%;
+
   width: 60px;
   height: 12px;
+
   background-image:
     radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-  background-position: 15px center, 35px center;
+
+  background-position:
+    15px center,
+    35px center;
+
   background-repeat: no-repeat;
   background-size: 12px 12px;
 }
-
+  
 .festivalet.imatge-dos-activa::after {
   background-image:
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
@@ -1394,15 +1404,17 @@ footer {
   border-radius: 15px;
 }
 
+/* --- PUNTS SLIDER --- */
+
 .festivalet::after {
   content: "";
 
   position: absolute;
 
   left: 50%;
-  bottom: 40px; 
-
   transform: translateX(-50%);
+
+  bottom: 80px;
 
   width: 60px;
   height: 12px;

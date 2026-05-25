@@ -1716,7 +1716,6 @@ footer {
 
 .festivalet-participants h3 {
   font-size: 20px;
-
   line-height: 1.2;
 }
 
@@ -1796,7 +1795,7 @@ footer {
 
   position: absolute;
 
-  bottom: 70px !important; 
+  top: 480px !important;
 
   left: 50%;
 
@@ -1816,6 +1815,8 @@ footer {
   background-repeat: no-repeat;
 
   background-size: 12px 12px;
+
+  z-index: 50;
 }
 
 /* =========================================
@@ -2370,8 +2371,8 @@ footer {
   padding-left: 0 !important;
   padding-right: 0 !important;
 
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin-left: -20px !important;
+  margin-right: -20px !important;
 
   width: 100% !important;
 
