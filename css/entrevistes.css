@@ -325,7 +325,6 @@ nav ul li a:hover {
 
 .destacats {
   padding: 0 0 80px;
-  font-family: Arial, sans-serif;
   color: var(--marro-fosc);
 }
 
@@ -339,9 +338,11 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 45px;
-  align-items: start;
+  align-items: stretch;
+  min-height: 330px;
 }
 
+/* Inverteix imatge i text */
 .entrevista-principal.reverse .contenidor-foto {
   order: 2;
 }
@@ -350,22 +351,27 @@ nav ul li a:hover {
   order: 1;
 }
 
+/* Contenidor imatge */
 .contenidor-foto {
   width: 100%;
+  height: 100%;
 }
 
 .foto-entrevista {
   width: 100%;
-  height: 330px;
+  height: 100%;
+  min-height: 330px;
   object-fit: cover;
   border-radius: 14px;
   display: block;
 }
 
+/* Contingut text */
 .contingut {
-  min-height: 330px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .contingut h3 {
@@ -388,6 +394,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Botó +INFO */
 .enllac-info {
   margin-top: 20px;
   display: inline-block;
@@ -399,8 +406,9 @@ nav ul li a:hover {
   width: auto;
 }
 
+/* Footer */
 .card-footer {
-  margin-top: auto;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -854,54 +862,133 @@ footer {
    ENTREVISTES ACTUALS
 ========================================= */
 
+.destacats {
+  padding: 0 0 80px;
+  color: var(--marro-fosc);
+}
+
 .cards-container {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 24px;
 }
 
 .entrevista-principal {
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
+  gap: 45px;
+  align-items: stretch;
+  min-height: 330px;
+}
+
+/* Inverteix imatge i text */
+.entrevista-principal.reverse .contenidor-foto {
+  order: 2;
+}
+
+.entrevista-principal.reverse .contingut {
+  order: 1;
+}
+
+/* Contenidor imatge */
+.contenidor-foto {
+  width: 100%;
+  height: 100%;
 }
 
 .foto-entrevista {
-  height: 280px;
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
 }
 
+/* Contingut text */
 .contingut {
-  min-height: 280px;
-  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .contingut h3 {
-  font-size: 26px;
-  line-height: 1.1;
-  margin-bottom: 14px;
+  margin: 0 0 18px;
+  font-size: 32px;
+  line-height: 1.05;
+  font-weight: 500;
+  color: #ff4a1c;
 }
 
 .contingut p {
-  font-size: 14px;
-  line-height: 1.35;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.25;
+  max-width: 680px;
+}
+
+.contingut a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Botó +INFO */
+.enllac-info {
+  margin-top: 20px;
+  display: inline-block;
+  width: fit-content;
 }
 
 .info-icon {
-  height: 24px;
+  height: 28px;
+  width: auto;
 }
 
+/* Footer */
 .card-footer {
-  left: 10px;
-  right: 10px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .social-icons img {
   width: 15px;
   height: 15px;
+  object-fit: contain;
 }
 
 .date {
   font-size: 13px;
+  color: var(--marro-fosc);
+}
+
+/* TABLET */
+@media (max-width: 1180px) {
+  .entrevista-principal {
+    gap: 30px;
+  }
+
+  .contingut h3 {
+    font-size: 26px;
+  }
+
+  .contingut p {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .foto-entrevista {
+    min-height: 280px;
+  }
 }
 
 
