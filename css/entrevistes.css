@@ -1,6 +1,6 @@
 /* =========================================
    VARIABLES I CONFIGURACIÓ GENERAL
-   ========================================= */
+========================================= */
 
 :root {
   --marro-fosc: #330B00;
@@ -33,7 +33,7 @@ body {
 
 /* =========================================
    MARGES GLOBALS
-   ========================================= */
+========================================= */
 
 section,
 footer {
@@ -47,81 +47,70 @@ section {
 }
 
 header {
-  padding: 30px var(--marge-lateral);
+  padding: 20px var(--marge-lateral);
 }
 
 /* =========================================
    BOTONS I LINKS
-   ========================================= */
-
+========================================= */
 
 .btn-custom {
   width: 180px;
   height: 52px;
+
   margin-top: 20px;
   margin-bottom: 20px;
+
   background-image: url("../icones/boto.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
   border: none;
   background-color: transparent;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: white;
   font-size: 14px;
   font-weight: 700;
+
   text-decoration: none;
+
   cursor: pointer;
+
   transition:
     transform 0.3s ease,
     opacity 0.3s ease,
     filter 0.3s ease;
+}
+
+.btn-custom:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
 }
 
 .info-icon {
   width: 80px;
   height: auto;
+
   margin-top: 20px;
   margin-bottom: 20px;
+
   display: block;
+
   cursor: pointer;
+
   transition:
     transform 0.3s ease,
-    opacity 0.3s ease,
-    filter 0.3s ease;
+    opacity 0.3s ease;
 }
 
 .info-icon:hover {
   transform: scale(1.05);
   opacity: 0.9;
-}
-
-.btn-custom,
-.wrapper-centrat {
-  width: 180px;
-  height: 52px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-image: url("../icones/boto.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease,
-    filter 0.3s ease;
 }
 
 .wrapper-centrat {
@@ -131,6 +120,9 @@ header {
 
 a {
   color: var(--marro-fosc);
+
+  text-decoration: none;
+
   transition: color 0.3s ease;
 }
 
@@ -139,66 +131,61 @@ a:hover {
 }
 
 /* =========================================
-   TIPOGRAFIA GENERAL
-   ========================================= */
+   ESTILS TEXTOS GENERALS
+========================================= */
 
 h1 {
   color: var(--blanc);
 
   font-size: 72px;
-
   font-weight: 700;
 
   line-height: 1.05;
 
   margin-bottom: 24px;
 
-  text-transform: lowercase !important;
+  text-transform: lowercase;
 }
 
 h2 {
   color: var(--taronja-viu);
 
   font-size: 42px;
-
   font-weight: 600;
+
+  line-height: 1.1;
 
   margin-bottom: 24px;
 
   text-align: left;
-
-  line-height: 1.1;
 }
 
 h3 {
   color: var(--teula);
 
   font-size: 24px;
-
   font-weight: 600;
 
-  margin-bottom: 24px;
-
   line-height: 1.25;
+
+  margin-bottom: 20px;
 }
 
 p {
   color: var(--marro-fosc);
 
   font-size: 16px;
-
   font-weight: 400;
 
-  margin-bottom: 20px;
-
   line-height: 1.6;
+
+  margin-bottom: 20px;
 }
 
 label {
   color: var(--teula);
 
   font-size: 17px;
-
   font-weight: 600;
 
   margin-bottom: 8px;
@@ -209,7 +196,6 @@ label {
 .date,
 figcaption {
   font-size: 14px;
-
   font-weight: 600;
 
   color: var(--taronja-viu);
@@ -221,7 +207,7 @@ figcaption {
 
 /* =========================================
    HEADER I NAVEGACIÓ
-   ========================================= */
+========================================= */
 
 header {
   background-color: var(--carn-clar);
@@ -240,8 +226,6 @@ header {
   z-index: 1000;
 
   box-sizing: border-box;
-
-  padding: 18px 20px;
 }
 
 .logo img {
@@ -535,7 +519,7 @@ p a:hover,
 .entrevistes h2 {
   color: var(--taronja-viu);
   margin-bottom: 24px;
-  padding: 0 30px;
+  padding: 0 20px;
   font-size: 34px;
   text-align: left;
 }
@@ -553,10 +537,10 @@ p a:hover,
   flex-direction: row !important;
   justify-content: center;
 
-  gap: 20px;
+  gap: 14px;
 
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
 
   flex-wrap: nowrap;
 
@@ -580,19 +564,19 @@ p a:hover,
 ========================================= */
 
 .card {
-  flex: 0 0 34% !important;
+  flex: 0 0 31% !important;
 
-  width: 34% !important;
+  width: 31% !important;
 
-  min-width: 34% !important;
+  min-width: 31% !important;
 
-  max-width: 34% !important;
+  max-width: 31% !important;
 
   background: url('../entrevistes/grafica.svg') no-repeat center center;
 
   background-size: cover;
 
-  padding: 26px;
+  padding: 22px;
 
   border-radius: 18px;
 
@@ -616,21 +600,21 @@ p a:hover,
 .card h3 {
   width: 100%;
 
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 
   line-height: 1.2;
 
   text-align: left;
 
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
 
-  line-height: 1.6;
+  line-height: 1.5;
 
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 
   flex-grow: 1;
 }
@@ -654,13 +638,13 @@ p a:hover,
 .main-img {
   width: 100%;
 
-  height: 220px;
+  height: 210px;
 
   object-fit: cover;
 
   border-radius: 12px;
 
-  margin: 16px 0;
+  margin: 14px 0;
 }
 
 /* =========================================
@@ -1031,41 +1015,25 @@ footer {
 
 .entrevistes-actuals h2 {
   margin-bottom: 24px;
-
   padding-left: 12px;
-
   padding-right: 12px;
 }
 
 .cards-container {
   width: 100%;
-
   max-width: 100%;
-
   margin: 0 auto;
-
   margin-top: 60px;
-
   padding-left: 12px;
-
   padding-right: 12px;
-
   display: flex;
-
   flex-direction: row;
-
   gap: 40px;
-
   overflow-x: auto;
-
   overflow-y: hidden;
-
   scroll-snap-type: x mandatory;
-
   -webkit-overflow-scrolling: touch;
-
   scrollbar-width: none;
-
   box-sizing: border-box;
 }
 
@@ -1121,37 +1089,24 @@ footer {
 ========================================= */
 
 .entrevistes {
-  padding: 80px 12px 70px 12px;
-
+  padding: 80px 0 70px 0;
   margin-bottom: 20px !important;
-
   overflow: hidden;
-
   position: relative;
 }
 
 .entrevistes .cards-container {
   display: flex !important;
-
   flex-direction: row;
-
   gap: 20px;
-
   overflow-x: auto;
-
   overflow-y: hidden;
-
   scroll-snap-type: x mandatory;
-
   -webkit-overflow-scrolling: touch;
-
   scrollbar-width: none;
-
   padding-bottom: 16px;
-
-  padding-left: 10px;
-
-  padding-right: 10px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .entrevistes .cards-container::-webkit-scrollbar {
@@ -1159,36 +1114,29 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 88vw;
-
-  min-width: 88vw;
-
-  max-width: 88vw;
+  flex: 0 0 94vw;
+  min-width: 94vw;
+  max-width: 94vw;
 
   background-image: url('../entrevistes/grafica.svg');
-
   background-size: cover;
-
   background-position: center;
 
   padding: 24px;
-
   border-radius: 18px;
-
   min-height: 520px;
 
   display: flex;
-
   flex-direction: column;
 
   text-decoration: none;
-
   color: var(--marro-fosc);
 
   scroll-snap-align: center;
-
   box-sizing: border-box;
 }
+  
+  
   /* =========================================
      PARTICIPA
      ========================================= */
@@ -1661,7 +1609,13 @@ footer {
 .entrevistes-actuals h2 {
   margin-top: 50px;
   margin-bottom: -40px;
+
   padding-left: 20px;
+
+  font-size: 52px;
+  line-height: 1;
+
+  text-align: left;
 }
 
 .cards-container {
@@ -1705,7 +1659,9 @@ footer {
 .foto-entrevista {
   width: 100%;
   height: 260px;
+
   object-fit: cover;
+
   border-radius: 16px;
 }
 
@@ -1722,6 +1678,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
   gap: 12px;
 
   width: 100%;
@@ -1753,7 +1710,7 @@ footer {
 
 .entrevistes {
   overflow: hidden;
-  padding-top: 20px;
+  padding-top: -60px;
   padding-bottom: 120px;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -1762,15 +1719,15 @@ footer {
 
 .entrevistes h2 {
   margin-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
   text-align: left;
 }
 
 .entrevistes .cards-container {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 12px;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -1780,8 +1737,8 @@ footer {
   scrollbar-width: none;
   scroll-behavior: smooth;
 
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
 
   margin: 0;
   box-sizing: border-box;
@@ -1792,9 +1749,9 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 96vw;
-  min-width: 96vw;
-  max-width: 96vw;
+  flex: 0 0 99vw;
+  min-width: 99vw;
+  max-width: 99vw;
 
   scroll-snap-align: center;
 
