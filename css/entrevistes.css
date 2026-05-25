@@ -327,114 +327,284 @@ nav ul li a:hover {
    ENTREVISTES ACTUALS — VERSIÓ ORDINADOR
 ========================================= */
 
-.destacats {
-  padding: 0 0 80px;
-  color: var(--marro-fosc);
-}
-
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
 .entrevista-principal {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 40px;
-  min-height: 420px;
+    display: flex;
+    width: 100%;
+    min-height: 450px;
+    background: #f5f5f5;
+    overflow: hidden;
 }
 
-/* Inverteix imatge i text */
-.entrevista-principal.reverse .contenidor-foto {
-  order: 2;
-}
-
-.entrevista-principal.reverse .contingut {
-  order: 1;
-}
-
-/* Contenidor imatge */
-.contenidor-foto,
-.contingut {
-  flex: 1;
+/* FOTO */
+.contenidor-foto {
+    width: 50%;
 }
 
 .foto-entrevista {
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
-  object-fit: cover;
-  border-radius: 14px;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* Contingut text */
+/* CONTINGUT */
 .contingut {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    width: 50%;
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contingut h3 {
-  margin: 0 0 18px;
-  font-size: 34px;
-  line-height: 1.1;
-  font-weight: 500;
-  color: #ff4a1c;
-  text-align: left;
+    line-height: 1.1;
+    color: var(--taronja-viu);
+    font-weight: 400;
+    margin-bottom: 2rem;
 }
 
 .contingut p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  max-width: 680px;
+    line-height: 1.5;
+    color: var(--marro-focs);
+    max-width: 90%;
 }
 
-.contingut a {
-  color: inherit;
-  text-decoration: underline;
+.contingut p a {
+    color: var(--marro-fosc);
+    text-decoration: underline;
 }
 
-/* Botó +INFO */
+/* INFO */
 .enllac-info {
-  margin-top: 20px;
-  display: inline-block;
-  width: fit-content;
+    margin-top: 2rem;
+    display: inline-block;
 }
 
 .info-icon {
-  height: 28px;
-  width: auto;
+    width: 110px;
+    transition: transform 0.3s ease;
 }
 
-/* Footer */
+.info-icon:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
 .card-footer {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 2rem;
 }
 
 .social-icons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    gap: 1rem;
 }
 
 .social-icons img {
-  width: 15px;
-  height: 15px;
-  object-fit: contain;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 0.7;
 }
 
 .date {
-  font-size: 13px;
-  color: var(--marro-fosc);
+    font-size: 1.2rem;
+    color: var(--maroo-fosc);
 }
+
+.entrevista-principal.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    min-height: 450px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+/* FOTO */
+.reverse .contenidor-foto {
+    width: 50%;
+}
+
+.reverse .foto-entrevista {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTINGUT */
+.reverse .contingut {
+    width: 50%;
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reverse .contingut h3 {
+    font-size: 3rem;
+    line-height: 1.1;
+    color: var(--taronja-viu);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.reverse .contingut p {
+    color: var(--marro-fosc);
+    max-width: 95%;
+}
+
+.reverse .contingut p a {
+    color: var(--marro-fosc);
+    text-decoration: underline;
+}
+
+/* INFO */
+.reverse .enllac-info {
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.reverse .info-icon {
+    width: 110px;
+    transition: transform 0.3s ease;
+}
+
+.reverse .info-icon:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.reverse .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.reverse .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.reverse .social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.reverse .social-icons img:hover {
+    opacity: 0.7;
+}
+
+.reverse .date {
+    font-size: 1.2rem;
+    color: var(--teula);
+}
+
+.e-casa-atlantica {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 450px;
+    background: #f5f5f5;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+/* CONTINGUT */
+.e-casa-atlantica .contingut {
+    width: 50%;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.e-casa-atlantica h3 {
+    font-size: 3.2rem;
+    line-height: 1.08;
+    font-weight: 400;
+   color: var(--taronja-viu);
+    margin-bottom: 2rem;
+    max-width: 95%;
+}
+
+.e-casa-atlantica p {
+    font-size: 1.2rem;
+    line-height: 1.45;
+    color: var(--marro-fosc);
+    max-width: 95%;
+}
+
+.e-casa-atlantica p a {
+    color: var(--marro-fosc);
+    text-decoration: underline;
+}
+
+/* FOTO */
+.e-casa-atlantica .contenidor-foto {
+    width: 50%;
+    display: flex;
+    align-items: stretch;
+}
+
+.e-casa-atlantica .foto-entrevista {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+    display: block;
+}
+
+/* INFO */
+.e-casa-atlantica .enllac-info {
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.e-casa-atlantica .info-icon {
+    width: 115px;
+    transition: transform 0.3s ease;
+}
+
+.e-casa-atlantica .info-icon:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.e-casa-atlantica .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.e-casa-atlantica .social-icons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.e-casa-atlantica .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.e-casa-atlantica .date {
+    font-size: 1.1rem;
+    color: var(--marro-fosc);
+}
+
 
 /* =========================================
    SECCIÓ ENTREVISTES ANTERIORS
@@ -867,14 +1037,14 @@ footer {
 ========================================= */
 
 .destacats {
-  padding: 0 0 80px;
+  padding: 120px 0 80px; 
   color: var(--marro-fosc);
 }
 
 .cards-container {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 60px; 
 }
 
 .entrevista-principal {
@@ -883,9 +1053,10 @@ footer {
   gap: 45px;
   align-items: stretch;
   min-height: 330px;
+  margin-top: 40px; 
 }
 
-/* Inverteix imatge i text */
+
 .entrevista-principal.reverse .contenidor-foto {
   order: 2;
 }
@@ -894,7 +1065,7 @@ footer {
   order: 1;
 }
 
-/* Contenidor imatge */
+
 .contenidor-foto {
   width: 100%;
   height: 100%;
@@ -909,12 +1080,12 @@ footer {
   display: block;
 }
 
-/* Contingut text */
 .contingut {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding-top: 20px; 
 }
 
 .contingut h3 {
@@ -922,7 +1093,7 @@ footer {
   font-size: 32px;
   line-height: 1.05;
   font-weight: 500;
-  color: #ff4a1c;
+  color: var(--taronja-viu);
 }
 
 .contingut p {
@@ -973,26 +1144,6 @@ footer {
 .date {
   font-size: 13px;
   color: var(--marro-fosc);
-}
-
-/* TABLET */
-@media (max-width: 1180px) {
-  .entrevista-principal {
-    gap: 30px;
-  }
-
-  .contingut h3 {
-    font-size: 26px;
-  }
-
-  .contingut p {
-    font-size: 14px;
-    line-height: 1.35;
-  }
-
-  .foto-entrevista {
-    min-height: 280px;
-  }
 }
 
 
