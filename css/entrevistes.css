@@ -1717,14 +1717,24 @@ footer {
 ========================================= */
 
 .entrevistes {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+
   padding: 0 12px 60px 12px !important;
+
   overflow: visible;
   position: relative;
+
   margin-top: -40px !important;
+
+  gap: 0;
 }
 
 .entrevistes h2 {
   color: var(--taronja-viu);
+
+  align-self: flex-start;
 
   margin-bottom: 24px;
 
@@ -1902,47 +1912,70 @@ footer {
 
 .participa {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  
   align-items: flex-start;
+
   gap: 40px;
 }
 
 .text-participa {
-  flex: 0 0 46%;
+  width: 100%;
 }
 
 .text-participa p {
   font-size: 17px;
   line-height: 1.45;
+
   margin-bottom: 35px;
+
   color: var(--marro-fosc);
+
   max-width: 760px;
 }
 
-  .participa h2 {
+.participa h2 {
   color: var(--taronja-viu);
+
   font-size: 34px;
+
   margin-bottom: 24px;
+
   text-align: left;
+
   line-height: 1.2;
-  }
+}
 
 .participa > * {
   width: 100%;
 }
 
+/* =========================================
+   FORMULARI
+========================================= */
+
 .formulari {
-  margin-top: -15px;
+  width: 100%;
+  margin-top: 10px; 
 }
 
 .formulari form {
   margin-top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
 }
 
 .formulari select,
 .formulari input,
 .formulari textarea {
-  margin-top: 10px;
+  width: 100%;
+
+  margin-top: 0;
+
+  box-sizing: border-box;
 }
   
   
