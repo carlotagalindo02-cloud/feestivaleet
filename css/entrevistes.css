@@ -1715,22 +1715,18 @@ footer {
 ========================================= */
 
 .entrevistes {
-  padding: 10px 12px 60px 12px !important;
+  padding: 0 12px 60px 12px !important;
   overflow: visible;
   position: relative;
+  margin-top: -40px !important;
 }
 
 .entrevistes h2 {
-  margin-top: 50px;
-  margin-bottom: -40px;
-
-  padding-left: 6px;
-  padding-right: 6px;
-
-  font-size: 52px;
-
-  line-height: 1;
-
+  color: var(--taronja-viu);
+  margin-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 34px;
   text-align: left;
 }
 
@@ -1893,25 +1889,34 @@ footer {
 
 /* =========================================
    PARTICIPA
-   ========================================= */
+========================================= */
 
 .participa {
-  padding-top: 10px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-.participa h2 {
-  margin-top: 50px;
-  margin-bottom: -40px;
+.text-participa {
+  flex: 0 0 46%;
+}
 
-  padding-left: 6px;
-  padding-right: 6px;
+.text-participa p {
+  font-size: 17px;
+  line-height: 1.45;
+  margin-bottom: 35px;
+  color: var(--marro-fosc);
+  max-width: 760px;
+}
 
-  font-size: 52px;
-
-  line-height: 1;
-
+  .participa h2 {
+  color: var(--taronja-viu);
+  font-size: 34px;
+  margin-bottom: 24px;
   text-align: left;
-}
+  line-height: 1.2;
+  }
 
 .participa > * {
   width: 100%;
