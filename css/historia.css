@@ -1321,12 +1321,27 @@ footer {
 
   overflow: visible !important;
 
-  background-image: none !important; /* treu imatge fons */
   background: transparent !important;
+  background-image: none !important;
 }
 
 .mobile-break br {
   display: block;
+}
+
+/* TREU QUALSEVOL FONS EXTRA */
+
+.history-section::before,
+.history-section::after,
+.timeline-grid::after,
+.milestone::before,
+.milestone::after {
+  display: none !important;
+
+  background: none !important;
+  background-image: none !important;
+
+  content: none !important;
 }
 
 /* =========================================
@@ -1345,13 +1360,13 @@ footer {
 
   scroll-snap-type: x mandatory;
 
-  padding-top: 20px !important;
+  padding-top: 0 !important;
   padding-bottom: 80px !important;
 
   scrollbar-width: none;
 
-  background-image: none !important;
   background: transparent !important;
+  background-image: none !important;
 }
 
 .timeline-grid::-webkit-scrollbar {
@@ -1368,7 +1383,7 @@ footer {
   position: absolute;
 
   left: 0;
-  top: 38%; /* més amunt */
+  top: 28%; /* molt més amunt */
 
   width: 300%;
   height: 2px;
@@ -1393,7 +1408,7 @@ footer {
 
   scroll-snap-align: center;
 
-  margin-top: -40px !important;
+  margin-top: -60px !important;
 
   background: transparent !important;
   background-image: none !important;
