@@ -1320,6 +1320,9 @@ footer {
   margin-top: 60px !important;
 
   overflow: visible !important;
+
+  background-image: none !important; /* treu imatge fons */
+  background: transparent !important;
 }
 
 .mobile-break br {
@@ -1342,10 +1345,13 @@ footer {
 
   scroll-snap-type: x mandatory;
 
-  padding-top: 40px !important;
+  padding-top: 20px !important;
   padding-bottom: 80px !important;
 
   scrollbar-width: none;
+
+  background-image: none !important;
+  background: transparent !important;
 }
 
 .timeline-grid::-webkit-scrollbar {
@@ -1362,7 +1368,7 @@ footer {
   position: absolute;
 
   left: 0;
-  top: 50%;
+  top: 38%; /* més amunt */
 
   width: 300%;
   height: 2px;
@@ -1395,6 +1401,8 @@ footer {
   border: none !important;
 
   padding: 0 !important;
+
+  box-shadow: none !important;
 }
 
 /* =========================================
