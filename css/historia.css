@@ -420,44 +420,77 @@ nav ul li a,
   line-height: 1.4;
 }
 
-/* =========================================
-   ENTITAT
-   ========================================= */
+  /* =========================================
+     ENTITAT
+  ========================================= */
 
-.entitat-section {
-  background-color: var(--blanc);
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: var(--marge-lateral);
-  padding-right: var(--marge-lateral);
-  margin-top: 40px;
-}
+  .entitat-section {
+    background-color: var(--blanc);
 
-.entitat-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 60px;
-  width: 100%;
-}
+    width: 100%;
 
-.entitat-text {
-  flex: 1;
-  margin-top: 20px;
-}
+    box-sizing: border-box;
 
-.entitat-imatge {
-  flex: 1.2;
-  margin-top: 40px;
-}
+    padding-left: 40px;
+    padding-right: 40px;
 
-.entitat-imatge img {
-  width: 100%;
-  height: 290px !important;
-  border-radius: 25px;
-  display: block;
-  object-fit: cover;
-  margin-top: 50px;
-}
+    margin-top: 40px;
+  }
+
+  .entitat-container {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    width: 100%;
+  }
+
+  /* =========================================
+     TEXT
+  ========================================= */
+
+  .entitat-text {
+    flex: 1;
+
+    margin-top: 10px;
+  }
+
+  .entitat-text h2 {
+    font-size: 34px;
+
+    line-height: 1.15;
+  }
+
+  .entitat-text p {
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+  /* =========================================
+     IMATGE
+  ========================================= */
+
+  .entitat-imatge {
+    flex: 1;
+
+    margin-top: -120px; /* puja imatge */
+  }
+
+  .entitat-imatge img {
+    width: 100%;
+
+    height: 320px !important;
+
+    border-radius: 25px;
+
+    display: block;
+
+    object-fit: cover;
+  }
 
 /* =========================================
    COL·LABORACIONS
@@ -701,111 +734,156 @@ footer {
     display: none !important;
   }
 
-/* =========================================
-   HISTÒRIA
-   ========================================= */
+ /* =========================================
+     SECCIÓ HISTÒRIA
+  ========================================= */
 
-.history-section {
-  position: relative;
-  margin-top: 60px !important;
-  overflow: visible !important;
-  padding-bottom: 80px;
-}
+  .history-section {
+    position: relative;
 
-.mobile-break br {
-  display: block;
-}
+    margin-top: 110px;
+  }
 
-.background-line {
-  display: none !important;
-}
+  .history-section h2 {
+    white-space: nowrap;
 
-/* =========================================
-   LÍNIA
-   ========================================= */
+    width: max-content;
 
-.history-section::before {
-  content: "";
-  position: absolute;
+    font-size: 42px;
+  }
 
-  left: 0;
-  right: 0;
+  .mobile-break br {
+    display: none;
+  }
 
-  top: auto !important;
-  bottom: 200px;
+  /* =========================================
+     LINIA FONS
+  ========================================= */
 
-  height: 2px;
-  background-color: var(--taronja-viu);
+  .background-line {
+    position: absolute;
 
-  z-index: 0;
-}
+    left: 50%;
 
-/* =========================================
-   TIMELINE
-   ========================================= */
+    transform: translateX(-50%);
 
-.timeline-grid {
-  display: flex !important;
-  flex-direction: row !important;
-  overflow-x: auto !important;
+    top: 120px !important;
 
-  gap: 24px !important;
-  scroll-snap-type: x mandatory;
+    width: 96% !important;
 
-  padding-top: 120px !important;
-  padding-bottom: 180px !important;
-  padding-left: 20px;
-  padding-right: 20px;
+    height: 980px !important;
 
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
+    object-fit: contain !important;
+    object-position: center !important;
 
-  position: relative;
-  z-index: 1;
-}
+    z-index: 0;
 
-.timeline-grid::-webkit-scrollbar {
-  display: none;
-}
+    pointer-events: none;
 
-/* =========================================
-   MILESTONES
-   ========================================= */
+    opacity: 0.8;
+  }
 
-.milestone {
-  flex: 0 0 58vw !important;
-  width: 58vw !important;
-  min-width: 58vw !important;
-  max-width: 58vw !important;
+  /* =========================================
+     GRID
+  ========================================= */
 
-  scroll-snap-align: center;
-  margin-top: 20px !important;
-}
+  .timeline-grid {
+    display: grid;
 
-/* =========================================
-   IMATGES
-   ========================================= */
+    grid-template-columns: repeat(3, 1fr);
 
-.milestone img {
-  width: 100% !important;
-  height: 190px !important;
-  object-fit: cover;
-  border-radius: 20px;
-}
+    column-gap: 28px;
+    row-gap: 60px;
 
-/* =========================================
-   TEXT
-   ========================================= */
+    position: relative;
 
-.year {
-  font-size: 22px !important;
-  font-weight: 600 !important;
-}
+    z-index: 1;
 
-.description {
-  font-size: 15px !important;
-  line-height: 1.4 !important;
-}
+    margin-top: 20px;
+  }
+
+  /* =========================================
+     TARGETES
+  ========================================= */
+
+  .milestone {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+
+    text-align: center;
+
+    z-index: 1;
+  }
+
+  .dot-separator {
+    width: 20px;
+    height: 20px;
+
+    margin-bottom: 8px;
+
+    background-image: url('../historia/punt.svg');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: var(--blanc);
+  }
+
+  .milestone .year {
+    display: block;
+
+    font-size: 20px;
+    font-weight: 900;
+
+    color: var(--taronja-viu);
+
+    margin-bottom: 2px;
+  }
+
+  .milestone img {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 3 / 2;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    margin-bottom: 14px;
+  }
+
+  .description {
+    font-size: 15px;
+
+    line-height: 1.45;
+
+    text-align: left;
+
+    width: 100%;
+  }
+
+  /* =========================================
+     AJUSTOS FILES
+  ========================================= */
+
+  .timeline-grid .milestone:nth-child(4),
+  .timeline-grid .milestone:nth-child(5),
+  .timeline-grid .milestone:nth-child(6) {
+    margin-top: -18px;
+  }
+
+  .timeline-grid .milestone:nth-child(7),
+  .timeline-grid .milestone:nth-child(8),
+  .timeline-grid .milestone:nth-child(9) {
+    margin-top: -18px;
+  }
 
   /* =========================================
    ENTITAT
@@ -1312,7 +1390,7 @@ footer {
 }
 
 /* =========================================
-   HISTÒRIA
+   SECCIÓ HISTÒRIA
 ========================================= */
 
 .history-section {
@@ -1323,26 +1401,28 @@ footer {
   overflow: visible !important;
 
   background: transparent !important;
-  background-image: none !important;
+}
+
+.history-section h2 {
+  white-space: normal;
+
+  width: 100%;
+
+  font-size: 28px;
+
+  line-height: 1.1;
 }
 
 .mobile-break br {
   display: block;
 }
 
-/* TREU QUALSEVOL FONS EXTRA */
+/* =========================================
+   TREURE IMATGE FONS
+========================================= */
 
-.history-section::before,
-.history-section::after,
-.timeline-grid::after,
-.milestone::before,
-.milestone::after {
+.background-line {
   display: none !important;
-
-  background: none !important;
-  background-image: none !important;
-
-  content: none !important;
 }
 
 /* =========================================
@@ -1361,13 +1441,12 @@ footer {
 
   scroll-snap-type: x mandatory;
 
-  padding-top: 0 !important;
+  padding-top: 20px !important;
   padding-bottom: 80px !important;
 
   scrollbar-width: none;
 
   background: transparent !important;
-  background-image: none !important;
 }
 
 .timeline-grid::-webkit-scrollbar {
@@ -1384,7 +1463,7 @@ footer {
   position: absolute;
 
   left: 0;
-  top: -20%;
+  top: 32%;
 
   width: 300%;
   height: 2px;
@@ -1412,13 +1491,38 @@ footer {
   margin-top: -60px !important;
 
   background: transparent !important;
-  background-image: none !important;
 
   border: none !important;
 
   padding: 0 !important;
 
   box-shadow: none !important;
+}
+
+.dot-separator {
+  width: 20px;
+  height: 20px;
+
+  margin-bottom: 8px;
+
+  background-image: url('../historia/punt.svg');
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-color: var(--blanc);
+}
+
+.milestone .year {
+  display: block;
+
+  font-size: 22px;
+  font-weight: 900;
+
+  color: var(--taronja-viu);
+
+  margin-bottom: 8px;
 }
 
 /* =========================================
@@ -1433,22 +1537,22 @@ footer {
   object-fit: cover;
 
   border-radius: 20px;
+
+  margin-bottom: 14px;
 }
 
 /* =========================================
    TEXT
 ========================================= */
 
-.year {
-  font-size: 22px !important;
-
-  font-weight: 600 !important;
-}
-
 .description {
-  font-size: 15px !important;
+  font-size: 15px;
 
-  line-height: 1.4 !important;
+  line-height: 1.4;
+
+  text-align: left;
+
+  width: 100%;
 }
 
   /* =========================================
