@@ -366,7 +366,7 @@ nav ul li a,
   width: 100%;
   max-width: 1500px;
 
-  margin: 200px auto 0 auto;
+  margin: 120px auto 0 auto;
 
   padding: 0 20px;
 
@@ -415,6 +415,10 @@ nav ul li a,
   flex-direction: column;
 
   justify-content: space-between;
+}
+
+.contingut h2 {
+  margin-top: 40px;
 }
 
 .contingut h3 {
@@ -544,7 +548,7 @@ p a:hover,
 .entrevistes .cards-container {
   width: 100%;
 
-  max-width: 1400px;
+  max-width: 1600px;
 
   margin: 0 auto;
 
@@ -554,17 +558,29 @@ p a:hover,
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 28px;
 
-  padding-left: 20px;
+  padding-left: 30px;
 
-  padding-right: 20px;
+  padding-right: 30px;
 
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
-  overflow: visible !important;
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
 
   box-sizing: border-box;
+}
+
+.entrevistes .cards-container::-webkit-scrollbar {
+  display: none;
 }
 
 /* =========================================
@@ -572,19 +588,19 @@ p a:hover,
 ========================================= */
 
 .card {
-  flex: 0 0 30% !important;
+  flex: 0 0 42% !important;
 
-  width: 30% !important;
+  width: 42% !important;
 
-  min-width: 30% !important;
+  min-width: 42% !important;
 
-  max-width: 30% !important;
+  max-width: 42% !important;
 
   background: url('../entrevistes/grafica.svg') no-repeat center center;
 
   background-size: cover;
 
-  padding: 22px;
+  padding: 26px;
 
   border-radius: 18px;
 
@@ -597,6 +613,8 @@ p a:hover,
   text-align: left;
 
   box-sizing: border-box;
+
+  scroll-snap-align: center;
 }
 
 /* =========================================
@@ -606,7 +624,7 @@ p a:hover,
 .card h3 {
   width: 100%;
 
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 
   line-height: 1.2;
 
@@ -616,9 +634,9 @@ p a:hover,
 }
 
 .card p {
-  font-size: 0.95rem;
+  font-size: 1rem;
 
-  line-height: 1.5;
+  line-height: 1.6;
 
   margin-bottom: 16px;
 
@@ -644,7 +662,7 @@ p a:hover,
 .main-img {
   width: 100%;
 
-  height: 190px;
+  height: 220px;
 
   object-fit: cover;
 
@@ -1016,7 +1034,7 @@ footer {
 ========================================= */
 
 .entrevistes-actuals {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .entrevistes-actuals h2 {
@@ -1139,7 +1157,9 @@ footer {
 
   padding-bottom: 16px;
 
-  padding-right: 4px;
+  padding-left: 10px;
+
+  padding-right: 10px;
 }
 
 .entrevistes .cards-container::-webkit-scrollbar {
@@ -1147,11 +1167,11 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 72%;
+  flex: 0 0 88vw;
 
-  min-width: 72%;
+  min-width: 88vw;
 
-  max-width: 72%;
+  max-width: 88vw;
 
   background-image: url('../entrevistes/grafica.svg');
 
@@ -1641,29 +1661,23 @@ footer {
 
 .entrevistes-actuals {
   position: relative;
-
-  padding-bottom: 220px;
-
+  padding-bottom: 240px;
   overflow: visible;
 }
 
 .cards-container {
   display: flex;
-
   gap: 20px;
 
   overflow-x: auto;
-
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
 
   padding-left: 20px;
-
   padding-right: 20px;
 
   -webkit-overflow-scrolling: touch;
-
   scrollbar-width: none;
 
   margin-top: 80px;
@@ -1677,17 +1691,13 @@ footer {
 
 .entrevista-principal {
   flex: 0 0 88vw;
-
   min-width: 88vw;
-
   max-width: 88vw;
 
   scroll-snap-align: center;
 
   display: flex;
-
   flex-direction: column;
-
   gap: 18px;
 
   position: relative;
@@ -1695,23 +1705,18 @@ footer {
 
 .foto-entrevista {
   width: 100%;
-
   height: 260px;
-
   object-fit: cover;
-
   border-radius: 16px;
 }
 
 .contingut h3 {
   font-size: 1.5rem;
-
   line-height: 1.1;
 }
 
 .contingut p {
   font-size: 0.9rem;
-
   line-height: 1.4;
 }
 
@@ -1721,44 +1726,47 @@ footer {
 
 .social-icons img {
   width: 16px;
-
   height: 16px;
 }
 
 /* =========================================
-   PUNTS SLIDER
+   PUNTS CARRUSEL
 ========================================= */
 
-.slider-punts {
-  position: absolute;
+.carousel-dots {
+  display: block;
 
-  bottom: 80px;
+  width: 80px;
+  height: 12px;
 
-  left: 50%;
+  margin: 30px auto 0 auto;
 
-  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
 
-  display: flex;
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
 
-  gap: 10px;
+  background-position:
+    10px center,
+    35px center,
+    60px center;
 }
 
-.slider-punts span {
-  width: 10px;
-
-  height: 10px;
-
-  border-radius: 50%;
-
-  background-color: var(--carn-clar);
-
-  transition: all 0.3s ease;
+.entrevistes-actuals.punt-2 .carousel-dots {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
 }
 
-.slider-punts span.actiu {
-  background-color: var(--taronja-viu);
-
-  transform: scale(1.2);
+.entrevistes-actuals.punt-3 .carousel-dots {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
 }
 
 /* =========================================
@@ -1767,55 +1775,37 @@ footer {
 
 .entrevistes {
   overflow: hidden;
-
   padding-top: 20px;
-
   padding-bottom: 120px;
-
   padding-left: 0 !important;
-
   padding-right: 0 !important;
-
   position: relative;
 }
 
 .entrevistes h2 {
   margin-bottom: 20px;
-
   padding-left: 10px;
-
   padding-right: 10px;
-
   text-align: left;
 }
 
 .entrevistes .cards-container {
   display: flex;
-
   flex-direction: row;
-
-  gap: 16px;
+  gap: 20px;
 
   overflow-x: auto;
-
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
-
   -webkit-overflow-scrolling: touch;
-
   scrollbar-width: none;
-
   scroll-behavior: smooth;
 
-  white-space: nowrap;
-
-  padding-left: 8px;
-
-  padding-right: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   margin: 0;
-
   box-sizing: border-box;
 }
 
@@ -1824,31 +1814,64 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 96vw;
-
-  min-width: 96vw;
-
-  max-width: 96vw;
+  flex: 0 0 88vw;
+  min-width: 88vw;
+  max-width: 88vw;
 
   scroll-snap-align: center;
 
   background-image: url("../entrevistes/grafica.svg");
-
   background-repeat: no-repeat;
-
   background-position: center;
-
   background-size: cover;
 
   border-radius: 20px;
-
   padding: 28px 22px 22px;
 
   box-sizing: border-box;
 
   display: flex;
-
   flex-direction: column;
+}
+
+/* =========================================
+   PUNTS CARRUSEL
+========================================= */
+
+.entrevistes .carousel-dots {
+  display: block;
+
+  width: 80px;
+  height: 12px;
+
+  margin: 30px auto 0 auto;
+
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
+  background-position:
+    10px center,
+    35px center,
+    60px center;
+}
+
+.entrevistes.punt-2 .carousel-dots {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+}
+
+.entrevistes.punt-3 .carousel-dots {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
 }
 
 /* =========================================
