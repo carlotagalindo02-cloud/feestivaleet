@@ -324,42 +324,45 @@ nav ul li a:hover {
 }
 
 /* =========================================
-   ENTREVISTES
+   ENTREVISTES - ESTRUCTURA COM LA IMATGE
 ========================================= */
 
 .cards-container {
   width: 100%;
-  max-width: 100%;
+  max-width: 1100px;
 
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 24px;
 
   display: flex;
   flex-direction: column;
 
-  gap: 80px;
+  gap: 48px;
 }
 
-/* =========================================
-   CADA ENTREVISTA
-========================================= */
+/* CADA ENTREVISTA */
 
 .entrevista-principal {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-  align-items: flex-start;
+  gap: 28px;
 
-  gap: 24px;
+  align-items: stretch;
 
   width: 100%;
-
-  margin: 0;
 }
 
-/* =========================================
-   IMATGE
-========================================= */
+/* Alternar: text esquerra / imatge dreta */
+.entrevista-principal:nth-child(even) .contenidor-foto {
+  order: 2;
+}
+
+.entrevista-principal:nth-child(even) .contingut {
+  order: 1;
+}
+
+/* IMATGE */
 
 .contenidor-foto {
   width: 100%;
@@ -367,19 +370,16 @@ nav ul li a:hover {
 
 .foto-entrevista {
   width: 100%;
-
-  height: 300px;
+  height: 270px;
 
   object-fit: cover;
 
   display: block;
 
-  border-radius: 14px;
+  border-radius: 10px;
 }
 
-/* =========================================
-   TEXT
-========================================= */
+/* TEXT */
 
 .contingut {
   width: 100%;
@@ -387,19 +387,18 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
 
-  gap: 14px;
+  justify-content: space-between;
 }
 
 .contingut h3 {
   color: var(--taronja-viu);
 
-  font-size: 1.7rem;
-
-  line-height: 1.05;
+  font-size: 1.55rem;
+  line-height: 1.1;
 
   font-weight: 500;
 
-  margin: 0;
+  margin: 0 0 14px 0;
 
   text-align: left;
 }
@@ -407,46 +406,36 @@ nav ul li a:hover {
 .contingut p {
   color: var(--marro-fosc);
 
-  font-size: 0.9rem;
-
-  line-height: 1.5;
+  font-size: 0.82rem;
+  line-height: 1.35;
 
   margin: 0;
-
-  max-width: 100%;
 
   text-align: left;
 }
 
-/* =========================================
-   + INFO
-========================================= */
+/* + INFO */
 
 .enllac-info {
-  margin-top: 1rem;
+  margin-top: 18px;
 
   display: inline-block;
 
-  width: fit-content;
+  color: var(--marro-fosc);
+
+  text-decoration: none;
+
+  font-weight: 600;
 }
 
-.info-icon {
-  width: 80px;
-
-  display: block;
-}
-
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 
 .card-footer {
-  margin-top: 24px;
+  margin-top: auto;
 
   display: flex;
 
   justify-content: space-between;
-
   align-items: center;
 
   width: 100%;
@@ -454,22 +443,60 @@ nav ul li a:hover {
 
 .social-icons {
   display: flex;
-
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .social-icons img {
-  width: 14px;
-
-  height: 14px;
+  width: 13px;
+  height: 13px;
 }
 
 .date {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
 
   color: var(--marro-fosc);
 }
 
+/* =========================================
+   MÒBIL
+========================================= */
+
+@media (max-width: 768px) {
+  .cards-container {
+    padding: 0;
+    gap: 80px;
+  }
+
+  .entrevista-principal {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+  }
+
+  .entrevista-principal:nth-child(even) .contenidor-foto,
+  .entrevista-principal:nth-child(even) .contingut {
+    order: initial;
+  }
+
+  .foto-entrevista {
+    height: 300px;
+    border-radius: 14px;
+  }
+
+  .contingut h3 {
+    font-size: 1.7rem;
+  }
+
+  .contingut p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .card-footer {
+    margin-top: 24px;
+  }
+}
 
 /* =========================================
    SECCIÓ ENTREVISTES ANTERIORS
@@ -477,14 +504,19 @@ nav ul li a:hover {
 
 .entrevistes {
   padding: 100px 0 !important;
+
   overflow-x: hidden;
 }
 
 .entrevistes h2 {
   color: var(--taronja-viu);
+
   margin-bottom: 40px;
+
   padding: 0 20px;
+
   font-size: 32px;
+
   text-align: left;
 }
 
@@ -516,17 +548,18 @@ nav ul li a:hover {
 }
 
 /* =========================================
-   TARGETES
+   TARGETES MES ESTRETES
    ========================================= */
 
 .card {
-  flex: 0 0 58vw !important;
+  flex: 0 0 42vw !important;
 
-  width: 58vw !important;
-  min-width: 58vw !important;
-  max-width: 58vw !important;
+  width: 42vw !important;
+  min-width: 42vw !important;
+  max-width: 42vw !important;
 
   background: url('../entrevistes/grafica.svg') no-repeat center center;
+
   background-size: cover;
 
   padding: 24px;
@@ -553,6 +586,7 @@ nav ul li a:hover {
 
 .contingut h3 {
   display: block;
+
   width: 100%;
 
   font-size: 0.9em;
@@ -990,54 +1024,62 @@ footer {
 ========================================= */
 
 .cards-container {
-    width: 100%;
-    max-width: 100%;
+  width: 100%;
+  max-width: 100%;
 
-    margin: 0;
+  margin: 0 auto;
 
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    gap: 60px;
-  }
+  gap: 60px;
 
-  .entrevista-principal {
-    display: flex;
-    flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
 
-    align-items: flex-start;
+/* CARD MES AMPLA */
 
-    gap: 20px;
+.entrevista-principal {
+  display: flex;
+  flex-direction: column;
 
-    width: 100%;
-  }
+  align-items: flex-start;
 
-  .contenidor-foto,
-  .contingut {
-    width: 100%;
-  }
+  gap: 20px;
 
-  .foto-entrevista {
-    width: 100%;
-    height: 320px;
+  width: 100%;
+  max-width: 1200px;
 
-    object-fit: cover;
+  margin: 0 auto;
+}
 
-    border-radius: 20px;
-  }
+.contenidor-foto,
+.contingut {
+  width: 100%;
+}
 
-  .contingut h3 {
-    font-size: 2rem;
-  }
+.foto-entrevista {
+  width: 100%;
+  height: 420px;
 
-  .contingut p {
-    font-size: 1rem;
+  object-fit: cover;
 
-    line-height: 1.45;
-  }
+  border-radius: 20px;
+}
+
+.contingut h3 {
+  font-size: 2rem;
+}
+
+.contingut p {
+  font-size: 1rem;
+
+  line-height: 1.45;
+}
 
 /* =========================================
    ENTREVISTES ANTERIORS
@@ -1046,28 +1088,34 @@ footer {
 .entrevistes {
   padding: 80px 24px;
   padding-bottom: 60px;
+
   margin-bottom: 20px !important;
 
   overflow: hidden;
+
   position: relative;
 }
 
 .entrevistes h2 {
   font-size: 36px;
   line-height: 43px;
+
   margin-bottom: 32px;
 }
 
 .entrevistes .cards-container {
   display: flex !important;
   flex-direction: row;
+
   gap: 16px;
 
   overflow-x: auto;
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
+
   -webkit-overflow-scrolling: touch;
+
   scrollbar-width: none;
 
   padding-bottom: 10px;
@@ -1078,13 +1126,15 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 calc(50% - 8px);
+  flex: 0 0 42%;
 
   background-image: url('../entrevistes/grafica.svg');
+
   background-size: cover;
   background-position: center;
 
   padding: 20px;
+
   border-radius: 18px;
 
   min-height: 520px;
@@ -1093,26 +1143,32 @@ footer {
   flex-direction: column;
 
   text-decoration: none;
+
   color: var(--marro-fosc);
 
   scroll-snap-align: start;
+
   box-sizing: border-box;
 }
 
 .entrevistes .card h3 {
   margin-bottom: 12px;
+
   color: var(--teula);
 }
 
 .entrevistes .card p {
   font-size: 14px;
   line-height: 22px;
+
   margin-bottom: 20px;
+
   min-height: 140px;
 }
 
 .entrevistes .card .info {
   font-size: 20px;
+
   margin-top: auto;
   margin-bottom: 14px;
 }
@@ -1120,15 +1176,20 @@ footer {
 .entrevistes .main-img {
   width: 100%;
   height: 300px;
+
   object-fit: cover;
+
   border-radius: 14px;
+
   margin-bottom: 18px;
 }
 
 .entrevistes .social-row {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   margin-top: auto;
 }
 
@@ -1139,9 +1200,13 @@ footer {
 
 .entrevistes .social-icons {
   display: flex;
+
   align-items: center;
+
   gap: 8px;
+
   margin: 0;
+
   transform: none;
 }
 
@@ -1150,6 +1215,7 @@ footer {
 .entrevistes .social-icons i {
   width: 20px;
   height: 20px;
+
   display: block;
 }
 
@@ -1159,6 +1225,7 @@ footer {
 
 .entrevistes::after {
   content: "";
+
   display: block;
 
   width: 90px;
@@ -1656,11 +1723,18 @@ footer {
    ENTREVISTES ACTUALS
    ========================================= */
 
+.entrevistes-actuals {
+  position: relative;
+
+  padding-bottom: 70px;
+}
+
 .cards-container {
   display: flex;
   gap: 20px;
 
   overflow-x: auto;
+
   scroll-snap-type: x mandatory;
 
   padding-left: 20px;
@@ -1719,20 +1793,69 @@ footer {
 }
 
 /* =========================================
+   PUNTS ENTREVISTES ACTUALS
+   ========================================= */
+
+.entrevistes-actuals::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  width: 90px;
+  height: 15px;
+
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+
+  background-image:
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+
+  background-position:
+    15px center,
+    45px center,
+    75px center;
+}
+
+.entrevistes-actuals.actiu-2::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
+}
+
+.entrevistes-actuals.actiu-3::after {
+  background-image:
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
+    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+}
+
+/* =========================================
    ENTREVISTES ANTERIORS
    ========================================= */
 
 .entrevistes {
   overflow: visible;
+
   padding-top: 20px;
   padding-bottom: 80px;
+
   padding-left: 0 !important;
   padding-right: 0 !important;
+
   position: relative;
 }
 
 .entrevistes h2 {
   margin-bottom: 20px;
+
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -1740,18 +1863,21 @@ footer {
 .entrevistes .cards-container {
   display: flex;
   flex-direction: row;
+
   gap: 20px;
 
   overflow-x: auto;
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
+
   -webkit-overflow-scrolling: touch;
 
   padding-left: 20px;
   padding-right: 20px;
 
   margin: 0;
+
   box-sizing: border-box;
 
   scrollbar-width: none;
@@ -1762,9 +1888,9 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 86vw;
-  min-width: 86vw;
-  max-width: 86vw;
+  flex: 0 0 92vw;
+  min-width: 92vw;
+  max-width: 92vw;
 
   scroll-snap-align: center;
 
@@ -1783,10 +1909,13 @@ footer {
   flex-direction: column;
 }
 
-/* PUNTS SLIDER */
+/* =========================================
+   PUNTS ENTREVISTES ANTERIORS
+   ========================================= */
 
 .entrevistes::after {
   content: "";
+
   position: absolute;
 
   left: 50%;
