@@ -366,7 +366,7 @@ nav ul li a,
   width: 100%;
   max-width: 1500px;
 
-  margin: 120px auto 0 auto;
+  margin: 40px auto 0 auto;
 
   padding: 0 20px;
 
@@ -380,6 +380,11 @@ nav ul li a,
   gap: 40px;
 
   box-sizing: border-box;
+}
+
+.entrevistes-actuals h2 {
+  margin-top: 70px;
+  margin-bottom: -20px;
 }
 
 .entrevista-principal {
@@ -523,21 +528,15 @@ p a:hover,
 
 .entrevistes {
   padding: 40px 0 90px 0 !important;
-
   overflow: visible;
-
   position: relative;
 }
 
 .entrevistes h2 {
   color: var(--taronja-viu);
-
   margin-bottom: 24px;
-
   padding: 0 30px;
-
   font-size: 34px;
-
   text-align: left;
 }
 
@@ -547,33 +546,26 @@ p a:hover,
 
 .entrevistes .cards-container {
   width: 100%;
-
   max-width: 1600px;
-
   margin: 0 auto;
 
   display: flex !important;
-
   flex-direction: row !important;
-
   justify-content: center;
 
-  gap: 28px;
+  gap: 20px;
 
   padding-left: 30px;
-
   padding-right: 30px;
 
   flex-wrap: nowrap;
 
   overflow-x: auto;
-
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
 
   -webkit-overflow-scrolling: touch;
-
   scrollbar-width: none;
 
   box-sizing: border-box;
@@ -588,13 +580,13 @@ p a:hover,
 ========================================= */
 
 .card {
-  flex: 0 0 42% !important;
+  flex: 0 0 34% !important;
 
-  width: 42% !important;
+  width: 34% !important;
 
-  min-width: 42% !important;
+  min-width: 34% !important;
 
-  max-width: 42% !important;
+  max-width: 34% !important;
 
   background: url('../entrevistes/grafica.svg') no-repeat center center;
 
@@ -1034,7 +1026,7 @@ footer {
 ========================================= */
 
 .entrevistes-actuals {
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
 .entrevistes-actuals h2 {
@@ -1661,8 +1653,15 @@ footer {
 
 .entrevistes-actuals {
   position: relative;
+  margin-top: -60px;
   padding-bottom: 240px;
   overflow: visible;
+}
+
+.entrevistes-actuals h2 {
+  margin-top: 50px;
+  margin-bottom: -40px;
+  padding-left: 20px;
 }
 
 .cards-container {
@@ -1710,63 +1709,42 @@ footer {
   border-radius: 16px;
 }
 
-.contingut h3 {
-  font-size: 1.5rem;
-  line-height: 1.1;
-}
-
-.contingut p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
 .info-icon {
   width: 60px;
 }
 
 .social-icons img {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
-
-/* =========================================
-   PUNTS CARRUSEL
-========================================= */
 
 .carousel-dots {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 
-  width: 80px;
+  width: 100%;
+
+  margin-top: 30px;
+
+  position: relative;
+  z-index: 10;
+}
+
+.carousel-dots span {
+  width: 12px;
   height: 12px;
 
-  margin: 30px auto 0 auto;
+  border-radius: 50%;
 
-  background-repeat: no-repeat;
-  background-size: 12px 12px;
+  background-color: var(--carn-clar);
 
-  background-image:
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-
-  background-position:
-    10px center,
-    35px center,
-    60px center;
+  display: block;
 }
 
-.entrevistes-actuals.punt-2 .carousel-dots {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-}
-
-.entrevistes-actuals.punt-3 .carousel-dots {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+.carousel-dots span.active {
+  background-color: var(--taronja-viu);
 }
 
 /* =========================================
@@ -1802,8 +1780,8 @@ footer {
   scrollbar-width: none;
   scroll-behavior: smooth;
 
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   margin: 0;
   box-sizing: border-box;
@@ -1814,9 +1792,9 @@ footer {
 }
 
 .entrevistes .card {
-  flex: 0 0 88vw;
-  min-width: 88vw;
-  max-width: 88vw;
+  flex: 0 0 96vw;
+  min-width: 96vw;
+  max-width: 96vw;
 
   scroll-snap-align: center;
 
@@ -1839,39 +1817,27 @@ footer {
 ========================================= */
 
 .entrevistes .carousel-dots {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 
-  width: 80px;
+  margin-top: 30px;
+}
+
+.entrevistes .carousel-dots::before,
+.entrevistes .carousel-dots::after,
+.entrevistes .carousel-dots span {
+  content: "";
+  width: 12px;
   height: 12px;
-
-  margin: 30px auto 0 auto;
-
-  background-repeat: no-repeat;
-  background-size: 12px 12px;
-
-  background-image:
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-
-  background-position:
-    10px center,
-    35px center,
-    60px center;
+  border-radius: 50%;
+  background: var(--carn-clar);
+  display: block;
 }
 
-.entrevistes.punt-2 .carousel-dots {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-}
-
-.entrevistes.punt-3 .carousel-dots {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
+.entrevistes .carousel-dots span {
+  background: var(--taronja-viu);
 }
 
 /* =========================================
