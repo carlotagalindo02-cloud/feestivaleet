@@ -771,14 +771,16 @@ footer {
     display: none;
   }
 
-  /* =========================================
+/* =========================================
    UBICACIÓ I TRANSPORT
 ========================================= */
 
 .ubicacio-transport {
   display: flex;
   flex-direction: column;
+
   gap: clamp(80px, 12vw, 180px);
+
   margin-top: 40px;
   margin-bottom: 50px;
 
@@ -786,6 +788,7 @@ footer {
   padding-right: 40px;
 
   overflow: hidden;
+
   box-sizing: border-box;
 
   background-image: url('../contacte/fons.svg');
@@ -794,22 +797,115 @@ footer {
   background-repeat: no-repeat;
 }
 
-/* COM ARRIBAR */
+/* =========================================
+   HEADER UBICACIÓ
+========================================= */
+
+.header-on {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+
+  gap: 40px;
+}
+
+.header-on h2 {
+  margin: 0;
+
+  text-align: left;
+}
+
+.header-on address {
+  margin: 0;
+
+  text-align: right;
+
+  margin-left: auto;
+
+  max-width: 220px;
+
+  line-height: 1.4;
+}
+
+/* =========================================
+   MAPA CENTRAT
+========================================= */
+
+.mapa-isometric {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 70px auto;
+}
+
+.mapa-isometric img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* =========================================
+   COM ARRIBAR
+========================================= */
 
 .columna-arribar {
   margin-top: clamp(60px, 10vw, 160px);
 }
 
-/* TRANSPORTS */
+/* =========================================
+   TRANSPORTS
+========================================= */
 
 .transports-flex {
   display: flex;
-  justify-content: space-between; 
+
+  justify-content: space-between;
+
   align-items: flex-end;
+
   flex-wrap: nowrap;
+
   width: 100%;
-  margin-top: 60px;
-  gap: 80px; 
+
+  margin-top: 90px;
+
+  gap: 120px;
+}
+
+.transport-item {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 25px;
+}
+
+.icona-transport {
+  width: 90px;
+
+  height: auto;
+}
+
+.transport-text {
+  max-width: 260px;
+
+  line-height: 1.5;
 }
 
   /* =========================================
@@ -869,6 +965,11 @@ footer {
   /* =========================================
      AJUSTOS GENERALS
      ========================================= */
+
+  body {
+    padding-top: 65px;
+    overflow-x: hidden;
+  }
 
   header,
   section,
@@ -936,205 +1037,223 @@ footer {
   }
 
   /* =========================================
-     LOGO NAV
+     HEADER FIX MOBILE
      ========================================= */
+
+  header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    height: 65px !important;
+
+    padding: 0 20px !important;
+
+    background-color: var(--carn-clar) !important;
+
+    z-index: 3000 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  /* =========================================
+     LOGO
+     ========================================= */
+
+  .logo a {
+    display: block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+  }
 
   .logo img {
     width: 150px;
     max-width: 150px;
+    height: auto;
+    display: block;
+    cursor: pointer;
   }
+
+  /* =========================================
+     MENÚ ORDINADOR
+     ========================================= */
 
   .nav-list {
     display: none !important;
   }
 
   /* =========================================
-   HEADER + MENÚ MÒBIL CONTACTE
-   ========================================= */
+     MENÚ HAMBURGUESA
+     ========================================= */
 
-header {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  width: 100% !important;
-  height: 65px !important;
-  padding: 0 20px !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  background-color: var(--carn-clar) !important;
-  z-index: 3000 !important;
-  box-sizing: border-box !important;
-}
+  .menu-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 
-/* =========================================
-   MENÚ ORDINADOR
-   ========================================= */
+    width: 28px !important;
+    height: 20px !important;
 
-.nav-list {
-  display: none !important;
-}
+    background: transparent !important;
+    border: none !important;
 
-/* =========================================
-   MENÚ HAMBURGUESA
-   ========================================= */
+    cursor: pointer !important;
 
-.menu-toggle {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  width: 28px !important;
-  height: 20px !important;
-  background: transparent !important;
-  border: none !important;
-  cursor: pointer !important;
-  padding: 0 !important;
-  position: relative !important;
-  z-index: 3002 !important;
-}
+    padding: 0 !important;
 
-.menu-toggle .bar {
-  display: block !important;
-  width: 100% !important;
-  height: 2.5px !important;
-  background-color: var(--marro-fosc) !important;
-  border-radius: 20px !important;
-  transition: all 0.3s ease-in-out !important;
-}
+    position: relative !important;
 
-/* =========================================
-   LOGO
-   ========================================= */
+    z-index: 3002 !important;
+  }
 
-.logo a {
-  display: block;
-  text-decoration: none;
-  border: none;
-  outline: none;
-}
+  .menu-toggle .bar {
+    display: block !important;
 
-.logo img {
-  max-width: 200px;
-  height: auto;
-  display: block;
-  cursor: pointer;
-}
+    width: 100% !important;
+    height: 2.5px !important;
 
-/* =========================================
-   ANIMACIÓ X
-   ========================================= */
+    background-color: var(--marro-fosc) !important;
 
-.menu-toggle.active .bar:nth-child(1) {
-  transform: translateY(8.5px) rotate(45deg) !important;
-}
+    border-radius: 20px !important;
 
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0 !important;
-}
+    transition: all 0.3s ease-in-out !important;
+  }
 
-.menu-toggle.active .bar:nth-child(3) {
-  transform: translateY(-8.5px) rotate(-45deg) !important;
-}
+  /* =========================================
+     ANIMACIÓ X
+     ========================================= */
 
-/* =========================================
-   MENÚ DESPLEGABLE
-   ========================================= */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg) !important;
+  }
 
-.nav-mobil {
-  position: fixed !important;
-  top: 65px !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  background-color: var(--carn-clar) !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  max-height: 0 !important;
-  overflow: hidden !important;
-  opacity: 0 !important;
-  transform: translateY(-10px) !important;
-  transition:
-    max-height 0.45s ease,
-    opacity 0.3s ease,
-    transform 0.3s ease !important;
-  pointer-events: none !important;
-  z-index: 3001 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  border-bottom-left-radius: 35px !important;
-  border-bottom-right-radius: 35px !important;
-  box-sizing: border-box !important;
-}
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0 !important;
+  }
 
-/* =========================================
-   MENÚ OBERT
-   ========================================= */
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg) !important;
+  }
 
-.nav-mobil.active {
-  max-height: 500px !important;
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  pointer-events: auto !important;
-  padding-top: 35px !important;
-  padding-bottom: 40px !important;
-}
+  /* =========================================
+     MENÚ DESPLEGABLE
+     ========================================= */
 
-/* =========================================
-   LLISTA
-   ========================================= */
+  .nav-mobil {
+    position: fixed !important;
 
-.nav-list-mobil {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 25px !important;
-  width: 100% !important;
-  text-align: center !important;
-}
+    top: 65px !important;
+    left: 0 !important;
+    right: 0 !important;
 
-.nav-list-mobil li {
-  width: 100% !important;
-}
+    width: 100% !important;
 
-/* =========================================
-   LINKS
-   ========================================= */
+    background-color: var(--carn-clar) !important;
 
-.nav-list-mobil li a {
-  display: block !important;
-  width: 100% !important;
-  text-decoration: none !important;
-  color: var(--marro-fosc) !important;
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  text-transform: none !important;
-  line-height: 1.4 !important;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease !important;
-}
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 
-/* =========================================
-   HOVER
-   ========================================= */
+    max-height: 0 !important;
 
-.nav-list-mobil li a:hover,
-.nav-list-mobil li a:active {
-  color: var(--blau-electric) !important;
-  transform: scale(1.03) !important;
-}
+    overflow: hidden !important;
 
-/* =========================================
-   PÀGINA ACTIVA
-   ========================================= */
+    opacity: 0 !important;
 
-.nav-list-mobil li a.active {
-  color: var(--blau-electric) !important;
-}
+    transform: translateY(-10px) !important;
+
+    transition:
+      max-height 0.45s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease !important;
+
+    pointer-events: none !important;
+
+    z-index: 3001 !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    border-bottom-left-radius: 35px !important;
+    border-bottom-right-radius: 35px !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .nav-mobil.active {
+    max-height: 500px !important;
+
+    opacity: 1 !important;
+
+    transform: translateY(0) !important;
+
+    pointer-events: auto !important;
+
+    padding-top: 35px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* =========================================
+     LLISTA
+     ========================================= */
+
+  .nav-list-mobil {
+    list-style: none !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    gap: 25px !important;
+
+    width: 100% !important;
+
+    text-align: center !important;
+  }
+
+  .nav-list-mobil li {
+    width: 100% !important;
+  }
+
+  /* =========================================
+     LINKS
+     ========================================= */
+
+  .nav-list-mobil li a {
+    display: block !important;
+
+    width: 100% !important;
+
+    text-decoration: none !important;
+
+    color: var(--marro-fosc) !important;
+
+    font-size: 18px !important;
+    font-weight: 600 !important;
+
+    line-height: 1.4 !important;
+
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease !important;
+  }
+
+  .nav-list-mobil li a:hover,
+  .nav-list-mobil li a:active,
+  .nav-list-mobil li a.active {
+    color: var(--blau-electric) !important;
+
+    transform: scale(1.03) !important;
+  }
 
 /* =========================================
    UBICACIÓ TRANSPORT

@@ -327,19 +327,32 @@ nav ul li a:hover {
    ENTREVISTES
 ========================================= */
 
-.entrevista-principal,
-.entrevista-principal.reverse,
-.e-casa-atlantica {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
-    width: 100%;
-    margin-bottom: 5rem;
+.cards-container {
+    max-width: 1060px;
+    margin: 0 auto;
 }
 
-/* REVERSE */
+.entrevista-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.4rem;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
 
+.contenidor-foto {
+    width: 100%;
+}
+
+.foto-entrevista {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Alternar ordre com a la imatge */
 .entrevista-principal.reverse .contingut {
     grid-column: 1;
     grid-row: 1;
@@ -350,68 +363,44 @@ nav ul li a:hover {
     grid-row: 1;
 }
 
-/* FOTO */
-
-.contenidor-foto {
-    width: 100%;
-}
-
-.foto-entrevista {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    display: block;
-    border-radius: 24px;
-}
-
-/* CONTINGUT */
-
+/* Contingut */
 .contingut {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 250px;
 }
 
-/* TITOL */
-
-.contingut h3,
-.e-casa-atlantica h3 {
+.contingut h3 {
     color: var(--taronja-viu);
-    margin: 0 0 1rem 0;
+    font-size: 1.55rem;
     line-height: 1.05;
+    font-weight: 500;
+    margin: 0 0 0.8rem 0;
 }
 
-/* TEXT */
-
-.contingut p,
-.e-casa-atlantica p {
+.contingut p {
     color: var(--marro-fosc);
+    font-size: 0.78rem;
+    line-height: 1.25;
     margin: 0;
-    line-height: 1.4;
+    max-width: 95%;
 }
 
-/* INFO */
-
+/* + INFO */
 .enllac-info {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: inline-block;
+    width: fit-content;
 }
 
 .info-icon {
-    width: 90px;
-    transition: transform 0.3s ease;
+    width: 70px;
+    display: block;
 }
 
-.info-icon:hover {
-    transform: scale(1.05);
-}
-
-/* FOOTER */
-
+/* Footer */
 .card-footer {
     margin-top: auto;
-    padding-top: 2rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -419,16 +408,16 @@ nav ul li a:hover {
 
 .social-icons {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.35rem;
 }
 
 .social-icons img {
-    width: 18px;
-    height: 18px;
+    width: 13px;
+    height: 13px;
 }
 
 .date {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     color: var(--marro-fosc);
 }
 
@@ -863,109 +852,104 @@ footer {
    ENTREVISTES ACTUALS
 ========================================= */
 
-.destacats {
-  padding: 120px 0 80px;
-  color: var(--marro-fosc);
-}
+ .destacats {
+    padding: 120px 0 80px;
+    color: var(--marro-fosc);
+  }
 
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
 
-/* Cada entrevista una sota l'altra */
-.entrevista-principal {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-top: 40px;
-}
+  .entrevista-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+  }
 
-/* Ja no cal reverse */
-.entrevista-principal.reverse .contenidor-foto,
-.entrevista-principal.reverse .contingut {
-  order: unset;
-}
+  .entrevista-principal.reverse .contenidor-foto,
+  .entrevista-principal.reverse .contingut {
+    order: unset;
+  }
 
-.contenidor-foto {
-  width: 100%;
-}
+  .contenidor-foto {
+    width: 100%;
+  }
 
-/* Treu el “fons gris” */
-.foto-entrevista {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: 14px;
-}
+  .foto-entrevista {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 14px;
+  }
 
-/* Contingut */
-.contingut {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 0;
-}
+  .contingut {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 0;
+    height: auto;
+  }
 
-.contingut h3 {
-  margin: 0;
-  font-size: 32px;
-  line-height: 1.05;
-  font-weight: 500;
-  color: var(--taronja-viu);
-}
+  .contingut h3 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.05;
+    font-weight: 500;
+    color: var(--taronja-viu);
+  }
 
-.contingut p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
-  max-width: 700px;
-}
+  .contingut p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 700px;
+  }
 
-.contingut a {
-  color: inherit;
-  text-decoration: underline;
-}
+  .contingut a {
+    color: inherit;
+    text-decoration: underline;
+  }
 
-/* Botó +INFO */
-.enllac-info {
-  margin-top: 10px;
-  display: inline-block;
-  width: fit-content;
-}
+  .enllac-info {
+    margin-top: 10px;
+    display: inline-block;
+    width: fit-content;
+  }
 
-.info-icon {
-  height: 28px;
-  width: auto;
-}
+  .info-icon {
+    height: 28px;
+    width: auto;
+  }
 
-/* Footer */
-.card-footer {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
+  .card-footer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
 
-.social-icons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 
-.social-icons img {
-  width: 15px;
-  height: 15px;
-  object-fit: contain;
-}
+  .social-icons img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+  }
 
-.date {
-  font-size: 13px;
-  color: var(--marro-fosc);
-}
+  .date {
+    font-size: 13px;
+    color: var(--marro-fosc);
+  }
 
 
 /* =========================================
@@ -1242,6 +1226,23 @@ footer {
 @media (max-width: 430px) {
 
   /* =========================================
+     FIX SCROLL + HEADER
+     ========================================= */
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    padding-top: 65px;
+  }
+
+  /* =========================================
      AJUSTOS GENERALS
      ========================================= */
 
@@ -1250,7 +1251,6 @@ footer {
   footer {
     padding-left: 20px !important;
     padding-right: 20px !important;
-    width: 100% !important;
     box-sizing: border-box !important;
   }
 
@@ -1321,263 +1321,218 @@ footer {
   }
 
   /* =========================================
-     LOGO NAV
+     HEADER + MENÚ
      ========================================= */
+
+  header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    height: 65px !important;
+
+    padding: 0 20px !important;
+
+    background-color: var(--carn-clar) !important;
+
+    z-index: 3000 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  /* =========================================
+     LOGO
+     ========================================= */
+
+  .logo a {
+    display: block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+  }
 
   .logo img {
     width: 150px;
     max-width: 150px;
+    height: auto;
+    display: block;
+    cursor: pointer;
   }
+
+  /* =========================================
+     MENÚ ORDINADOR
+     ========================================= */
 
   .nav-list {
     display: none !important;
   }
 
-/* =========================================
-   HEADER + MENÚ MÒBIL ENTREVISTES
-   ========================================= */
+  /* =========================================
+     MENÚ HAMBURGUESA
+     ========================================= */
 
-header {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
+  .menu-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 
-  width: 100% !important;
-  height: 65px !important;
+    width: 28px !important;
+    height: 20px !important;
 
-  padding: 0 20px !important;
+    background: transparent !important;
+    border: none !important;
 
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
+    cursor: pointer !important;
 
-  background-color: var(--carn-clar) !important;
+    padding: 0 !important;
 
-  z-index: 3000 !important;
+    position: relative !important;
+    z-index: 3002 !important;
+  }
 
-  box-sizing: border-box !important;
-}
+  .menu-toggle .bar {
+    display: block !important;
 
-/* ESPAI PERQUÈ EL CONTINGUT
-   NO QUEDI SOTA EL HEADER */
+    width: 100% !important;
+    height: 2.5px !important;
 
-body {
-  padding-top: 65px;
-}
+    background-color: var(--marro-fosc) !important;
 
-/* =========================================
-   MENÚ ORDINADOR
-   ========================================= */
+    border-radius: 20px !important;
 
-.nav-list {
-  display: none !important;
-}
+    transition: all 0.3s ease-in-out !important;
+  }
 
-/* =========================================
-   MENÚ HAMBURGUESA
-   ========================================= */
+  /* =========================================
+     ANIMACIÓ X
+     ========================================= */
 
-.menu-toggle {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg) !important;
+  }
 
-  width: 28px !important;
-  height: 20px !important;
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0 !important;
+  }
 
-  background: transparent !important;
-  border: none !important;
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg) !important;
+  }
 
-  cursor: pointer !important;
+  /* =========================================
+     MENÚ DESPLEGABLE
+     ========================================= */
 
-  padding: 0 !important;
+  .nav-mobil {
+    position: fixed !important;
 
-  position: relative !important;
-  z-index: 3002 !important;
-}
+    top: 65px !important;
+    left: 0 !important;
+    right: 0 !important;
 
-.menu-toggle .bar {
-  display: block !important;
+    background-color: var(--carn-clar) !important;
 
-  width: 100% !important;
-  height: 2.5px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 
-  background-color: var(--marro-fosc) !important;
+    max-height: 0 !important;
 
-  border-radius: 20px !important;
+    overflow: hidden !important;
 
-  transition: all 0.3s ease-in-out !important;
-}
+    opacity: 0 !important;
 
-/* =========================================
-   LOGO
-   ========================================= */
+    transform: translateY(-10px) !important;
 
-.logo a {
-  display: block;
+    transition:
+      max-height 0.45s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease !important;
 
-  text-decoration: none;
+    pointer-events: none !important;
 
-  border: none;
-  outline: none;
-}
+    z-index: 3001 !important;
 
-.logo img {
-  max-width: 200px;
+    border-bottom-left-radius: 35px !important;
+    border-bottom-right-radius: 35px !important;
 
-  height: auto;
+    box-sizing: border-box !important;
+  }
 
-  display: block;
+  .nav-mobil.active {
+    max-height: 500px !important;
 
-  cursor: pointer;
-}
+    opacity: 1 !important;
 
-/* =========================================
-   ANIMACIÓ X
-   ========================================= */
+    transform: translateY(0) !important;
 
-.menu-toggle.active .bar:nth-child(1) {
-  transform: translateY(8.5px) rotate(45deg) !important;
-}
+    pointer-events: auto !important;
 
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0 !important;
-}
+    padding-top: 35px !important;
+    padding-bottom: 40px !important;
+  }
 
-.menu-toggle.active .bar:nth-child(3) {
-  transform: translateY(-8.5px) rotate(-45deg) !important;
-}
+  /* =========================================
+     LLISTA
+     ========================================= */
 
-/* =========================================
-   MENÚ DESPLEGABLE
-   ========================================= */
+  .nav-list-mobil {
+    list-style: none !important;
 
-.nav-mobil {
-  position: fixed !important;
+    padding: 0 !important;
+    margin: 0 !important;
 
-  top: 65px !important;
-  left: 0 !important;
-  right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 
-  width: 100% !important;
+    gap: 25px !important;
 
-  background-color: var(--carn-clar) !important;
+    width: 100% !important;
 
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
+    text-align: center !important;
+  }
 
-  max-height: 0 !important;
+  .nav-list-mobil li {
+    width: 100% !important;
+  }
 
-  overflow: hidden !important;
+  /* =========================================
+     LINKS
+     ========================================= */
 
-  opacity: 0 !important;
+  .nav-list-mobil li a {
+    display: block !important;
 
-  transform: translateY(-10px) !important;
+    width: 100% !important;
 
-  transition:
-    max-height 0.45s ease,
-    opacity 0.3s ease,
-    transform 0.3s ease !important;
+    text-decoration: none !important;
 
-  pointer-events: none !important;
+    color: var(--marro-fosc) !important;
 
-  z-index: 3001 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
 
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+    line-height: 1.4 !important;
 
-  border-bottom-left-radius: 35px !important;
-  border-bottom-right-radius: 35px !important;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease !important;
+  }
 
-  box-sizing: border-box !important;
-}
+  .nav-list-mobil li a:hover,
+  .nav-list-mobil li a:active,
+  .nav-list-mobil li a.active {
+    color: var(--blau-electric) !important;
 
-/* =========================================
-   MENÚ OBERT
-   ========================================= */
-
-.nav-mobil.active {
-  max-height: 500px !important;
-
-  opacity: 1 !important;
-
-  transform: translateY(0) !important;
-
-  pointer-events: auto !important;
-
-  padding-top: 35px !important;
-  padding-bottom: 40px !important;
-}
-
-/* =========================================
-   LLISTA
-   ========================================= */
-
-.nav-list-mobil {
-  list-style: none !important;
-
-  padding: 0 !important;
-  margin: 0 !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-
-  gap: 25px !important;
-
-  width: 100% !important;
-
-  text-align: center !important;
-}
-
-.nav-list-mobil li {
-  width: 100% !important;
-}
-
-/* =========================================
-   LINKS
-   ========================================= */
-
-.nav-list-mobil li a {
-  display: block !important;
-
-  width: 100% !important;
-
-  text-decoration: none !important;
-
-  color: var(--marro-fosc) !important;
-
-  font-size: 18px !important;
-  font-weight: 600 !important;
-
-  text-transform: none !important;
-
-  line-height: 1.4 !important;
-
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease !important;
-}
-
-/* =========================================
-   HOVER
-   ========================================= */
-
-.nav-list-mobil li a:hover,
-.nav-list-mobil li a:active {
-  color: var(--blau-electric) !important;
-
-  transform: scale(1.03) !important;
-}
-
-/* =========================================
-   PÀGINA ACTIVA
-   ========================================= */
-
-.nav-list-mobil li a.active {
-  color: var(--blau-electric) !important;
-}
+    transform: scale(1.03) !important;
+  }
 
 /* =========================================
    ENTREVISTES ACTUALS

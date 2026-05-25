@@ -871,14 +871,18 @@ footer {
 
 .festivalet .images {
   display: flex !important;
+
   overflow-x: auto;
+
   gap: 12px;
+
   padding-bottom: 38px;
+
   scrollbar-width: none;
 
-  /* puja les imatges */
   position: relative;
-  top: -20px;
+
+  top: 40px;
 }
 
 .festivalet .images::-webkit-scrollbar {
@@ -1396,7 +1400,7 @@ footer {
   position: absolute;
 
   left: 50%;
-  bottom: 18px;
+  bottom: 30px;
 
   transform: translateX(-50%);
 
