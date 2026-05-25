@@ -334,35 +334,80 @@ nav ul li a:hover {
   text-align: left;
 }
 
+/* GRID GENERAL */
+
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px 24px;
 }
+
+/* CARD */
 
 .card {
   background: none;
+  padding: 0;
+  border-radius: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  grid-column: span 2;
+  position: relative;
+}
+
+/* ALTERNAR IMATGE */
+
+.card:nth-child(even) .main-img {
+  order: 2;
+}
+
+.card:nth-child(even) .contingut {
+  order: 1;
+}
+
+/* IMATGE */
+
+.main-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0;
+  display: block;
+}
+
+/* CONTINGUT */
+
+.contingut {
   display: flex;
   flex-direction: column;
-  position: relative;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: left;
+  height: 100%;
+  justify-content: flex-start;
 }
+
+/* TÍTOL */
 
 .contingut h3 {
-  display: block;
-  text-align: left;
+  color: var(--taronja-viu);
+  font-size: 48px;
+  line-height: 1.05;
+  margin-bottom: 22px;
+  font-weight: 400;
   width: 100%;
-  font-size: 0.8em;
+  text-align: left;
 }
 
+/* TEXT */
+
 .card p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
-  margin-bottom: 20px;
-  flex-grow: 1;
+  margin-bottom: 24px;
+  color: var(--marro-fosc);
 }
+
+/* LINKS */
 
 .contingut p a {
   color: var(--marro-fosc);
@@ -372,75 +417,144 @@ nav ul li a:hover {
 
 .contingut p a:hover {
   color: var(--taronja-viu);
-  text-decoration: underline;
 }
 
 .card a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.3s;
 }
 
 .card a:hover {
   color: var(--taronja-viu);
-  text-decoration: underline;
 }
 
-.main-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 24px;
-  margin-top: 24px;
+/* + INFO */
+
+.info-link {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--marro-fosc);
+  text-decoration: none !important;
+  margin-top: 10px;
+  display: inline-block;
 }
+
+.info-link::before {
+  content: "+ ";
+}
+
+/* FOOTER */
 
 .card-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   margin-top: auto;
+  padding-top: 40px;
 }
 
+/* XARXES */
+
 .social-icons {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 12px !important;
-  align-items: center !important;
-  height: 30px !important;
-  overflow: visible !important;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
 }
 
 .social-icons a {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-decoration: none !important;
-  border: none !important;
-  outline: none !important;
-  line-height: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  line-height: 0;
 }
 
 .social-icons img {
-  width: 24px !important;
-  height: 24px !important;
-  max-width: 24px !important;
-  max-height: 24px !important;
-  object-fit: contain !important;
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  display: block !important;
-  transform: none !important;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  display: block;
 }
 
+/* DATA */
+
 .date {
-  font-size: 0.85rem;
+  font-size: 14px;
   font-weight: 500;
   color: var(--marro-fosc);
   white-space: nowrap;
   font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+  .card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card:nth-child(even) .main-img,
+  .card:nth-child(even) .contingut {
+    order: initial;
+  }
+
+  .main-img {
+    height: 280px;
+  }
+
+  .contingut h3 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-img {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 20px;
+  }
+
+  .contingut h3 {
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .card-footer {
+    padding-top: 24px;
+  }
+
+  .info-link {
+    font-size: 20px;
+  }
 }
 
 /* =========================================
@@ -873,142 +987,49 @@ footer {
    ENTREVISTES ACTUALS
 ========================================= */
 
-.entrevistes-actuals .titol-seccio {
-  font-size: 40px;
-  line-height: 48px;
-  margin-top: 120px;
-  margin-bottom: 40px;
-}
+.cards-container {
+    gap: 70px 24px;
+  }
 
-/* SCROLL HORITZONTAL */
+  .card {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+  }
 
-.entrevistes-actuals .cards-container {
-  display: flex !important;
-  flex-direction: row;
-  gap: 16px;
+  .main-img {
+    height: 260px;
+  }
 
-  overflow-x: auto;
-  overflow-y: hidden;
+  .contingut h3 {
+    font-size: 38px;
+    line-height: 1.08;
+    margin-bottom: 18px;
+  }
 
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  .card p {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 20px;
+  }
 
-  padding-bottom: 20px;
+  .info-link {
+    font-size: 20px;
+  }
 
-  background: transparent; 
-}
+  .card-footer {
+    padding-top: 24px;
+  }
 
-.entrevistes-actuals .cards-container::-webkit-scrollbar {
-  display: none;
-}
+  .social-icons img {
+    width: 17px;
+    height: 17px;
+  }
 
-/* CARD */
+  .date {
+    font-size: 13px;
+  }
 
-.entrevista-principal {
-  flex: 0 0 68%;
-  min-width: 68%;
-
-  display: flex !important;
-  flex-direction: column-reverse !important;
-  gap: 24px;
-
-  scroll-snap-align: center;
-
-  background: transparent; 
-  padding: 0;
-}
-
-.entrevista-principal.reverse {
-  direction: ltr;
-}
-
-.entrevista-principal .contingut {
-  width: 100%;
-  margin-top: 0;
-  order: 1;
-}
-
-.entrevista-principal .contenidor-foto {
-  width: 100%;
-  order: 2;
-}
-
-/* IMATGE */
-
-.entrevista-principal .foto-entrevista {
-  width: 100%;
-  height: clamp(300px, 38vw, 400px);
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-/* TEXT */
-
-.entrevista-principal h2 {
-  font-size: 28px;
-  line-height: 34px;
-}
-
-.entrevista-principal h3 {
-  font-size: 20px !important;
-  line-height: 27px;
-  text-align: left;
-}
-
-.entrevista-principal p {
-  font-size: 15px;
-  line-height: 24px;
-}
-
-/* + INFO */
-
-.entrevista-principal .info-icon {
-  width: 70px !important;
-  max-width: 70px;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
-}
-
-/* =========================================
-   PUNTS / DOTS
-========================================= */
-
-.entrevistes-actuals::after {
-  content: "";
-  display: block;
-  width: 90px;
-  height: 15px;
-  margin: 18px auto 0 auto;
-
-  background-repeat: no-repeat;
-  background-size: 15px 15px;
-
-  background-image:
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-
-  background-position:
-    15px center,
-    45px center,
-    75px center;
-}
-
-.entrevistes-actuals.actiu-2::after {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-}
-
-.entrevistes-actuals.actiu-3::after {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
-}
 
 /* =========================================
    ENTREVISTES ANTERIORS
