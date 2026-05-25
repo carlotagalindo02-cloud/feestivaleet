@@ -855,52 +855,54 @@ footer {
 ========================================= */
 
 .cards-container {
-    gap: 70px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
 
-  .entrevista-principal {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-  }
+.entrevista-principal {
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
 
-  .foto-entrevista {
-    height: 280px;
-  }
+.foto-entrevista {
+  height: 280px;
+}
 
-  .contingut {
-    min-height: 280px;
-    padding: 0 10px;
-  }
+.contingut {
+  min-height: 280px;
+  padding: 0 10px;
+}
 
-  .contingut h3 {
-    font-size: 26px;
-    line-height: 1.1;
-    margin-bottom: 14px;
-  }
+.contingut h3 {
+  font-size: 26px;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
 
-  .contingut p {
-    font-size: 14px;
-    line-height: 1.35;
-  }
+.contingut p {
+  font-size: 14px;
+  line-height: 1.35;
+}
 
-  .info-icon {
-    height: 24px;
-  }
+.info-icon {
+  height: 24px;
+}
 
-  .card-footer {
-    left: 10px;
-    right: 10px;
-  }
+.card-footer {
+  left: 10px;
+  right: 10px;
+}
 
-  .social-icons img {
-    width: 15px;
-    height: 15px;
-  }
+.social-icons img {
+  width: 15px;
+  height: 15px;
+}
 
-  .date {
-    font-size: 13px;
-  }
+.date {
+  font-size: 13px;
+}
 
 
 /* =========================================
