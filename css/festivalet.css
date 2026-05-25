@@ -888,7 +888,7 @@ footer {
   align-items: center;
   gap: clamp(40px, 6vw, 90px);
   position: relative;
-  margin-top: 30px !important;
+  margin-top: -40px !important;
 }
 
 /* TEXT */
@@ -1129,43 +1129,149 @@ footer {
   }
   
 /* =========================================
-   UBICACIÓ I TRANSPORT
+   UBICACIÓ + TRANSPORT
 ========================================= */
 
 .ubicacio-transport {
   display: flex;
   flex-direction: column;
-  gap: clamp(80px, 12vw, 180px);
-  margin-top: 40px;
-  margin-bottom: 50px;
+  align-items: flex-start;
 
-  padding-left: 40px;
-  padding-right: 40px;
-
-  overflow: hidden;
-  box-sizing: border-box;
-
-  background-image: url('../contacte/fons.svg');
+  background-image: url('../festivalet/fons.svg');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+
+  padding-top: var(--espai-seccions);
+  padding-bottom: var(--espai-seccions);
+
+  position: relative;
 }
 
-/* COM ARRIBAR */
+/* TITOLS */
+
+.ubicacio-transport h2 {
+  font-size: 52px;
+  line-height: 58px;
+  color: var(--taronja-viu);
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+/* BLOC SUPERIOR */
+
+.columna-on {
+  width: 100%;
+  position: relative;
+}
+
+/* INFO ESQUERRA */
+
+.header-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  position: absolute;
+  top: 90px;
+  left: 0;
+  z-index: 3;
+}
+
+.header-inline p {
+  font-size: 28px;
+  line-height: 34px;
+  color: var(--taronja-viu);
+  margin: 0;
+}
+
+/* ADREÇA DRETA */
+
+address {
+  position: absolute;
+  top: 30px;
+  right: 0;
+
+  font-style: normal;
+  text-decoration: underline;
+
+  font-size: 26px;
+  line-height: 34px;
+  text-align: right;
+
+  color: #222;
+}
+
+/* MAPA */
+
+.mapa-container {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.mapa-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   COM ARRIBAR
+========================================= */
 
 .columna-arribar {
-  margin-top: clamp(60px, 10vw, 160px);
+  width: 100%;
+  margin-top: 120px;
 }
-
-/* TRANSPORTS */
 
 .transports-flex {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  flex-wrap: nowrap;
-  width: 100%;
-  margin-top: 60px;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 120px;
+
+  margin-top: 70px;
+}
+
+/* ITEM */
+
+.transport-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex: 1;
+}
+
+/* ICONES */
+
+.icona-transport {
+  width: 170px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* TEXT */
+
+.transport-text strong {
+  display: block;
+
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 400;
+
+  color: var(--taronja-viu);
+
+  margin-bottom: 18px;
+}
+
+.transport-text p {
+  font-size: 30px;
+  line-height: 38px;
+  color: var(--marro-fosc);
+  margin: 0;
 }
   
    /* --- ESPÒNSORS --- */

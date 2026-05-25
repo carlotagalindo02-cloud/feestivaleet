@@ -419,7 +419,7 @@ nav ul li a,
   height: 275px;
   object-fit: cover;
   border-radius: 20px;
-  margin-top: 100px;
+  margin-top: 100px !important;
 }
 
 /* =========================================
@@ -450,7 +450,7 @@ nav ul li a,
 .fira .images {
   overflow: hidden;
   width: 100%;
-  margin: 80px 0 0 -40px; /* més avall i més a l’esquerra */
+  margin: 80px 0 0 -40px; 
   align-self: start;
 }
 
