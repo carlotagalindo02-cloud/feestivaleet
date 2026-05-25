@@ -1340,88 +1340,94 @@ footer {
   line-height: 1.5;
 }
   
-  /* =========================================
-     SPONSORS
-     ========================================= */
+/* =========================================
+   SPONSORS
+   ========================================= */
 
-  .sponsors {
-    width: 100vw;
+.sponsors {
+  width: 100vw;
 
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 
-  /* =========================================
-     NEWSLETTER
-     ========================================= */
+  box-sizing: border-box;
+}
 
-  .newsletter {
-    width: 100vw;
+/* =========================================
+   NEWSLETTER
+   ========================================= */
 
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+.newsletter {
+  width: 100vw;
 
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 
-    display: flex !important;
-    flex-direction: column !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 
-    gap: 24px !important;
+  box-sizing: border-box;
 
-    margin-top: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
 
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
-  }
+  gap: 24px !important;
 
-  .newsletter-left,
-  .newsletter-right {
-    width: 100%;
-    max-width: 100%;
-  }
+  margin-top: 0 !important;
 
-  .newsletter-right {
-    margin-top: 0;
-  }
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
 
-  .newsletter-right input {
-    width: 100%;
-  }
+.newsletter-left,
+.newsletter-right {
+  width: 100%;
+  max-width: 100%;
+}
 
-  /* =========================================
-     FOOTER
-     ========================================= */
+.newsletter-right {
+  margin-top: 0;
+}
 
-  footer {
-    width: 100vw;
+.newsletter-right input {
+  width: 100%;
+}
 
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+/* =========================================
+   FOOTER
+   ========================================= */
 
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+footer {
+  width: 100vw;
 
-  /* --- BOTONS --- */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 
-  .btn-custom,
-  .wrapper-centrat {
-    width: 220px;
-    height: 65px;
-  }
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 
-  .btn-custom:hover,
-  .wrapper-centrat:hover {
-    filter: brightness(1.1);
-  }
+  box-sizing: border-box;
+}
 
-  .info-icon:hover {
-    transform: scale(1.08);
-  }
+/* --- BOTONS --- */
+
+.btn-custom,
+.wrapper-centrat {
+  width: 220px;
+  height: 65px;
+}
+
+.btn-custom:hover,
+.wrapper-centrat:hover {
+  filter: brightness(1.1);
+}
+
+.info-icon:hover {
+  transform: scale(1.08);
+}
   
   /* --- Botons --- */
 
@@ -1703,7 +1709,7 @@ footer {
   display: flex !important;
   flex-direction: column !important;
 
-  padding: 0 0 30px 0;
+  padding: 0 0 70px 0;
 
   margin-top: 130px !important;
 
@@ -1767,7 +1773,7 @@ footer {
   min-width: 90vw;
   max-width: 90vw;
 
-  height: 420px;
+  height: 280px;
 
   object-fit: cover;
   object-position: center;
@@ -1795,7 +1801,7 @@ footer {
 
   position: absolute;
 
-  top: 20px !important;
+  bottom: 20px !important;
 
   left: 50%;
 

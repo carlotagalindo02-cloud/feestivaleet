@@ -701,7 +701,7 @@ footer {
     display: none !important;
   }
 
-  /* =========================================
+/* =========================================
    HISTÒRIA
    ========================================= */
 
@@ -727,12 +727,14 @@ footer {
   content: "";
   position: absolute;
 
-  top: 390px !important; 
+  top: 480px !important;
 
   left: 0;
   width: 100%;
   height: 2px;
+
   background-color: var(--taronja-viu);
+
   z-index: 0;
 }
 
@@ -743,17 +745,21 @@ footer {
 .timeline-grid {
   display: flex !important;
   flex-direction: row !important;
+
   overflow-x: auto !important;
+
   gap: 24px !important;
+
   scroll-snap-type: x mandatory;
 
-  padding-top: 80px !important;
+  padding-top: 120px !important;
   padding-bottom: 140px !important;
 
   padding-left: 20px;
   padding-right: 20px;
 
   scrollbar-width: none;
+
   -webkit-overflow-scrolling: touch;
 }
 
@@ -795,8 +801,11 @@ footer {
 
 .milestone img {
   width: 100% !important;
+
   height: 190px !important;
+
   object-fit: cover;
+
   border-radius: 20px;
 }
 

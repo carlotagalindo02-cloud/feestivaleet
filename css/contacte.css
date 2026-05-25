@@ -857,8 +857,14 @@ footer {
 
   width: 100%;
 
-  overflow: hidden;
+  overflow: visible;
+
+  position: relative;
 }
+
+/* =========================================
+   TRANSPORTS
+========================================= */
 
 .transports-flex {
   display: flex;
@@ -871,9 +877,10 @@ footer {
 
   width: 100%;
 
-  gap: 0 !important;
+  gap: 14px !important;
 
-  padding-bottom: 0 !important;
+  padding-bottom: 16px;
+  padding-right: 4px;
 
   margin-top: -10px !important;
 
@@ -889,11 +896,9 @@ footer {
 }
 
 .transport-item {
-  flex: 0 0 100% !important;
-
-  width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important;
+  flex: 0 0 48%;
+  min-width: 48%;
+  max-width: 48%;
 
   box-sizing: border-box;
 
@@ -909,8 +914,11 @@ footer {
 
   gap: 15px;
 
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
+
+  border-radius: 18px;
+
+  min-height: 250px;
 }
 
 .icona-transport {
@@ -925,6 +933,8 @@ footer {
   text-align: center;
 
   max-width: 240px;
+
+  line-height: 1.5;
 }
 
 .transport-text strong {
@@ -945,6 +955,10 @@ footer {
   line-height: 1.4;
 }
 
+/* =========================================
+   PUNTS TRANSPORT
+========================================= */
+
 .bloc-dreta::after {
   content: "";
 
@@ -953,7 +967,7 @@ footer {
   width: 90px;
   height: 15px;
 
-  margin: 15px auto 0 auto;
+  margin: 18px auto 0 auto;
 
   background-repeat: no-repeat;
 
@@ -969,7 +983,14 @@ footer {
     45px center,
     75px center;
 
-  transition: none !important;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.bloc-dreta.canviant-punt::after {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .bloc-dreta.actiu-2::after {
