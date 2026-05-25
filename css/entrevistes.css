@@ -1718,49 +1718,68 @@ footer {
 
 .entrevistes {
   padding: 80px 0 70px 0;
+
   margin-bottom: 20px !important;
+
   overflow: hidden;
+
   position: relative;
 }
 
 .entrevistes .cards-container {
   display: flex !important;
+
   flex-direction: row;
+
   gap: 20px;
+
   overflow-x: auto;
   overflow-y: hidden;
+
   scroll-snap-type: x mandatory;
+
   -webkit-overflow-scrolling: touch;
+
   scrollbar-width: none;
+
   padding-bottom: 16px;
-  padding-left: 0;
-  padding-right: 0;
+
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .entrevistes .cards-container::-webkit-scrollbar {
   display: none;
 }
 
+/* CARD MÉS AMPLE */
+
 .entrevistes .card {
-  flex: 0 0 94vw;
-  min-width: 94vw;
-  max-width: 94vw;
+  flex: 0 0 98vw;
+
+  min-width: 98vw;
+  max-width: 98vw;
 
   background-image: url('../entrevistes/grafica.svg');
+
   background-size: cover;
   background-position: center;
 
   padding: 24px;
+
   border-radius: 18px;
+
   min-height: 520px;
 
   display: flex;
   flex-direction: column;
 
   text-decoration: none;
+
   color: var(--marro-fosc);
 
   scroll-snap-align: center;
+
   box-sizing: border-box;
 }
 
@@ -1771,8 +1790,11 @@ footer {
 
 .participa {
   display: grid !important;
+
   grid-template-columns: 1fr;
-  gap: 50px;
+
+  gap: 20px;
+
   padding-top: 50px !important;
   padding-bottom: 40px !important;
 }
@@ -1793,8 +1815,10 @@ summary {
   line-height: 26px;
 }
 
+/* FORMULARI MÉS AMUNT */
+
 .formulari form {
-  margin-top: 48px;
+  margin-top: 0;
 }
 
 .formulari label {

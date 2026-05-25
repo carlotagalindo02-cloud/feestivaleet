@@ -1310,41 +1310,22 @@ footer {
 
 }
 
-  /* =========================================
-     HISTÒRIA
-     ========================================= */
+/* =========================================
+   HISTÒRIA
+========================================= */
 
-  .history-section {
-    position: relative;
-    margin-top: 60px !important;
-    overflow: visible !important;
-  }
-  
-  .mobile-break br {
-    display: block;
-  }
+.history-section {
+  position: relative;
+  margin-top: 60px !important;
+  overflow: visible !important;
+}
 
-  /* =========================================
-     TIMELINE
-     ========================================= */
-
-  .timeline-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    overflow-x: auto !important;
-    gap: 30px !important;
-    scroll-snap-type: x mandatory;
-    padding-top: 80px !important;
-    padding-bottom: 120px !important;
-    scrollbar-width: none;
-  }
-
-  .timeline-grid::-webkit-scrollbar {
-    display: none;
-  }
+.mobile-break br {
+  display: block;
+}
 
 /* =========================================
-   LINIA HORITZONTAL TIMELINE
+   TIMELINE
 ========================================= */
 
 .timeline-grid {
@@ -1359,13 +1340,19 @@ footer {
 
   scroll-snap-type: x mandatory;
 
-  padding-top: 80px !important;
-  padding-bottom: 120px !important;
+  padding-top: 40px !important;
+  padding-bottom: 80px !important;
 
   scrollbar-width: none;
 }
 
-/* línia */
+.timeline-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================
+   LÍNIA HORITZONTAL
+========================================= */
 
 .timeline-grid::before {
   content: "";
@@ -1373,7 +1360,7 @@ footer {
   position: absolute;
 
   left: 0;
-  top: 80%;
+  top: 63%;
 
   width: 220%;
   height: 3px;
@@ -1385,7 +1372,9 @@ footer {
   z-index: 0;
 }
 
-/* targetes davant línia */
+/* =========================================
+   TARGETES
+========================================= */
 
 .milestone {
   position: relative;
@@ -1395,56 +1384,48 @@ footer {
   flex: 0 0 80% !important;
 
   scroll-snap-align: center;
+
+  margin-top: -40px !important;
+
+  background: transparent !important;
+  background-image: none !important;
+
+  border: 2px solid var(--taronja-viu);
+
+  border-radius: 20px;
+
+  padding: 20px;
 }
 
-  /* =========================================
-     MILESTONES
-     ========================================= */
+/* =========================================
+   IMATGES
+========================================= */
 
-  .milestone {
-    flex: 0 0 80% !important;
+.milestone img {
+  width: 100% !important;
 
-    scroll-snap-align: center;
-  }
+  height: 220px !important;
 
-  /* ESPAI ENTRE TARGETES I LÍNIA */
+  object-fit: cover;
 
-  .milestone:nth-child(1),
-  .milestone:nth-child(2),
-  .milestone:nth-child(3),
-  .milestone:nth-child(4),
-  .milestone:nth-child(5),
-  .milestone:nth-child(6),
-  .milestone:nth-child(7),
-  .milestone:nth-child(8),
-  .milestone:nth-child(9) {
-    margin-top: -25px !important;
-  }
+  border-radius: 20px;
+}
 
-  /* =========================================
-     IMATGES
-     ========================================= */
+/* =========================================
+   TEXT
+========================================= */
 
-  .milestone img {
-    width: 100% !important;
-    height: 220px !important;
-    object-fit: cover;
-    border-radius: 20px;
-  }
+.year {
+  font-size: 22px !important;
 
-  /* =========================================
-     TEXT
-     ========================================= */
+  font-weight: 600 !important;
+}
 
-  .year {
-    font-size: 22px !important;
-    font-weight: 600 !important;
-  }
+.description {
+  font-size: 15px !important;
 
-  .description {
-    font-size: 15px !important;
-    line-height: 1.4 !important;
-  }
+  line-height: 1.4 !important;
+}
 
   /* =========================================
      BANNER
