@@ -702,182 +702,316 @@ footer {
   }
 
   /* =========================================
-     HISTÒRIA
-     ========================================= */
+   HISTÒRIA
+   ========================================= */
 
-  .history-section {
-    position: relative;
-    margin-top: 100px !important;
-    overflow: visible !important;
-  }
+.history-section {
+  position: relative;
 
-  /* =========================================
-     LÍNIA
-     ========================================= */
+  margin-top: 60px !important;
 
-  .background-line {
-    display: none !important;
-  }
+  overflow: visible !important;
+}
 
-  .history-section::before {
-    content: "";
-    position: absolute;
-    top: 219px !important;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--taronja-viu);
-    z-index: 0;
-  }
+.mobile-break br {
+  display: block;
+}
 
-  /* =========================================
-     TIMELINE
-     ========================================= */
+/* =========================================
+   LÍNIA
+   ========================================= */
 
-  .timeline-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    overflow-x: auto !important;
-    gap: 40px !important;
-    scroll-snap-type: x mandatory;
-    padding-top: 50px !important;
-    padding-bottom: 140px !important;
-    scrollbar-width: none;
-  }
+.background-line {
+  display: none !important;
+}
 
-  .timeline-grid::-webkit-scrollbar {
-    display: none;
-  }
+.history-section::before {
+  content: "";
 
-  /* =========================================
-     MILESTONES
-     ========================================= */
+  position: absolute;
 
-  .milestone {
-    flex: 0 0 45% !important;
-    scroll-snap-align: center;
-  }
+  top: 270px !important;
 
-  /* ESPAI ENTRE TARGETES I LÍNIA */
+  left: 0;
 
-  .milestone:nth-child(1),
-  .milestone:nth-child(2),
-  .milestone:nth-child(3),
-  .milestone:nth-child(4),
-  .milestone:nth-child(5),
-  .milestone:nth-child(6),
-  .milestone:nth-child(7),
-  .milestone:nth-child(8),
-  .milestone:nth-child(9) {
-    margin-top: -25px !important;
-  }
+  width: 100%;
 
-  /* =========================================
-     IMATGES
-     ========================================= */
+  height: 2px;
 
-  .milestone img {
-    width: 100% !important;
-    height: 260px !important;
-    object-fit: cover;
-    border-radius: 24px;
-  }
+  background-color: var(--taronja-viu);
 
-  /* =========================================
-     TEXT
-     ========================================= */
+  z-index: 0;
+}
 
-  .year {
-    font-size: 24px !important;
-    font-weight: 600 !important;
-  }
+/* =========================================
+   TIMELINE
+   ========================================= */
 
-  .description {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
-  }
+.timeline-grid {
+  display: flex !important;
 
-  /* =========================================
-     BANNER
-     ========================================= */
+  flex-direction: row !important;
 
-  .banner-historia {
-    padding: 70px 40px;
-    min-height: 320px;
-    margin-top: -160px !important;
-  }
+  overflow-x: auto !important;
 
-  .contingut-banner p {
-    max-width: 100%;
-  }
+  gap: 24px !important;
 
-  /* =========================================
-     ENTITAT
-     ========================================= */
+  scroll-snap-type: x mandatory;
 
-  .entitat-section {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
-  }
+  padding-top: 40px !important;
+  padding-bottom: 120px !important;
 
-  .entitat-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-    width: 100%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    box-sizing: border-box;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 
-  .entitat-text {
-    width: 100%;
-    margin-top: 0;
-  }
+  scrollbar-width: none;
 
-  .entitat-imatge {
-    width: 100%;
-    margin-top: 35px;
-  }
+  -webkit-overflow-scrolling: touch;
+}
 
-  .entitat-imatge img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 28px;
-    display: block;
-  }
+.timeline-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================
+   MILESTONES
+   ========================================= */
+
+.milestone {
+  flex: 0 0 68vw !important;
+
+  width: 68vw !important;
+  min-width: 68vw !important;
+  max-width: 68vw !important;
+
+  scroll-snap-align: center;
+}
+
+/* ESPAI ENTRE TARGETES I LÍNIA */
+
+.milestone:nth-child(1),
+.milestone:nth-child(2),
+.milestone:nth-child(3),
+.milestone:nth-child(4),
+.milestone:nth-child(5),
+.milestone:nth-child(6),
+.milestone:nth-child(7),
+.milestone:nth-child(8),
+.milestone:nth-child(9) {
+  margin-top: -5px !important;
+}
+
+/* =========================================
+   IMATGES
+   ========================================= */
+
+.milestone img {
+  width: 100% !important;
+
+  height: 190px !important;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.year {
+  font-size: 22px !important;
+
+  font-weight: 600 !important;
+}
+
+.description {
+  font-size: 15px !important;
+
+  line-height: 1.4 !important;
+}
 
   /* =========================================
-     COL·LABORACIONS
-     ========================================= */
+   ENTITAT
+   ========================================= */
 
-  .grid-cards {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    scrollbar-width: none;
-  }
+.entitat-section {
+  padding-top: 80px;
 
-  .grid-cards::-webkit-scrollbar {
-    display: none;
-  }
+  padding-bottom: 20px;
 
-  .card {
-    flex: 0 0 calc(50% - 10px);
-    min-height: 500px;
-    scroll-snap-align: start;
-  }
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
 
-  .logo {
-    max-width: 160px;
-  }
+/* =========================================
+   DOS BLOCS
+   ========================================= */
+
+.entitat-container {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+/* =========================================
+   TEXT ESQUERRA
+   ========================================= */
+
+.entitat-text {
+  width: 48%;
+
+  order: 1;
+
+  margin-top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.entitat-text h2 {
+  margin-bottom: 20px;
+}
+
+.entitat-descripcio p {
+  margin-bottom: 18px;
+
+  line-height: 1.45;
+}
+
+.entitat-text a img.btn-info {
+  display: inline-block;
+
+  margin-top: 20px !important;
+
+  width: 70px;
+
+  height: auto;
+}
+
+/* =========================================
+   IMATGE DRETA
+   ========================================= */
+
+.entitat-imatge {
+  width: 48%;
+
+  order: 2;
+
+  margin-top: 0;
+}
+
+.entitat-imatge img {
+  width: 100%;
+
+  height: auto;
+
+  border-radius: 30px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.entitat-descripcio p:last-child {
+  margin-bottom: 10px;
+}
+
+  /* =========================================
+   COL·LABORACIONS
+   ========================================= */
+
+.collaboracions {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+
+  margin-top: -20px !important;
+}
+
+.grid-cards {
+  display: flex;
+
+  flex-direction: row;
+
+  gap: 15px;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  padding-bottom: 10px;
+
+  width: 100%;
+}
+
+.grid-cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================
+   TARGETES MÉS PETITES
+   ========================================= */
+
+.card {
+  flex: 0 0 78vw !important;
+
+  width: 78vw !important;
+  min-width: 78vw !important;
+  max-width: 78vw !important;
+
+  min-height: auto;
+
+  border-radius: 35px;
+
+  padding: 30px 25px;
+
+  scroll-snap-align: center;
+
+  box-sizing: border-box;
+}
+
+.collaboracions h2 {
+  width: 100%;
+
+  text-align: left !important;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 140px;
+}
+
+.btn-info-collab {
+  display: inline-block;
+
+  margin-top: 40px !important;
+
+  width: 50px;
+
+  height: auto;
+
+  font-size: 12px;
+
+  padding: 6px 10px;
+}
 
   /* =========================================
      SPONSORS
@@ -944,17 +1078,24 @@ footer {
 
 @media (max-width: 430px) {
 
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+   header,
+  section,
+  footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  main {
-    padding-top: 65px;
+  section,
+  .history-section,
+  .banner-historia,
+  .entitat-section,
+  .collaboracions,
+  .sponsors,
+  .newsletter,
+  footer {
+    margin-bottom: 50px !important;
   }
 
   /* =========================================

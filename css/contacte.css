@@ -821,13 +821,85 @@ footer {
 .header-on address {
   margin: 0;
 
-  text-align: right;
-
   margin-left: auto;
+
+  text-align: right;
 
   max-width: 220px;
 
   line-height: 1.4;
+}
+
+/* =========================================
+   MAPA CENTRAT
+========================================= */
+
+.mapa-isometric {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 60px auto;
+}
+
+.mapa-isometric img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   TRANSPORTS
+========================================= */
+
+.transports-flex {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  flex-wrap: nowrap;
+
+  width: 100%;
+
+  margin-top: 90px;
+
+  gap: 120px;
+}
+
+.transport-item {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 25px;
+}
+
+.icona-transport {
+  width: 90px;
+
+  height: auto;
+}
+
+.transport-text {
+  max-width: 260px;
+
+  line-height: 1.5;
 }
 
 /* =========================================
@@ -882,7 +954,7 @@ footer {
 
   margin-top: 90px;
 
-  gap: 120px;
+  gap: 200px;
 }
 
 .transport-item {
@@ -1474,11 +1546,29 @@ footer {
 
   gap: 10px;
 
-  padding-left: -20px !important;
-  padding-right: -20px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  width: 100% !important;
 
   margin-top: 80px;
   margin-bottom: 40px !important;
+
+  box-sizing: border-box;
+}
+  
+  .info-section,
+.form-section {
+  width: 100%;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .info-section h2 {
@@ -1548,6 +1638,7 @@ footer {
   color: var(--marro-fosc);
 
   width: 100%;
+  max-width: 100%;
 
   padding: 14px;
 

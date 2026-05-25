@@ -455,69 +455,212 @@ nav ul li a {
 }
 
 /* =========================================
-   UBICACIÓ TRANSPORT
-   ========================================= */
+   UBICACIÓ I TRANSPORT
+========================================= */
 
 .ubicacio-transport {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 100px !important;
-  background-image: url('../festivalet/fons.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
+  flex-direction: column;
+
+  gap: clamp(80px, 12vw, 180px);
+
+  margin-top: 40px;
+  margin-bottom: 50px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background-image: url('../contacte/fons.svg');
+  background-size: cover;
   background-position: center;
-  min-height: 400px;
+  background-repeat: no-repeat;
+}
+
+/* =========================================
+   HEADER UBICACIÓ
+========================================= */
+
+.header-on {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+
+  gap: 40px;
+}
+
+.header-on h2 {
+  margin: 0;
+
   text-align: left;
 }
 
-.header-inline {
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
-  margin-bottom: 20px;
-}
+.header-on address {
+  margin: 0;
 
-.columna-on,
-.columna-arribar {
-  flex: 1;
-}
+  margin-left: auto;
 
-address {
-  font-style: normal;
-  text-decoration: underline;
-  font-size: 0.9rem;
-  line-height: 1.2;
   text-align: right;
-  margin-top: -50px;
-  margin-left: 350px;
-  display: block;
+
+  max-width: 220px;
+
+  line-height: 1.4;
 }
+
+/* =========================================
+   MAPA CENTRAT
+========================================= */
+
+.mapa-isometric {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 60px auto;
+}
+
+.mapa-isometric img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   TRANSPORTS
+========================================= */
 
 .transports-flex {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 160px;
-  margin-top: 60px;
+
+  justify-content: space-between;
+
   align-items: flex-end;
+
+  flex-wrap: nowrap;
+
+  width: 100%;
+
+  margin-top: 90px;
+
+  gap: 120px;
 }
 
 .transport-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 25px;
 }
 
 .icona-transport {
-  width: 70px;
+  width: 90px;
+
   height: auto;
 }
 
-.transport-text strong {
+.transport-text {
+  max-width: 260px;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   MAPA CENTRAT
+========================================= */
+
+.mapa-isometric {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 70px auto;
+}
+
+.mapa-isometric img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: auto;
+
+  object-fit: contain;
+
   display: block;
-  color: var(--taronja-viu);
+}
+
+/* =========================================
+   COM ARRIBAR
+========================================= */
+
+.columna-arribar {
+  margin-top: clamp(60px, 10vw, 160px);
+}
+
+/* =========================================
+   TRANSPORTS
+========================================= */
+
+.transports-flex {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  flex-wrap: nowrap;
+
+  width: 100%;
+
+  margin-top: 90px;
+
+  gap: 200px;
+}
+
+.transport-item {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 25px;
+}
+
+.icona-transport {
+  width: 90px;
+
+  height: auto;
+}
+
+.transport-text {
+  max-width: 260px;
+
+  line-height: 1.5;
 }
 
 /* =========================================
@@ -697,6 +840,11 @@ address {
 
 .sponsors {
   border-top: 1px solid var(--taronja-viu);
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  box-sizing: border-box;
 }
 
 .sponsors-wrapper {
@@ -705,7 +853,9 @@ address {
 
 .logos {
   display: flex;
+
   gap: 56px;
+
   width: max-content;
 }
 
@@ -729,8 +879,15 @@ address {
 
 .newsletter {
   display: flex;
+
   gap: 40px;
+
   border-top: 1px solid var(--taronja-viu);
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  box-sizing: border-box;
 }
 
 .newsletter-left {
@@ -739,16 +896,24 @@ address {
 
 .newsletter-right {
   flex: 1;
+
   max-width: 500px;
+
   margin-top: 70px;
 }
 
 .newsletter-right input {
-  width: 155%;
+  width: 100%;
+
   height: 50px;
+
   border: 1px solid var(--marro-fosc);
+
   border-radius: 8px;
+
   padding: 0 15px;
+
+  box-sizing: border-box;
 }
 
 /* =========================================
@@ -919,7 +1084,7 @@ footer {
   scrollbar-width: none;
   width: 100%;
   position: relative;
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 160px;
 }
 
@@ -1628,7 +1793,7 @@ footer {
   display: flex !important;
   flex-direction: column !important;
 
-  padding: 10px 0 70px 0;
+  padding: 0 0 30px 0;
 
   margin-top: 130px !important;
 
@@ -1655,7 +1820,9 @@ footer {
   padding-bottom: 0;
 }
 
-/* MÉS ESPAI ENTRE EL TEXT I LES IMATGES */
+/* =========================================
+   SLIDER
+   ========================================= */
 
 .js-festivalet-slider {
   display: flex !important;
@@ -1671,7 +1838,7 @@ footer {
 
   height: auto !important;
 
-  margin-top: 45px !important;
+  margin-top: 0 !important;
 
   scrollbar-width: none;
 
@@ -1706,15 +1873,20 @@ footer {
 
   flex-shrink: 0;
 
-  margin-top: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
+
+/* =========================================
+   PUNTS
+   ========================================= */
 
 .festivalet::after {
   content: "";
 
   position: absolute;
 
-  bottom: 12px !important;
+  bottom: -5px !important;
 
   left: 50%;
 
@@ -1735,6 +1907,10 @@ footer {
 
   background-size: 12px 12px;
 }
+
+/* =========================================
+   BOTÓ
+   ========================================= */
 
 .wrapper-centrat {
   width: 220px !important;
@@ -2278,19 +2454,31 @@ footer {
 .grid-categories {
   display: flex !important;
   flex-direction: column !important;
+
   gap: 40px;
-  padding-left: -20px !important;
-  padding-right: -20px !important;
-  overflow: hidden;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  width: 100% !important;
+
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .categoria {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .categoria h2 {
   text-align: left !important;
+
   margin-bottom: 15px;
+
   width: 100%;
 }
 
@@ -2301,13 +2489,21 @@ footer {
 
 .cards-wrapper {
   display: flex !important;
+
   flex-direction: row !important;
+
   overflow-x: auto !important;
   overflow-y: hidden;
+
   scroll-snap-type: x mandatory;
+
   gap: 0 !important;
+
   width: 100%;
+
   scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .cards-wrapper::-webkit-scrollbar {
@@ -2316,29 +2512,40 @@ footer {
 
 .card {
   flex: 0 0 100% !important;
+
   min-width: 100% !important;
   max-width: 100% !important;
+
   scroll-snap-align: center;
 
   display: flex;
   flex-direction: column;
+
   align-items: flex-start;
+
   text-align: left;
 }
 
 .card img {
   height: 250px !important;
+
   width: 100% !important;
+
   object-fit: cover;
+
   border-radius: 15px;
+
   display: block;
 }
 
 .categoria::after {
   content: "";
+
   display: block;
+
   width: 60px;
   height: 12px;
+
   margin: 20px auto 0 auto;
 
   background-image:
@@ -2346,7 +2553,9 @@ footer {
     radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
 
   background-position: 15px center, 35px center;
+
   background-repeat: no-repeat;
+
   background-size: 12px 12px;
 }
 
@@ -2358,72 +2567,106 @@ footer {
 }
 
   /* =========================================
-     SPONSORS
-     ========================================= */
+   SPONSORS
+   ========================================= */
 
-  .sponsors {
-    padding-top: 20px;
-    padding-bottom: 10px !important;
-    margin-bottom: 20px !important;
-  }
+.sponsors {
+  padding-top: 20px;
 
-  .logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
+  padding-bottom: 10px !important;
 
-  .logos img {
-    height: 28px;
-    width: auto;
-    object-fit: contain;
-  }
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 
-  /* --- NEWSLETTER --- */
+  margin-bottom: 20px !important;
 
-  .newsletter {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 30px;
-    padding-top: 50px;
-    padding-bottom: 0 !important;
-    margin-bottom: 30px !important;
-  }
+  box-sizing: border-box;
+}
 
-  .newsletter-left,
-  .newsletter-right {
-    width: 100%;
-    max-width: 100%;
-  }
+.logos {
+  display: flex;
 
-  .newsletter-right {
-    margin-top: 0;
-  }
+  flex-wrap: wrap;
 
-  .newsletter-form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+  justify-content: center;
 
-  .newsletter-right input {
-    width: 100%;
-    height: 60px;
-    border: 1px solid var(--marro-fosc);
-  }
+  gap: 30px;
+}
 
-  .veure {
-    width: 100%;
-    min-width: unset;
-    text-align: center;
-  }
+.logos img {
+  height: 28px;
 
-  .btn-custom {
-    width: 220px !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-  }
+  width: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   NEWSLETTER
+   ========================================= */
+
+.newsletter {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  gap: 30px;
+
+  padding-top: 50px;
+
+  padding-bottom: 0 !important;
+
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+
+  margin-bottom: 30px !important;
+
+  box-sizing: border-box;
+}
+
+.newsletter-left,
+.newsletter-right {
+  width: 100%;
+
+  max-width: 100%;
+}
+
+.newsletter-right {
+  margin-top: 0;
+}
+
+.newsletter-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.newsletter-right input {
+  width: 100%;
+
+  height: 60px;
+
+  border: 1px solid var(--marro-fosc);
+
+  box-sizing: border-box;
+}
+
+.veure {
+  width: 100%;
+
+  min-width: unset;
+
+  text-align: center;
+}
+
+.btn-custom {
+  width: 220px !important;
+
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
 
   /* --- FOOTER --- */
 
