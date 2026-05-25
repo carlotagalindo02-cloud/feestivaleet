@@ -1802,18 +1802,106 @@ footer,
   /* --- FOOTER --- */
 
   footer {
+    background-color: var(--carn-clar);
+
+    display: flex;
     flex-direction: column;
-    gap: 30px;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 28px;
+
+    padding: 32px 20px;
+  }
+
+  /* =========================================
+     LOGO
+  ========================================= */
+
+  .footer-left img {
+    width: 140px;
+    height: auto;
+  }
+
+  /* =========================================
+     CENTRE
+  ========================================= */
+
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 6px;
+
+    margin-left: 0;
+  }
+
+  .footer-center p {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: var(--marro-fosc);
+  }
+
+  .footer-center a {
+    color: var(--marro-fosc);
+
+    text-decoration: none;
+  }
+
+  .footer-center a:hover {
+    color: var(--taronja-viu);
+  }
+
+  /* =========================================
+     DRETA
+  ========================================= */
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
     text-align: center;
   }
 
-  .footer-left img {
-    margin: 0 auto;
-    width: 150px;
+  .contacte-link {
+    margin-right: 0;
+
+    font-size: 11px;
   }
 
-  .footer-center,
-  .footer-right {
+  /* =========================================
+     XARXES
+  ========================================= */
+
+  .social-icons {
+    display: flex;
+
     align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+  }
+
+  .social-icons img,
+  .social-icons svg,
+  .social-icons i {
+    width: 18px;
+    height: 18px;
   }
 }
