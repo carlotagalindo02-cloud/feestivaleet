@@ -342,143 +342,139 @@ nav ul li a,
   display: none;
 }
 
-//* =========================================
+/* =========================================
    ENTREVISTES ACTUALS
 ========================================= */
 
-.entrevistes-actuals {
-  position: relative;
+.cards-container {
+  width: 100%;
+  max-width: 1500px;
 
-  margin-top: -60px;
+  margin: 40px auto 0 auto;
 
-  padding-bottom: 240px;
+  padding: 0 20px;
 
-  overflow: visible;
-}
-
-.entrevistes-actuals h2 {
-  margin-top: 50px;
-  margin-bottom: -40px;
-
-  padding-left: 6px;
-  padding-right: 6px;
-
-  font-size: 52px;
-
-  line-height: 1;
-
-  text-align: left;
-}
-
-/* =========================================
-   CONTAINER TARGETES
-========================================= */
-
-.entrevistes-actuals .cards-container {
   display: flex;
+  flex-direction: row;
 
-  gap: 20px;
+  flex-wrap: nowrap;
 
-  overflow-x: auto;
-  overflow-y: hidden;
+  justify-content: center;
 
-  scroll-snap-type: x mandatory;
-
-  -webkit-overflow-scrolling: touch;
-
-  scrollbar-width: none;
-
-  margin-top: 80px;
-
-  position: relative;
-
-  padding-left: 6px;
-  padding-right: 6px;
+  gap: 40px;
 
   box-sizing: border-box;
 }
 
-.entrevistes-actuals .cards-container::-webkit-scrollbar {
-  display: none;
+.entrevistes-actuals h2 {
+  margin-top: 70px;
+  margin-bottom: -20px;
 }
 
-/* =========================================
-   TARGETA PRINCIPAL
-========================================= */
-
-.entrevistes-actuals .entrevista-principal {
-  flex: 0 0 92vw;
-
-  min-width: 92vw;
-
-  max-width: 92vw;
-
-  scroll-snap-align: center;
-
+.entrevista-principal {
   display: flex;
+
   flex-direction: column;
 
   gap: 18px;
 
-  position: relative;
+  width: 60%;
 }
 
-/* =========================================
-   IMATGE
-========================================= */
+.contenidor-foto,
+.contingut {
+  width: 100%;
+}
 
-.entrevistes-actuals .foto-entrevista {
+.foto-entrevista {
   width: 100%;
 
   height: 260px;
 
   object-fit: cover;
 
-  border-radius: 16px;
+  display: block;
+
+  border-radius: 10px;
 }
 
-/* =========================================
-   TEXTOS
-========================================= */
-
-.entrevistes-actuals h3 {
-  font-size: 20px;
-
-  font-weight: 600;
-
-  line-height: 1.2;
-
-  margin-bottom: 12px;
-}
-
-.entrevistes-actuals p {
-  line-height: 1.5;
-}
-
-/* =========================================
-   ICONES
-========================================= */
-
-.entrevistes-actuals .info-icon {
-  width: 60px;
-}
-
-.entrevistes-actuals .social-icons {
+.contingut {
   display: flex;
 
-  gap: 12px;
+  flex-direction: column;
+
+  justify-content: space-between;
 }
 
-.entrevistes-actuals .social-icons img {
-  width: 24px;
-  height: 24px;
+.contingut h2 {
+  margin-top: 40px;
+}
+
+.contingut h3 {
+  color: var(--taronja-viu);
+
+  font-size: 2rem;
+
+  line-height: 1.1;
+
+  font-weight: 500;
+
+  margin-bottom: 14px;
+
+  text-align: left;
+}
+
+.contingut p {
+  color: var(--marro-fosc);
+
+  font-size: 1rem;
+
+  line-height: 1.55;
+
+  margin: 0;
+
+  text-align: left;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+a,
+p a,
+.link-text,
+.enllac-info {
+  color: var(--marro-fosc);
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+a:hover,
+p a:hover,
+.link-text:hover,
+.enllac-info:hover {
+  color: var(--taronja-viu);
+}
+
+/* =========================================
+   + INFO
+========================================= */
+
+.enllac-info {
+  margin-top: 18px;
+
+  display: inline-block;
+
+  font-weight: 600;
 }
 
 /* =========================================
    FOOTER TARGETA
 ========================================= */
 
-.entrevistes-actuals .card-footer {
+.card-footer {
   margin-top: 20px;
 
   display: flex;
@@ -490,90 +486,63 @@ nav ul li a,
   width: 100%;
 }
 
-.entrevistes-actuals .date {
+.social-icons {
+  display: flex;
+
+  gap: 12px;
+}
+
+.social-icons img {
+  width: 24px;
+
+  height: 24px;
+
+  object-fit: contain;
+}
+
+.date {
   font-size: 14px;
 
   color: var(--marro-fosc);
 }
 
 /* =========================================
-   PUNTS CARRUSEL
-========================================= */
-
-.entrevistes-actuals .carousel-dots {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  gap: 12px;
-
-  width: 100%;
-
-  margin-top: 30px;
-
-  position: relative;
-
-  z-index: 10;
-}
-
-.entrevistes-actuals .carousel-dots span {
-  width: 12px;
-  height: 12px;
-
-  border-radius: 50%;
-
-  background-color: var(--carn-clar);
-
-  display: block;
-}
-
-.entrevistes-actuals .carousel-dots span.active {
-  background-color: var(--taronja-viu);
-}
-
-
-/* =========================================
    ENTREVISTES ANTERIORS
 ========================================= */
 
 .entrevistes {
-  overflow: hidden;
-
-  padding-top: 0;
-  padding-bottom: 120px;
-
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-
+  padding: 40px 20px 90px 20px !important;
+  overflow: visible;
   position: relative;
-
-  margin-top: -40px;
 }
 
 .entrevistes h2 {
-  margin-bottom: 20px;
-
-  padding-left: 6px;
-  padding-right: 6px;
-
-  font-size: 52px;
-
-  line-height: 1;
-
+  color: var(--taronja-viu);
+  margin-bottom: 24px;
+  padding: 0 20px;
+  font-size: 34px;
   text-align: left;
 }
 
 /* =========================================
-   CONTAINER TARGETES
+   TARGETES SENSE SCROLL
 ========================================= */
 
 .entrevistes .cards-container {
-  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 
-  flex-direction: row;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
 
   gap: 14px;
+
+  padding-left: 12px;
+  padding-right: 12px;
+
+  flex-wrap: nowrap;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -581,15 +550,7 @@ nav ul li a,
   scroll-snap-type: x mandatory;
 
   -webkit-overflow-scrolling: touch;
-
   scrollbar-width: none;
-
-  scroll-behavior: smooth;
-
-  padding-left: 6px;
-  padding-right: 6px;
-
-  margin: 0;
 
   box-sizing: border-box;
 }
@@ -602,52 +563,54 @@ nav ul li a,
    TARGETES
 ========================================= */
 
-.entrevistes .card {
-  flex: 0 0 92vw;
+.card {
+  flex: 0 0 31% !important;
 
-  min-width: 92vw;
+  width: 31% !important;
 
-  max-width: 92vw;
+  min-width: 31% !important;
 
-  scroll-snap-align: center;
+  max-width: 31% !important;
 
-  background-image: url("../entrevistes/grafica.svg");
-
-  background-repeat: no-repeat;
-
-  background-position: center;
+  background: url('../entrevistes/grafica.svg') no-repeat center center;
 
   background-size: cover;
 
-  border-radius: 20px;
+  padding: 22px;
 
-  padding: 28px 22px 22px;
-
-  box-sizing: border-box;
+  border-radius: 18px;
 
   display: flex;
 
   flex-direction: column;
+
+  position: relative;
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  scroll-snap-align: center;
 }
 
 /* =========================================
    TEXT TARGETES
 ========================================= */
 
-.entrevistes .card h3 {
-  font-size: 20px;
+.card h3 {
+  width: 100%;
 
-  font-weight: 600;
+  font-size: 1.5rem;
 
   line-height: 1.2;
 
-  margin-bottom: 12px;
-
   text-align: left;
+
+  margin-bottom: 12px;
 }
 
-.entrevistes .card p {
-  font-size: 16px;
+.card p {
+  font-size: 0.95rem;
 
   line-height: 1.5;
 
@@ -656,7 +619,7 @@ nav ul li a,
   flex-grow: 1;
 }
 
-.entrevistes .card a {
+.card a {
   color: var(--marro-fosc);
 
   text-decoration: none;
@@ -664,7 +627,7 @@ nav ul li a,
   transition: color 0.3s ease;
 }
 
-.entrevistes .card a:hover {
+.card a:hover {
   color: var(--taronja-viu);
 }
 
@@ -672,7 +635,7 @@ nav ul li a,
    IMATGE TARGETA
 ========================================= */
 
-.entrevistes .main-img {
+.main-img {
   width: 100%;
 
   height: 210px;
@@ -685,11 +648,11 @@ nav ul li a,
 }
 
 /* =========================================
-   FOOTER TARGETA
+   FOOTER
 ========================================= */
 
-.entrevistes .card-footer {
-  margin-top: 20px;
+footer {
+  background-color: var(--carn-clar);
 
   display: flex;
 
@@ -697,63 +660,44 @@ nav ul li a,
 
   align-items: center;
 
-  width: 100%;
+  padding: 24px;
 }
 
-.entrevistes .social-icons {
+.footer-left img {
+  width: 150px;
+
+  height: auto;
+}
+
+.footer-center,
+.footer-right {
   display: flex;
 
-  gap: 12px;
-}
-
-.entrevistes .social-icons img {
-  width: 24px;
-
-  height: 24px;
-
-  object-fit: contain;
-}
-
-.entrevistes .date {
-  font-size: 14px;
-
-  color: var(--marro-fosc);
-}
-
-/* =========================================
-   PUNTS CARRUSEL
-========================================= */
-
-.entrevistes .carousel-dots {
-  display: flex;
-
-  justify-content: center;
+  flex-direction: column;
 
   align-items: center;
 
-  gap: 12px;
+  justify-content: center;
 
-  margin-top: 30px;
+  text-align: center;
+
+  gap: 8px;
 }
 
-.entrevistes .carousel-dots::before,
-.entrevistes .carousel-dots::after,
-.entrevistes .carousel-dots span {
-  content: "";
-
-  width: 12px;
-
-  height: 12px;
-
-  border-radius: 50%;
-
-  background: var(--carn-clar);
-
-  display: block;
+.footer-center p,
+.footer-right p,
+.footer-right a {
+  font-size: 14px;
 }
 
-.entrevistes .carousel-dots span {
-  background: var(--taronja-viu);
+.footer-right a {
+  color: var(--marro-fosc);
+
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: var(--taronja-viu);
 }
 
 /* =========================================
@@ -1771,30 +1715,21 @@ footer {
 ========================================= */
 
 .entrevistes {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-
-  overflow: hidden;
-
-  padding-top: 100px !important;
-  padding-bottom: 120px;
-
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-
+  padding: 10px 12px 60px 12px !important;
+  overflow: visible;
   position: relative;
-
-  gap: 0;
 }
 
 .entrevistes h2 {
-  align-self: flex-start;
-
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: -40px;
 
   padding-left: 6px;
   padding-right: 6px;
+
+  font-size: 52px;
+
+  line-height: 1;
 
   text-align: left;
 }
@@ -1961,13 +1896,21 @@ footer {
    ========================================= */
 
 .participa {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 15px;
-  margin-bottom: 40px !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-  margin-top: -20px; 
+  padding-top: 10px !important;
+}
+
+.participa h2 {
+  margin-top: 50px;
+  margin-bottom: -40px;
+
+  padding-left: 6px;
+  padding-right: 6px;
+
+  font-size: 52px;
+
+  line-height: 1;
+
+  text-align: left;
 }
 
 .participa > * {
