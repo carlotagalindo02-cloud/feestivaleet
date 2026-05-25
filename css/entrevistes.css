@@ -1,6 +1,7 @@
 /* =========================================
    VARIABLES I CONFIGURACIÓ GENERAL
    ========================================= */
+
 :root {
   --marro-fosc: #330B00;
   --taronja-viu: #FF4A1A;
@@ -9,6 +10,9 @@
   --carn-clar: #FFD7CC;
   --blau-electric: #0B4EDB;
   --blau-clar: #CFDDFC;
+
+  --marge-lateral: 30px;
+  --espai-seccions: 80px;
 }
 
 * {
@@ -25,95 +29,6 @@ body {
 
 body {
   font-family: 'Montserrat', sans-serif;
-}
-
-.btn-custom {
-  width: 180px;
-  height: 52px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-image: url("../icones/boto.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.3s ease,
-              opacity 0.3s ease,
-              filter 0.3s ease;
-}
-
-.info-icon {
-  width: 80px;
-  height: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease,
-              opacity 0.3s ease,
-              filter 0.3s ease;
-}
-
-.info-icon:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-.btn-custom,
-.wrapper-centrat {
-  width: 180px;
-  height: 52px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-image: url("../icones/boto.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.3s ease,
-              opacity 0.3s ease,
-              filter 0.3s ease;
-}
-
-.wrapper-centrat {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-a {
-  color: var(--marro-fosc);
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--taronja-viu);
-}
-
-/* =========================================
-   CONTENIDOR GLOBAL
-   ========================================= */
-
-:root {
-  --marge-lateral: 80px;
-  --espai-seccions: 80px;
 }
 
 /* =========================================
@@ -136,234 +51,178 @@ header {
 }
 
 /* =========================================
-   ESTILS TEXTOS GENERALS
+   TIPOGRAFIA GENERAL
    ========================================= */
+
 h1 {
   color: var(--blanc);
-  font-size: 100px;
+
+  font-size: 72px;
+
   font-weight: 700;
-  line-height: 1.1;
+
+  line-height: 1.05;
+
   margin-bottom: 24px;
+
   text-transform: lowercase !important;
 }
 
 h2 {
   color: var(--taronja-viu);
-  font-size: 36px;
+
+  font-size: 42px;
+
   font-weight: 600;
+
   margin-bottom: 24px;
+
   text-align: left;
-  line-height: 1.2;
+
+  line-height: 1.1;
 }
 
 h3 {
   color: var(--teula);
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 24px;
-  display: block;
-  text-align: center;
-  line-height: 1.3;
-}
 
-label {
-  color: var(--teula);
-  font-size: 16px;
+  font-size: 24px;
+
   font-weight: 600;
-  margin-bottom: 8px;
-  display: block;
-  letter-spacing: 0.5px;
+
+  margin-bottom: 24px;
+
+  line-height: 1.25;
 }
 
 p {
   color: var(--marro-fosc);
-  font-size: 18px;
+
+  font-size: 16px;
+
   font-weight: 400;
+
   margin-bottom: 20px;
+
   line-height: 1.6;
 }
 
-p:last-child,
-h2:last-child {
-  margin-bottom: 0;
+label {
+  color: var(--teula);
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+
+  display: block;
 }
 
 .date,
 figcaption {
-  font-size: 16px;
+  font-size: 14px;
+
   font-weight: 600;
+
   color: var(--taronja-viu);
+
   text-transform: uppercase;
+
   letter-spacing: 1px;
 }
 
 /* =========================================
-  HEADER I NAVEGACIÓ
+   HEADER
    ========================================= */
+
 header {
   background-color: var(--carn-clar);
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
-  padding: 30px 80px; 
-  position: fixed; 
-  top: 0; 
+
+  position: fixed;
+
+  top: 0;
+
   left: 0;
+
   width: 100%;
+
   z-index: 1000;
-  box-sizing: border-box; 
 }
 
 .logo img {
   max-width: 200px;
+
   height: auto;
-  display: block;
-}
 
-.logo a {
   display: block;
-  text-decoration: none;
-  border: none;
-  outline: none;
-}
-
-.logo img {
-  cursor: pointer;
 }
 
 nav ul {
   display: flex;
+
   align-items: center;
+
   list-style: none;
 }
 
 nav ul li {
   margin-left: 25px;
-  position: relative;
 }
 
 nav ul li a {
   text-decoration: none;
-  font-size: 16px;
+
+  font-size: 17px;
+
   font-weight: 600;
+
   color: var(--marro-fosc);
-  transition: color 0.3s ease; 
-}
 
-.nav-list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.nav-list li {
-  margin-left: 25px;
-}
-
-.nav-list li a.active, 
-.nav-list-mobil li a.active {
-  color: var(--blau-electric) !important;
-  font-weight: 600;
-}
-
-.dropdown-idioma:hover .enllac-idioma {
-  color: var(--blau-electric);
-}
-
-.enllac-idioma {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.mini-icona {
-  width: 10px;
-  margin-left: 6px;
-  transition: transform 0.3s;
-}
-
-.submenu-idiomes {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: var(--carn-clar);
-  list-style: none;
-  padding: 10px 0;
-  min-width: 80px;
-  border-radius: 4px;
-}
-
-.submenu-idiomes li a {
-  padding: 8px 15px;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
   color: var(--blau-electric);
 }
 
-.submenu-idiomes li a:hover {
-  background-color: transparent;
-  color: var(--blau-electric); 
-}
-
-.dropdown-idioma:hover .submenu-idiomes {
-  display: block;
-}
-
-.dropdown-idioma:hover .mini-icona {
-  transform: rotate(180deg);
-}
-
-.menu-toggle, .nav-mobil {
-  display: none;
-}
-
 /* =========================================
-   ENTREVISTES
-========================================= */
+   ENTREVISTES ACTUALS
+   ========================================= */
 
 .cards-container {
   width: 100%;
-  max-width: 1000px;
+
+  max-width: 1400px;
 
   margin: 0 auto;
 
-  padding: 0 10px;
+  padding: 0;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 36px;
 }
 
-/* CADA ENTREVISTA */
-
 .entrevista-principal {
   display: flex;
+
   flex-direction: column;
 
   gap: 18px;
 
-  align-items: flex-start;
-
   width: 100%;
 }
 
-/* TREURE ALTERNANÇA */
-
-.entrevista-principal:nth-child(even) .contenidor-foto,
-.entrevista-principal:nth-child(even) .contingut {
-  order: initial;
-}
-
-/* IMATGE */
-
-.contenidor-foto {
+.contenidor-foto,
+.contingut {
   width: 100%;
 }
 
@@ -379,12 +238,9 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-/* TEXT */
-
 .contingut {
-  width: 100%;
-
   display: flex;
+
   flex-direction: column;
 
   justify-content: space-between;
@@ -393,12 +249,13 @@ nav ul li a:hover {
 .contingut h3 {
   color: var(--taronja-viu);
 
-  font-size: 1.55rem;
+  font-size: 2rem;
+
   line-height: 1.1;
 
   font-weight: 500;
 
-  margin: 0 0 14px 0;
+  margin-bottom: 14px;
 
   text-align: left;
 }
@@ -406,15 +263,18 @@ nav ul li a:hover {
 .contingut p {
   color: var(--marro-fosc);
 
-  font-size: 0.82rem;
-  line-height: 1.35;
+  font-size: 1rem;
+
+  line-height: 1.55;
 
   margin: 0;
 
   text-align: left;
 }
 
-/* + INFO */
+/* =========================================
+   + INFO
+   ========================================= */
 
 .enllac-info {
   margin-top: 18px;
@@ -428,7 +288,9 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
-/* FOOTER */
+/* =========================================
+   FOOTER TARGETA
+   ========================================= */
 
 .card-footer {
   margin-top: 20px;
@@ -436,6 +298,7 @@ nav ul li a:hover {
   display: flex;
 
   justify-content: space-between;
+
   align-items: center;
 
   width: 100%;
@@ -444,26 +307,29 @@ nav ul li a:hover {
 .social-icons {
   display: flex;
 
-  gap: 8px;
+  gap: 12px;
 }
 
 .social-icons img {
-  width: 13px;
-  height: 13px;
+  width: 24px;
+
+  height: 24px;
+
+  object-fit: contain;
 }
 
 .date {
-  font-size: 0.7rem;
+  font-size: 14px;
 
   color: var(--marro-fosc);
 }
 
 /* =========================================
-   SECCIÓ ENTREVISTES ANTERIORS
+   ENTREVISTES ANTERIORS
    ========================================= */
 
 .entrevistes {
-  padding: 100px 0 !important;
+  padding: 60px 0 !important;
 
   overflow-x: hidden;
 }
@@ -471,11 +337,11 @@ nav ul li a:hover {
 .entrevistes h2 {
   color: var(--taronja-viu);
 
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
-  padding: 0 10px;
+  padding: 0 30px;
 
-  font-size: 32px;
+  font-size: 42px;
 
   text-align: left;
 }
@@ -484,26 +350,29 @@ nav ul li a:hover {
    SLIDER HORITZONTAL
    ========================================= */
 
-.cards-container {
+.entrevistes .cards-container {
   display: flex !important;
+
   flex-direction: row !important;
 
-  gap: 14px;
+  gap: 18px;
 
   overflow-x: auto !important;
+
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
 
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 30px;
+
+  padding-right: 30px;
 
   scrollbar-width: none;
 
   -webkit-overflow-scrolling: touch;
 }
 
-.cards-container::-webkit-scrollbar {
+.entrevistes .cards-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -512,11 +381,13 @@ nav ul li a:hover {
    ========================================= */
 
 .card {
-  flex: 0 0 46vw !important;
+  flex: 0 0 32vw !important;
 
-  width: 46vw !important;
-  min-width: 46vw !important;
-  max-width: 46vw !important;
+  width: 32vw !important;
+
+  min-width: 32vw !important;
+
+  max-width: 32vw !important;
 
   background: url('../entrevistes/grafica.svg') no-repeat center center;
 
@@ -527,6 +398,7 @@ nav ul li a:hover {
   border-radius: 20px;
 
   display: flex;
+
   flex-direction: column;
 
   position: relative;
@@ -536,35 +408,34 @@ nav ul li a:hover {
   scroll-snap-align: center;
 
   box-sizing: border-box;
-
-  color: var(--marro-fosc);
 }
 
 /* =========================================
-   TEXT
+   TEXT TARGETES
    ========================================= */
 
-.contingut h3 {
-  display: block;
-
+.card h3 {
   width: 100%;
 
-  font-size: 0.9em;
+  font-size: 1.6rem;
+
+  line-height: 1.2;
 
   text-align: left;
+
+  margin-bottom: 18px;
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 0.95rem;
 
-  line-height: 1.5;
+  line-height: 1.55;
 
   margin-bottom: 20px;
 
   flex-grow: 1;
 }
 
-.contingut p a,
 .card a {
   color: var(--marro-fosc);
 
@@ -573,21 +444,18 @@ nav ul li a:hover {
   transition: color 0.3s ease;
 }
 
-.contingut p a:hover,
 .card a:hover {
   color: var(--taronja-viu);
-
-  text-decoration: underline;
 }
 
 /* =========================================
-   IMATGE
+   IMATGE TARGETA
    ========================================= */
 
 .main-img {
   width: 100%;
 
-  height: 220px;
+  height: 180px;
 
   object-fit: cover;
 
@@ -600,78 +468,53 @@ nav ul li a:hover {
    FOOTER
    ========================================= */
 
-.card-footer {
+footer {
+  background-color: var(--carn-clar);
+
   display: flex;
 
   justify-content: space-between;
 
   align-items: center;
 
-  width: 100%;
-
-  margin-top: auto;
+  padding: 30px;
 }
 
-.social-icons {
-  display: flex !important;
+.footer-left img {
+  width: 180px;
 
-  flex-direction: row !important;
-
-  align-items: center !important;
-
-  gap: 12px !important;
-
-  height: 30px !important;
-
-  overflow: visible !important;
+  height: auto;
 }
 
-.social-icons a {
-  display: inline-flex !important;
+.footer-center,
+.footer-right {
+  display: flex;
 
-  align-items: center !important;
+  flex-direction: column;
 
-  justify-content: center !important;
+  align-items: center;
 
-  text-decoration: none !important;
+  justify-content: center;
 
-  border: none !important;
+  text-align: center;
 
-  outline: none !important;
-
-  line-height: 0 !important;
+  gap: 10px;
 }
 
-.social-icons img {
-  width: 24px !important;
-  height: 24px !important;
-
-  max-width: 24px !important;
-  max-height: 24px !important;
-
-  object-fit: contain !important;
-
-  display: block !important;
-
-  border: none !important;
-
-  background: transparent !important;
-
-  box-shadow: none !important;
-
-  transform: none !important;
+.footer-center p,
+.footer-right p,
+.footer-right a {
+  font-size: 15px;
 }
 
-.date {
+.footer-right a {
   color: var(--marro-fosc);
 
-  font-size: 0.85rem;
+  text-decoration: none;
+}
 
-  font-weight: 500;
-
-  white-space: nowrap;
-
-  font-family: 'Montserrat', sans-serif;
+.footer-right a:hover {
+  color: var(--taronja-viu);
 }
 
 /* =========================================
@@ -989,8 +832,8 @@ footer {
 
   margin: 0 auto;
 
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 20px;  
+  padding-right: 20px; 
 
   display: flex;
   flex-direction: column;
@@ -998,10 +841,11 @@ footer {
   gap: 60px;
 
   box-sizing: border-box;
-  margin-top: 80px;
+
+  margin-top: 100px;
 }
 
-/* CARD MES AMPLA */
+/* CARD MÉS AMPLA */
 
 .entrevista-principal {
   display: flex;
@@ -1012,7 +856,7 @@ footer {
   gap: 20px;
 
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px; 
 
   margin: 0 auto;
 }
@@ -1024,6 +868,7 @@ footer {
 
 .foto-entrevista {
   width: 100%;
+
   height: 420px;
 
   object-fit: cover;
@@ -1091,53 +936,6 @@ footer {
 
   scroll-snap-align: center;
   box-sizing: border-box;
-}
-
-/* PUNTS */
-
-.entrevistes::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-  height: 15px;
-
-  margin: 18px auto 0 auto;
-
-  background-repeat: no-repeat;
-  background-size: 15px 15px;
-
-  background-image:
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-
-  background-position:
-    15px center,
-    45px center,
-    75px center;
-
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.entrevistes.canviant-punt::after {
-  opacity: 0.45;
-  transform: scale(0.85);
-}
-
-.entrevistes.actiu-2::after {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px);
-}
-
-.entrevistes.actiu-3::after {
-  background-image:
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--carn-clar) 5px, transparent 6px),
-    radial-gradient(circle, var(--taronja-viu) 5px, transparent 6px);
 }
 
   /* =========================================
@@ -1681,7 +1479,7 @@ footer {
   position: absolute;
 
   left: 50%;
-  bottom: 20px;
+  bottom: -10px; /* MÉS AVALL */
 
   transform: translateX(-50%);
 
@@ -1724,7 +1522,7 @@ footer {
   overflow: visible;
 
   padding-top: 20px;
-  padding-bottom: 120px;
+  padding-bottom: 90px; /* MÉS ESPAI A BAIX */
 
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -1737,6 +1535,8 @@ footer {
 
   padding-left: 20px;
   padding-right: 20px;
+
+  text-align: center;
 }
 
 .entrevistes .cards-container {
@@ -1798,7 +1598,7 @@ footer {
   position: absolute;
 
   left: 50%;
-  bottom: 40px;
+  bottom: 10px; /* MÉS A SOTA */
 
   transform: translateX(-50%);
 
@@ -1994,22 +1794,30 @@ footer {
 }
 
   /* =========================================
-     FOOTER
-     ========================================= */
+   FOOTER
+   ========================================= */
 
-  footer {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
+footer {
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  align-items: center;
+}
 
-  .footer-left img {
-    margin: 0 auto;
-    width: 150px;
-  }
+.footer-left img {
+  margin: 0 auto;
+  width: 150px;
+}
 
-  .footer-center,
-  .footer-right {
-    align-items: center;
-  }
+.footer-center,
+.footer-right {
+  align-items: center;
+  text-align: center;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 }
