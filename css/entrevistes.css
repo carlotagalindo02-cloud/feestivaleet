@@ -324,141 +324,111 @@ nav ul li a:hover {
 }
 
 /* =========================================
-   ENTREVISTES ACTUALS
+   ENTREVISTES
 ========================================= */
 
 .entrevista-principal,
 .entrevista-principal.reverse,
 .e-casa-atlantica {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    overflow: hidden;
-    margin-bottom: 6rem;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+/* REVERSE */
+
+.entrevista-principal.reverse .contingut {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.entrevista-principal.reverse .contenidor-foto {
+    grid-column: 2;
+    grid-row: 1;
 }
 
 /* FOTO */
 
-.contenidor-foto,
-.reverse .contenidor-foto,
-.e-casa-atlantica .contenidor-foto {
+.contenidor-foto {
     width: 100%;
 }
 
-.foto-entrevista,
-.reverse .foto-entrevista,
-.e-casa-atlantica .foto-entrevista {
+.foto-entrevista {
     width: 100%;
-    height: auto;
+    height: 320px;
     object-fit: cover;
     display: block;
-    border-radius: 28px;
+    border-radius: 24px;
 }
 
 /* CONTINGUT */
 
-.contingut,
-.reverse .contingut,
-.e-casa-atlantica .contingut {
-    width: 100%;
-    padding: 0;
+.contingut {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    height: 100%;
 }
 
-/* TÍTOLS */
+/* TITOL */
 
 .contingut h3,
-.reverse .contingut h3,
 .e-casa-atlantica h3 {
-    font-size: 3rem;
-    line-height: 1.08;
-    font-weight: 400;
     color: var(--taronja-viu);
-    margin: 0;
-    max-width: 100%;
+    margin: 0 0 1rem 0;
+    line-height: 1.05;
 }
 
 /* TEXT */
 
 .contingut p,
-.reverse .contingut p,
 .e-casa-atlantica p {
-    font-size: 1.1rem;
-    line-height: 1.5;
     color: var(--marro-fosc);
-    max-width: 900px;
     margin: 0;
-}
-
-.contingut p a,
-.reverse .contingut p a,
-.e-casa-atlantica p a {
-    color: var(--marro-fosc);
-    text-decoration: underline;
+    line-height: 1.4;
 }
 
 /* INFO */
 
-.enllac-info,
-.reverse .enllac-info,
-.e-casa-atlantica .enllac-info {
-    margin-top: 1rem;
+.enllac-info {
+    margin-top: 1.5rem;
     display: inline-block;
 }
 
-.info-icon,
-.reverse .info-icon,
-.e-casa-atlantica .info-icon {
-    width: 110px;
+.info-icon {
+    width: 90px;
     transition: transform 0.3s ease;
 }
 
-.info-icon:hover,
-.reverse .info-icon:hover,
-.e-casa-atlantica .info-icon:hover {
+.info-icon:hover {
     transform: scale(1.05);
 }
 
 /* FOOTER */
 
-.card-footer,
-.reverse .card-footer,
-.e-casa-atlantica .card-footer {
+.card-footer {
+    margin-top: auto;
+    padding-top: 2rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1.5rem;
-    gap: 1rem;
-    flex-wrap: wrap;
 }
 
-.social-icons,
-.reverse .social-icons,
-.e-casa-atlantica .social-icons {
+.social-icons {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
-.social-icons img,
-.reverse .social-icons img,
-.e-casa-atlantica .social-icons img {
-    width: 24px;
-    height: 24px;
-    transition: opacity 0.3s ease;
+.social-icons img {
+    width: 18px;
+    height: 18px;
 }
 
-.social-icons img:hover,
-.reverse .social-icons img:hover {
-    opacity: 0.7;
-}
-
-.date,
-.reverse .date,
-.e-casa-atlantica .date {
-    font-size: 1rem;
+.date {
+    font-size: 0.8rem;
     color: var(--marro-fosc);
 }
 
