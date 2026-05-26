@@ -341,12 +341,12 @@ nav ul li a {
 }
 
 .js-festivalet-slider img {
-  width: 420px; /* abans 560px */
-  height: 340px;
+  width: 420px; 
+  height: 240px !important;
   object-fit: cover;
   border-radius: 14px;
   display: block;
-  margin-top: 75px;
+  margin-top: 70px;
   flex-shrink: 0;
 }
 /* =========================================
@@ -430,6 +430,7 @@ nav ul li a {
   grid-template-columns: 1fr 1.5fr 1.5fr;
   gap: 40px;
   align-items: start;
+  margin-bottom: 80px; 
 }
 
 .img-gran-curvada {
@@ -445,7 +446,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 .contenidor-boto {
@@ -455,212 +456,69 @@ nav ul li a {
 }
 
 /* =========================================
-   UBICACIÓ I TRANSPORT
-========================================= */
+   UBICACIÓ TRANSPORT
+   ========================================= */
 
 .ubicacio-transport {
   display: flex;
-  flex-direction: column;
-
-  gap: clamp(80px, 12vw, 180px);
-
-  margin-top: 40px;
-  margin-bottom: 50px;
-
-  padding-left: 40px;
-  padding-right: 40px;
-
-  overflow: hidden;
-
-  box-sizing: border-box;
-
-  background-image: url('../contacte/fons.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* =========================================
-   HEADER UBICACIÓ
-========================================= */
-
-.header-on {
-  display: flex;
-
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-start;
-
-  width: 100%;
-
-  gap: 40px;
-}
-
-.header-on h2 {
-  margin: 0;
-
+  gap: 100px !important;
+  background-image: url('../festivalet/fons.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 400px;
   text-align: left;
 }
 
-.header-on address {
-  margin: 0;
-
-  margin-left: auto;
-
-  text-align: right;
-
-  max-width: 220px;
-
-  line-height: 1.4;
-}
-
-/* =========================================
-   MAPA CENTRAT
-========================================= */
-
-.mapa-isometric {
-  width: 100%;
-
+.header-inline {
   display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  margin: 60px auto;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 20px;
 }
 
-.mapa-isometric img {
-  width: 100%;
-
-  max-width: 500px;
-
-  height: auto;
-
-  object-fit: contain;
-
-  display: block;
-
-  margin: 0 auto;
-}
-
-/* =========================================
-   TRANSPORTS
-========================================= */
-
-.transports-flex {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: flex-end;
-
-  flex-wrap: nowrap;
-
-  width: 100%;
-
-  margin-top: 90px;
-
-  gap: 120px;
-}
-
-.transport-item {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-
-  gap: 25px;
-}
-
-.icona-transport {
-  width: 90px;
-
-  height: auto;
-}
-
-.transport-text {
-  max-width: 260px;
-
-  line-height: 1.5;
-}
-
-/* =========================================
-   MAPA CENTRAT
-========================================= */
-
-.mapa-isometric {
-  width: 100%;
-
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  margin: 70px auto;
-}
-
-.mapa-isometric img {
-  width: 100%;
-
-  max-width: 500px;
-
-  height: auto;
-
-  object-fit: contain;
-
-  display: block;
-}
-
-/* =========================================
-   COM ARRIBAR
-========================================= */
-
+.columna-on,
 .columna-arribar {
-  margin-top: clamp(60px, 10vw, 160px);
+  flex: 1;
 }
 
-/* =========================================
-   TRANSPORTS
-========================================= */
+address {
+  font-style: normal;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-align: right;
+  margin-top: -50px;
+  margin-left: 350px;
+  display: block;
+}
 
 .transports-flex {
   display: flex;
-
-  justify-content: space-between;
-
-  align-items: flex-end;
-
   flex-wrap: nowrap;
-
-  width: 100%;
-
-  margin-top: 90px;
-
-  gap: 200px;
+  gap: 160px;
+  margin-top: 60px;
+  align-items: flex-end;
 }
 
 .transport-item {
   display: flex;
   flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-
-  gap: 25px;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .icona-transport {
-  width: 90px;
-
+  width: 70px;
   height: auto;
 }
 
-.transport-text {
-  max-width: 260px;
-
-  line-height: 1.5;
+.transport-text strong {
+  display: block;
+  color: var(--taronja-viu);
 }
 
 /* =========================================
@@ -691,7 +549,7 @@ nav ul li a {
 .img-curvada {
   flex: 1;
   min-width: 0;
-  height: 303px;
+  height: 255px;
   width: 100%;
   object-fit: cover;
   border-radius: 20px;

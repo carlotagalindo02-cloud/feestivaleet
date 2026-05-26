@@ -416,10 +416,10 @@ nav ul li a,
 
 .festivalet .images img {
   width: 100%;
-  height: 275px;
+  height: 240px;
   object-fit: cover;
   border-radius: 20px;
-  margin-top: 20 !important;
+  margin-top: 48px !important;
 }
 
 /* =========================================
